@@ -23,6 +23,10 @@ public class MittagsTischRetriever {
 
     public final static URI MITTAGSTISCH_URL;
 
+    private final HttpClient httpClient;
+
+    private final HttpGet get;
+
     static {
         try {
             MITTAGSTISCH_URL = new URI("http://mittagstisch-ka.de/app/index");
@@ -31,16 +35,18 @@ public class MittagsTischRetriever {
         }
     }
 
-    public static void main(String[] args) throws ClientProtocolException, IOException {
-        final HttpClient httpClient = new DefaultHttpClient();
-        final HttpGet get = new HttpGet(MITTAGSTISCH_URL);
-        try {
-            final HttpResponse response = httpClient.execute(get);
-            final StatusLine statusLine = response.getStatusLine();
-            System.out.println("MittagsTischRetriever.main()" + statusLine);
-        } finally {
+    /**
+     * 
+     */
+    public MittagsTischRetriever() {
+        httpClient = new DefaultHttpClient();
+        get = new HttpGet(MITTAGSTISCH_URL);
+    }
 
-        }
+    public void retrieve() throws ClientProtocolException, IOException {
+        final HttpResponse response = httpClient.execute(get);
+        final StatusLine statusLine = response.getStatusLine();
+        System.out.println("MittagsTischRetriever.main()" + statusLine);
     }
 
 }
