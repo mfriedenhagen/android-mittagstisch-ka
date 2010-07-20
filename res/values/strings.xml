@@ -2,4 +2,7 @@
 <resources>
     <string name="hello">Hello World, Home!</string>
     <string name="app_name">Mittagstisch Karlsruhe</string>
+    <string name="app_descrip">Mittagstisch Karlsruhe</string>
+    <string name="app_credits">Mittagstisch Karlsruhe</string>
+    <string name="empty_result">No entry found for this word, or problem reading data.</string>
 </resources>
