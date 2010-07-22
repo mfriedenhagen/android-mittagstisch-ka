@@ -47,10 +47,10 @@ public class HomeActivity extends Activity implements AnimationListener {
         slideInView = AnimationUtils.loadAnimation(this, R.anim.slide_in);
         slideOutView = AnimationUtils.loadAnimation(this, R.anim.slide_out);
         slideInView.setAnimationListener(this);
-        progressBarView = (ProgressBar) findViewById(R.id.progress);
-        titleBarView = findViewById(R.id.title_bar);
-        titleView = (TextView) findViewById(R.id.title);
-        eateriesView = (ListView) findViewById(R.id.eateries);
+        progressBarView = (ProgressBar) findViewById(R.id.main_progress);
+        titleBarView = findViewById(R.id.main_title_bar);
+        titleView = (TextView) findViewById(R.id.main_title);
+        eateriesView = (ListView) findViewById(R.id.main_eateries);
         eateriesView.setTextFilterEnabled(true);
         eateriesView.setOnItemClickListener(new OnItemClickListener() {
 
@@ -62,9 +62,8 @@ public class HomeActivity extends Activity implements AnimationListener {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 final Intent eateryIntent = new Intent(parent.getContext(), EateryActivity.class);
                 final Eatery eatery = (Eatery)parent.getAdapter().getItem(position);
-                Log.d(TAG, "eatery=" + eatery);
+                Log.i(TAG, "eatery=" + eatery + ", position=" + position);
                 eateryIntent.putExtra(Eatery.class.getName(), eatery);                
-                Log.d(TAG, "title=" + eatery.title + ", id=" + eatery.id + ", position=" + position);
                 //eateryIntent.putExtra(Eatery.class.getName(), view.getAdapter())
                 startActivity(eateryIntent);
                 
@@ -113,9 +112,10 @@ public class HomeActivity extends Activity implements AnimationListener {
             titleView.setText(" ...");
             
         }
+        
         /** {@inheritDoc} */
         @Override
-        protected void onPostExecute(List<Eatery> eateries) {
+        protected void onPostExecute(final List<Eatery> eateries) {
             Collections.sort(eateries, EateryTitleComparator.INSTANCE);
             eateriesView.setAdapter(new EateryAdapter(eateries));
             titleBarView.setAnimation(slideOutView);

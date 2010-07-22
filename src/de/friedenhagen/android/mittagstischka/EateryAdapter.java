@@ -9,9 +9,11 @@ package de.friedenhagen.android.mittagstischka;
 
 import java.util.List;
 
+import android.database.DataSetObserver;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ListAdapter;
 import android.widget.TextView;
 import de.friedenhagen.android.mittagstischka.model.Eatery;
 
@@ -19,7 +21,7 @@ public class EateryAdapter extends BaseAdapter {
 
     public final List<Eatery> eateries;
     
-    public EateryAdapter(List<Eatery> eateries) {
+    public EateryAdapter(final List<Eatery> eateries) {
         this.eateries = eateries;
     }
     @Override
@@ -34,16 +36,15 @@ public class EateryAdapter extends BaseAdapter {
 
     @Override
     public long getItemId(int position) {
-        return eateries.get(position).id;
+        return position;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
-            convertView = new TextView(parent.getContext());
-            ((TextView)convertView).setText(eateries.get(position).title);          
+            convertView = new TextView(parent.getContext());                      
         }
+        ((TextView)convertView).setText(eateries.get(position).title);
         return convertView;
     }
-
 }

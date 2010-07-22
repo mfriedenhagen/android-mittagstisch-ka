@@ -5,13 +5,13 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
     <LinearLayout
-        android:id="@+id/title_bar"
+        android:id="@+id/main_title_bar"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical">
         <ProgressBar
-            android:id="@+id/progress"
+            android:id="@+id/main_progress"
             android:layout_width="18dip"
             android:layout_height="18dip"
             android:layout_marginLeft="10dip"
@@ -21,13 +21,13 @@
             android:indeterminateBehavior="repeat"
             android:indeterminateDuration="3500" />
         <TextView
-            android:id="@+id/title"
+            android:id="@+id/main_title"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/eateries_title" />
     </LinearLayout>
     <ListView
-        android:id="@+id/eateries"
+        android:id="@+id/main_eateries"
         android:layout_width="fill_parent" 
         android:layout_height="fill_parent" />
 </LinearLayout>

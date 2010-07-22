@@ -29,23 +29,13 @@ public class Eatery implements Serializable {
         } catch (JSONException e) {
             throw new RuntimeException("Message:", e);
         }
-//        String homepageUrl;
-//        try {
-//            homepageUrl = o.getString("homepage");
-//        } catch (JSONException e) {
-//            homepageUrl = "http://mittagstisch-ka.de/";
-//        }
-//        try {
-//            homepage = new URL(homepageUrl);
-//        } catch (MalformedURLException e) {
-//            throw new RuntimeException("Message:", e);
-//        }
-        
     }
+    
     @Override
     public String toString() {        
         return "Eatery(" + title + ", " + id + ")";
     }
+    
     public static Eatery fromJsonObject(JSONObject o) {
         return new Eatery(o);
     }

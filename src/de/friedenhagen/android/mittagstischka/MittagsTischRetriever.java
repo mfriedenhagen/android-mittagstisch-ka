@@ -21,8 +21,10 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.util.Log;
 
 /**
@@ -30,7 +32,9 @@ import android.util.Log;
  * 
  */
 public class MittagsTischRetriever {
-    private static final String MITTAGSTISCH_API = "http://mittagstisch-ka.de/app/";
+
+    public static final String MITTAGSTISCH_API = "http://mittagstisch-ka.de/app/";
+
     /**
      * Thrown when there were problems contacting the remote API server, either because of a network error, or the
      * server returned a bad status code.
@@ -59,8 +63,6 @@ public class MittagsTischRetriever {
 
     private final HttpClient httpClient;
 
-    private final HttpGet indexGet;
-
     static {
         try {
             MITTAGSTISCH_INDEX = new URI(MITTAGSTISCH_API + "index");
@@ -74,12 +76,26 @@ public class MittagsTischRetriever {
      */
     public MittagsTischRetriever() {
         httpClient = new DefaultHttpClient();
-        indexGet = new HttpGet(MITTAGSTISCH_INDEX);
     }
 
-    private String retrieve(HttpGet whatToGet) throws ApiException {
-        final HttpResponse response;
+    private String retrieveString(HttpGet whatToGet) throws ApiException {
         try {
+            return new String(retrieveBytes(whatToGet), "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            throw new ApiException("Conversion to UTF-8 failed!", e);
+        }
+    }
+
+    /**
+     * @param whatToGet
+     * @return
+     * @throws IOException
+     * @throws ClientProtocolException
+     * @throws ApiException
+     */
+    private byte[] retrieveBytes(HttpGet whatToGet) throws ApiException {
+        try {
+            final HttpResponse response;
             response = httpClient.execute(whatToGet);
             final StatusLine statusLine = response.getStatusLine();
             if (statusLine.getStatusCode() != HttpStatus.SC_OK) {
@@ -87,8 +103,8 @@ public class MittagsTischRetriever {
             }
             Log.i("MittagsTischRetriever.retrieve()", String.valueOf(statusLine));
             final HttpEntity entity = response.getEntity();
-            final InputStream inputStream = entity.getContent();
-            return toString(inputStream);
+            final byte[] byteArray = toByteArray(entity.getContent());
+            return byteArray;
         } catch (ClientProtocolException e) {
             throw new ApiException("Message:", e);
         } catch (IOException e) {
@@ -96,7 +112,7 @@ public class MittagsTischRetriever {
         }
     }
 
-    private static String toString(final InputStream inputStream) throws IOException {
+    private static byte[] toByteArray(final InputStream inputStream) throws IOException {
         final byte[] sBuffer = new byte[1024];
         final ByteArrayOutputStream content = new ByteArrayOutputStream();
         // Read response into a buffered stream
@@ -105,15 +121,26 @@ public class MittagsTischRetriever {
             content.write(sBuffer, 0, readBytes);
         }
         // Return result from buffered stream
-        return new String(content.toByteArray(), "UTF-8");
+        return content.toByteArray();
     }
-    
+
     public JSONArray retrieveEateries() throws ApiException {
-        final String response = retrieve(indexGet);
+        final String response = retrieveString(new HttpGet(MITTAGSTISCH_INDEX));
         try {
             return new JSONArray(response);
         } catch (JSONException e) {
             throw new ApiException("Could not parse " + response, e);
         }
     }
+
+    public String retrieveEateryContent(Integer id) throws ApiException {
+        return retrieveString(new HttpGet(MITTAGSTISCH_API + id));
+    }
+
+    public Bitmap retrieveEateryPicture(Integer id) throws ApiException {        
+        final HttpGet imageGet = new HttpGet(MITTAGSTISCH_API + id + ".jpg");
+        final byte[] bytes = retrieveBytes(imageGet);
+        return BitmapFactory.decodeByteArray(bytes, 0, bytes.length);        
+    }
+
 }
