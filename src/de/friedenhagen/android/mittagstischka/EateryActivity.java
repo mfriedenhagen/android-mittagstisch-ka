@@ -4,14 +4,8 @@
 
 package de.friedenhagen.android.mittagstischka;
 
-import java.net.URI;
-
-import de.friedenhagen.android.mittagstischka.MittagsTischHttpRetriever.ApiException;
-import de.friedenhagen.android.mittagstischka.model.Eatery;
 import android.app.Activity;
 import android.graphics.Bitmap;
-import android.graphics.Color;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
@@ -23,6 +17,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import de.friedenhagen.android.mittagstischka.MittagsTischHttpRetriever.ApiException;
+import de.friedenhagen.android.mittagstischka.model.Eatery;
 
 /**
  * @author mirko
@@ -59,8 +55,7 @@ public class EateryActivity extends Activity implements AnimationListener {
         progressBarView = (ProgressBar) findViewById(R.id.eatery_progress);
         titleBarView = findViewById(R.id.eatery_title_bar);
         titleView = (TextView) findViewById(R.id.eatery_title);
-        contentView = (TextView) findViewById(R.id.eatery_content);
-        contentView.setMovementMethod(new ScrollingMovementMethod());
+        contentView = (TextView) findViewById(R.id.eatery_content);        
         imageView = (ImageView) findViewById(R.id.eatery_image);        
         final Bundle extras = getIntent().getExtras();
         Log.d(TAG, String.valueOf(extras.keySet()));
@@ -103,9 +98,10 @@ public class EateryActivity extends Activity implements AnimationListener {
         /** {@inheritDoc} */
         @Override
         protected void onPostExecute(String result) {
-            contentView.setText(result);            
             titleBarView.setAnimation(slideOutView);
             progressBarView.setVisibility(View.INVISIBLE);
+            contentView.setText(result);
+            contentView.setMovementMethod(new ScrollingMovementMethod());
         }
         
         /** {@inheritDoc} */
