@@ -137,9 +137,19 @@ public class MittagsTischHttpRetriever implements MittagsTischRetriever {
     /** {@inheritDoc} */
     @Override
     public Bitmap retrieveEateryPicture(Integer id) throws ApiException {        
+        final byte[] bytes = retrieveEateryPictureBytes(id);
+        return BitmapFactory.decodeByteArray(bytes, 0, bytes.length);        
+    }
+
+    /**
+     * @param id
+     * @return
+     * @throws ApiException
+     */
+    public byte[] retrieveEateryPictureBytes(Integer id) throws ApiException {
         final HttpGet imageGet = new HttpGet(MITTAGSTISCH_API + id + ".jpg");
         final byte[] bytes = retrieveBytes(imageGet);
-        return BitmapFactory.decodeByteArray(bytes, 0, bytes.length);        
+        return bytes;
     }
 
 }

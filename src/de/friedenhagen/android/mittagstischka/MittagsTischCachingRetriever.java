@@ -17,6 +17,7 @@ import org.json.JSONArray;
 import android.app.Application;
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Environment;
 import android.util.Log;
 import de.friedenhagen.android.mittagstischka.MittagsTischHttpRetriever.ApiException;
@@ -26,9 +27,9 @@ import de.friedenhagen.android.mittagstischka.MittagsTischHttpRetriever.ApiExcep
  * 
  */
 public class MittagsTischCachingRetriever implements MittagsTischRetriever {
-    
+
     private static String TAG = MittagsTischCachingRetriever.class.getSimpleName();
-    
+
     public static class NoCacheEntry extends Exception {
     }
 
@@ -41,8 +42,11 @@ public class MittagsTischCachingRetriever implements MittagsTischRetriever {
     public MittagsTischCachingRetriever() {
         httpRetriever = new MittagsTischHttpRetriever();
         hasExternalStorage = Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED);
+        Log.i(TAG, "hasExternalStorage=" + hasExternalStorage);
         if (hasExternalStorage) {
-            storageDirectory = Environment.getExternalStorageDirectory();
+            storageDirectory = new File(Environment.getExternalStorageDirectory(),
+                    MittagsTischCachingRetriever.class.getName());
+            storageDirectory.mkdir();
         } else {
             storageDirectory = null;
         }
@@ -54,7 +58,7 @@ public class MittagsTischCachingRetriever implements MittagsTischRetriever {
         final String filename = "index.txt";
         try {
             final String response = IOUtils.toUtf8String(readFromCache(filename));
-            Log.i(TAG, "Read " + response.length() + " from " + filename);
+            Log.i(TAG, "Read " + response.length() + " bytes from " + filename);
             return httpRetriever.retrieveEateries(response);
         } catch (NoCacheEntry e) {
             final JSONArray eateries = httpRetriever.retrieveEateries();
@@ -73,10 +77,11 @@ public class MittagsTischCachingRetriever implements MittagsTischRetriever {
     private void writeToCache(final String filename, final byte[] bytes) throws ApiException {
         if (hasExternalStorage) {
             final File cacheFile = new File(storageDirectory, filename);
+            Log.d(TAG, "writeToCache: " + cacheFile);
             try {
                 final FileOutputStream stream = new FileOutputStream(cacheFile);
                 try {
-                    
+
                     IOUtils.toOutputStream(stream, bytes);
                 } finally {
                     stream.close();
@@ -98,6 +103,7 @@ public class MittagsTischCachingRetriever implements MittagsTischRetriever {
         if (hasExternalStorage) {
             final File cacheFile = new File(storageDirectory, filename);
             if (cacheFile.exists()) {
+                Log.d(TAG, "readFromCache: " + cacheFile);
                 try {
                     final FileInputStream stream = new FileInputStream(cacheFile);
                     try {
@@ -121,13 +127,29 @@ public class MittagsTischCachingRetriever implements MittagsTischRetriever {
     /** {@inheritDoc} */
     @Override
     public String retrieveEateryContent(Integer id) throws ApiException {
-        return httpRetriever.retrieveEateryContent(id);
+        final String filename = id + ".txt";
+        try {
+            return IOUtils.toUtf8String(readFromCache(filename));
+        } catch (NoCacheEntry e) {
+            final String eateryContent = httpRetriever.retrieveEateryContent(id);
+            writeToCache(filename, IOUtils.toUtf8Bytes(eateryContent));
+            return eateryContent;
+        }
     }
 
     /** {@inheritDoc} */
     @Override
     public Bitmap retrieveEateryPicture(Integer id) throws ApiException {
-        return httpRetriever.retrieveEateryPicture(id);
+        final String filename = id + ".png";
+        byte[] bytes;
+        try {
+            bytes = readFromCache(filename);            
+        } catch (NoCacheEntry e) {
+            bytes = httpRetriever.retrieveEateryPictureBytes(id);
+            writeToCache(filename, bytes);
+        }
+        return BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+        
     }
 
 }
