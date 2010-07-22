@@ -46,6 +46,7 @@
         android:layout_height="wrap_content"
         android:text="Loading ..."
         android:scrollbars="vertical"
+        android:maxLines="1000"
         android:autoLink="web" />
 
 </LinearLayout>
