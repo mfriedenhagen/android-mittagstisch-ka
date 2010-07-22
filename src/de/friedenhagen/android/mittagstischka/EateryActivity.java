@@ -6,7 +6,7 @@ package de.friedenhagen.android.mittagstischka;
 
 import java.net.URI;
 
-import de.friedenhagen.android.mittagstischka.MittagsTischRetriever.ApiException;
+import de.friedenhagen.android.mittagstischka.MittagsTischHttpRetriever.ApiException;
 import de.friedenhagen.android.mittagstischka.model.Eatery;
 import android.app.Activity;
 import android.graphics.Bitmap;
@@ -110,7 +110,7 @@ public class EateryActivity extends Activity implements AnimationListener {
         @Override
         protected String doInBackground(Integer... params) {            
             try {
-                return new MittagsTischRetriever().retrieveEateryContent(params[0]);
+                return getMittagsTischRetriever().retrieveEateryContent(params[0]);
             } catch (ApiException e) {
                 throw new RuntimeException("Message:", e);
             }
@@ -130,11 +130,16 @@ public class EateryActivity extends Activity implements AnimationListener {
         @Override
         protected Bitmap doInBackground(Integer... params) {            
             try {
-                return new MittagsTischRetriever().retrieveEateryPicture(params[0]);
+                return getMittagsTischRetriever().retrieveEateryPicture(params[0]);
             } catch (ApiException e) {
                 throw new RuntimeException("Message:", e);
             }
         }
         
     }
+    
+    MittagsTischRetriever getMittagsTischRetriever() {
+        return new MittagsTischCachingRetriever();
+    }
+
 }

@@ -20,7 +20,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import de.friedenhagen.android.mittagstischka.MittagsTischRetriever.ApiException;
+import de.friedenhagen.android.mittagstischka.MittagsTischHttpRetriever.ApiException;
 import de.friedenhagen.android.mittagstischka.model.Eatery;
 
 public class HomeActivity extends Activity implements AnimationListener {
@@ -109,8 +109,7 @@ public class HomeActivity extends Activity implements AnimationListener {
         protected void onPreExecute() {
             oldTitle = titleView.getText();
             titleBarView.setAnimation(slideInView);
-            titleView.setText(" ...");
-            
+            titleView.setText(" ...");            
         }
         
         /** {@inheritDoc} */
@@ -126,12 +125,11 @@ public class HomeActivity extends Activity implements AnimationListener {
         /** {@inheritDoc} */
         @Override
         protected List<Eatery> doInBackground(Void... arg0) {
-            final MittagsTischRetriever retriever = new MittagsTischRetriever();
             final JSONArray response;
             try {
-                response = retriever.retrieveEateries();
+                response = getMittagsTischRetriever().retrieveEateries();
             } catch (ApiException e) {
-                throw new RuntimeException(TAG + "Error while retrieving data from " + MittagsTischRetriever.MITTAGSTISCH_INDEX, e);
+                throw new RuntimeException(TAG + "Error while retrieving data from " + MittagsTischHttpRetriever.MITTAGSTISCH_INDEX, e);
             }
             return Eatery.fromJsonArray(response);
         }
@@ -147,4 +145,7 @@ public class HomeActivity extends Activity implements AnimationListener {
         startActivity(eateryIntent);
     }
 
+    MittagsTischRetriever getMittagsTischRetriever() {
+        return new MittagsTischCachingRetriever();
+    }
 }

@@ -31,7 +31,7 @@ import android.util.Log;
  * @author mirko
  * 
  */
-public class MittagsTischRetriever {
+public class MittagsTischHttpRetriever implements MittagsTischRetriever {
 
     public static final String MITTAGSTISCH_API = "http://mittagstisch-ka.de/app/";
 
@@ -74,7 +74,7 @@ public class MittagsTischRetriever {
     /**
      * 
      */
-    public MittagsTischRetriever() {
+    public MittagsTischHttpRetriever() {
         httpClient = new DefaultHttpClient();
     }
 
@@ -103,7 +103,7 @@ public class MittagsTischRetriever {
             }
             Log.i("MittagsTischRetriever.retrieve()", String.valueOf(statusLine));
             final HttpEntity entity = response.getEntity();
-            final byte[] byteArray = toByteArray(entity.getContent());
+            final byte[] byteArray = IOUtils.toByteArray(entity.getContent());
             return byteArray;
         } catch (ClientProtocolException e) {
             throw new ApiException("Message:", e);
@@ -112,31 +112,30 @@ public class MittagsTischRetriever {
         }
     }
 
-    private static byte[] toByteArray(final InputStream inputStream) throws IOException {
-        final byte[] sBuffer = new byte[1024];
-        final ByteArrayOutputStream content = new ByteArrayOutputStream();
-        // Read response into a buffered stream
-        int readBytes = 0;
-        while ((readBytes = inputStream.read(sBuffer)) != -1) {
-            content.write(sBuffer, 0, readBytes);
-        }
-        // Return result from buffered stream
-        return content.toByteArray();
-    }
-
+    /** {@inheritDoc} */
+    @Override
     public JSONArray retrieveEateries() throws ApiException {
         final String response = retrieveString(new HttpGet(MITTAGSTISCH_INDEX));
+        return retrieveEateries(response);
+    }
+    
+    /** {@inheritDoc} */
+    public JSONArray retrieveEateries(final String response) throws ApiException {        
         try {
             return new JSONArray(response);
         } catch (JSONException e) {
             throw new ApiException("Could not parse " + response, e);
         }
     }
-
+    
+    /** {@inheritDoc} */
+    @Override
     public String retrieveEateryContent(Integer id) throws ApiException {
         return retrieveString(new HttpGet(MITTAGSTISCH_API + id));
     }
 
+    /** {@inheritDoc} */
+    @Override
     public Bitmap retrieveEateryPicture(Integer id) throws ApiException {        
         final HttpGet imageGet = new HttpGet(MITTAGSTISCH_API + id + ".jpg");
         final byte[] bytes = retrieveBytes(imageGet);
