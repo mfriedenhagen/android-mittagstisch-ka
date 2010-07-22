@@ -14,6 +14,7 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
@@ -59,6 +60,7 @@ public class EateryActivity extends Activity implements AnimationListener {
         titleBarView = findViewById(R.id.eatery_title_bar);
         titleView = (TextView) findViewById(R.id.eatery_title);
         contentView = (TextView) findViewById(R.id.eatery_content);
+        contentView.setMovementMethod(new ScrollingMovementMethod());
         imageView = (ImageView) findViewById(R.id.eatery_image);        
         final Bundle extras = getIntent().getExtras();
         Log.d(TAG, String.valueOf(extras.keySet()));
@@ -101,8 +103,7 @@ public class EateryActivity extends Activity implements AnimationListener {
         /** {@inheritDoc} */
         @Override
         protected void onPostExecute(String result) {
-            contentView.setText(result);
-            contentView.setScrollContainer(true);
+            contentView.setText(result);            
             titleBarView.setAnimation(slideOutView);
             progressBarView.setVisibility(View.INVISIBLE);
         }
