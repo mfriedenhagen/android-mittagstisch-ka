@@ -16,7 +16,7 @@ public class EateryTitleComparator implements Comparator<Eatery> {
     final static EateryTitleComparator INSTANCE = new EateryTitleComparator();
 
     private EateryTitleComparator() {
-
+        // no need for instances
     }
 
     @Override

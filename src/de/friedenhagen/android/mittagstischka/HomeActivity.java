@@ -10,10 +10,13 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -48,6 +51,25 @@ public class HomeActivity extends Activity implements AnimationListener {
         titleBarView = findViewById(R.id.title_bar);
         titleView = (TextView) findViewById(R.id.title);
         eateriesView = (ListView) findViewById(R.id.eateries);
+        eateriesView.setTextFilterEnabled(true);
+        eateriesView.setOnItemClickListener(new OnItemClickListener() {
+
+            
+            /**
+             * {@inheritDoc}
+             */
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                final Intent eateryIntent = new Intent(parent.getContext(), EateryActivity.class);
+                final Eatery eatery = (Eatery)parent.getAdapter().getItem(position);
+                Log.d(TAG, "eatery=" + eatery);
+                eateryIntent.putExtra(Eatery.class.getName(), eatery);                
+                Log.d(TAG, "title=" + eatery.title + ", id=" + eatery.id + ", position=" + position);
+                //eateryIntent.putExtra(Eatery.class.getName(), view.getAdapter())
+                startActivity(eateryIntent);
+                
+            }
+        });
         onNewIntent(getIntent());
     }
 
@@ -107,12 +129,22 @@ public class HomeActivity extends Activity implements AnimationListener {
             final MittagsTischRetriever retriever = new MittagsTischRetriever();
             final JSONArray response;
             try {
-                response = retriever.retrieveLocals();
+                response = retriever.retrieveEateries();
             } catch (ApiException e) {
-                throw new RuntimeException(TAG + "Error while retrieving data from " + MittagsTischRetriever.MITTAGSTISCH_URL, e);
+                throw new RuntimeException(TAG + "Error while retrieving data from " + MittagsTischRetriever.MITTAGSTISCH_INDEX, e);
             }
             return Eatery.fromJsonArray(response);
         }
+    }
+    
+    public void onEateriesClick(final ListView view) {
+        final long selectedItemId = view.getSelectedItemId();
+        final Intent eateryIntent = new Intent(this, EateryActivity.class);
+        Eatery eatery = (Eatery)view.getAdapter().getItem((int)selectedItemId);
+        eateryIntent.putExtra("title", eatery.title);
+        eateryIntent.putExtra("id", eatery.id);
+        //eateryIntent.putExtra(Eatery.class.getName(), view.getAdapter())
+        startActivity(eateryIntent);
     }
 
 }

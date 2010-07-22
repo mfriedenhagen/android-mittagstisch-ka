@@ -41,7 +41,7 @@ public class EateryAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
             convertView = new TextView(parent.getContext());
-            ((TextView)convertView).setText(eateries.get(position).title);            
+            ((TextView)convertView).setText(eateries.get(position).title);          
         }
         return convertView;
     }

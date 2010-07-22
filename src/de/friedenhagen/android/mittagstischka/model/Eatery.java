@@ -4,8 +4,7 @@
 
 package de.friedenhagen.android.mittagstischka.model;
 
-import java.net.MalformedURLException;
-import java.net.URL;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,11 +16,9 @@ import org.json.JSONObject;
  * @author mirko
  *
  */
-public class Eatery {
+public class Eatery implements Serializable {
     
     public final String title;
-    
-//    public final URL homepage;
     
     public final Integer id;
 
@@ -45,7 +42,10 @@ public class Eatery {
 //        }
         
     }
-    
+    @Override
+    public String toString() {        
+        return "Eatery(" + title + ", " + id + ")";
+    }
     public static Eatery fromJsonObject(JSONObject o) {
         return new Eatery(o);
     }

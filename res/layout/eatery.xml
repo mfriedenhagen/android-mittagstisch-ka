@@ -22,6 +22,7 @@
     android:id="@+id/eateryLayout">
 
     <TextView
+        android:id="@+id/eatery_title"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textSize="16sp"
@@ -29,7 +30,7 @@
         android:textColor="?android:attr/textColorPrimaryInverse" />
 
     <TextView
-        android:id="@+id/about_credits"
+        android:id="@+id/eatery_content"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:paddingTop="20dip"
