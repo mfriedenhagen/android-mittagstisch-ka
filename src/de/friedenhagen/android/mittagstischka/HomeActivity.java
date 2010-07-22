@@ -1,5 +1,7 @@
 package de.friedenhagen.android.mittagstischka;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 import org.json.JSONArray;
@@ -92,6 +94,7 @@ public class HomeActivity extends Activity implements AnimationListener {
         /** {@inheritDoc} */
         @Override
         protected void onPostExecute(List<Eatery> eateries) {
+            Collections.sort(eateries, EateryTitleComparator.INSTANCE);
             eateriesView.setAdapter(new EateryAdapter(eateries));
             titleBarView.setAnimation(slideOutView);
             progressBarView.setVisibility(View.INVISIBLE);
