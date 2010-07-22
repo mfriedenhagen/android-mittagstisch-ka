@@ -1,5 +1,9 @@
 package de.friedenhagen.android.mittagstischka;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -14,9 +18,12 @@ import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
 import android.webkit.WebView;
+import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import de.friedenhagen.android.mittagstischka.MittagsTischRetriever.ApiException;
+import de.friedenhagen.android.mittagstischka.model.Eateries;
+import de.friedenhagen.android.mittagstischka.model.Eatery;
 
 public class HomeActivity extends Activity implements AnimationListener {
     
@@ -34,6 +41,8 @@ public class HomeActivity extends Activity implements AnimationListener {
 
     private TextView title;
 
+    private ListView eateriesList;
+
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -45,6 +54,7 @@ public class HomeActivity extends Activity implements AnimationListener {
         progressBar = (ProgressBar) findViewById(R.id.progress);
         titleBar = findViewById(R.id.title_bar);
         title = (TextView) findViewById(R.id.title);
+        eateriesList = (ListView) findViewById(R.id.eateriesList);
         webView = (WebView) findViewById(R.id.webview);
         webView.setBackgroundColor(0);
         onNewIntent(getIntent());
@@ -78,7 +88,7 @@ public class HomeActivity extends Activity implements AnimationListener {
         new LookupTask().execute(null);
     }
     
-    private class LookupTask extends AsyncTask<String, String, String> {
+    private class LookupTask extends AsyncTask<String, String, Eateries> {
         
         /** {@inheritDoc} */
         @Override
@@ -87,16 +97,22 @@ public class HomeActivity extends Activity implements AnimationListener {
         }
         /** {@inheritDoc} */
         @Override
-        protected void onPostExecute(String result) {
+        protected void onPostExecute(Eateries result) {
+            ArrayList<View> list = new ArrayList<View>();
+            for (final Eatery eatery : result.eateryList) {
+                final TextView view = new TextView(HomeActivity.this);
+                view.setTag(eatery.id);
+                view.setText(eatery.title);
+                list.add(view);
+            }
+            eateriesList.addTouchables(list);
             titleBar.setAnimation(slideOut);
             progressBar.setVisibility(View.INVISIBLE);
-            webView.loadDataWithBaseURL(MittagsTischRetriever.MITTAGSTISCH_URL.toString(), result, "text/html",
-                    "utf-8", null);
         }
         
         /** {@inheritDoc} */
         @Override
-        protected String doInBackground(String... arg0) {
+        protected Eateries doInBackground(String... arg0) {
             final MittagsTischRetriever retriever = new MittagsTischRetriever();
             final JSONArray response;
             try {
@@ -104,36 +120,8 @@ public class HomeActivity extends Activity implements AnimationListener {
             } catch (ApiException e) {
                 throw new RuntimeException(TAG + "Error while retrieving data from " + MittagsTischRetriever.MITTAGSTISCH_URL, e);
             }
-            final int length = response.length();
-            Log.i(TAG, "response.length()" + length);
-            final StringBuilder sb = new StringBuilder();
-            sb.append("<html><body>");
-            for (int i = 0; i < length; i++) {
-                Log.d(TAG, "In entry " + i);
-                try {
-                    JSONObject local = response.getJSONObject(i);
-                    final String title = local.getString("title");
-                    final Integer id = local.getInt("id");
-                    //"http://mittagstisch-ka.de/index.php?/archives/459-Hoepfner-Treff-am-Bannwald.html";
-                    String homePage;
-                    try {
-                        homePage = local.getString("homepage");
-                    } catch (JSONException e) {
-                        homePage = "UNKNOWN";
-                    }
-                    Log.d(TAG, title);
-                    Log.d(TAG, homePage);
-                    sb //
-                    .append("<a href=\"").append("http://mittagstisch-ka.de/app/" + id).append("\">") //
-                            .append(title) //
-                            .append("</a><br/>");
-                } catch (JSONException e) {
-                    // TODO Auto-generated catch block
-                    throw new RuntimeException(TAG + "Error parsing " + response, e);
-                }
-            }
-            sb.append("</body></html>");            
-            return sb.toString();
+            final Eateries eateries = Eateries.fromJsonObject(response);
+            return eateries;
         }
     }
 
