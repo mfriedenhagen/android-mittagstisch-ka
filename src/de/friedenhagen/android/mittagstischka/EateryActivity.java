@@ -101,7 +101,7 @@ public class EateryActivity extends Activity implements AnimationListener {
             titleBarView.setAnimation(slideOutView);
             progressBarView.setVisibility(View.INVISIBLE);
             contentView.setText(result);
-            contentView.setMovementMethod(new ScrollingMovementMethod());
+//            contentView.setMovementMethod(new ScrollingMovementMethod());
         }
         
         /** {@inheritDoc} */
