@@ -101,7 +101,8 @@ public class EateryActivity extends Activity implements AnimationListener {
         /** {@inheritDoc} */
         @Override
         protected void onPostExecute(String result) {
-            contentView.setText(result);            
+            contentView.setText(result);
+            contentView.setScrollContainer(true);
             titleBarView.setAnimation(slideOutView);
             progressBarView.setVisibility(View.INVISIBLE);
         }

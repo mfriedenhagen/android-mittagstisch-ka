@@ -9,8 +9,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:padding="20dip">
+    android:orientation="vertical" >
     <LinearLayout
         android:id="@+id/eatery_title_bar"
         android:layout_width="fill_parent"
@@ -38,7 +37,7 @@
             android:id="@+id/eatery_title"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textScaleX="1.5"
+            android:textScaleX="2.0"
             android:text="Eatery" />
     </LinearLayout>
     <TextView
@@ -46,6 +45,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:text="Loading ..."
+        android:scrollbars="vertical"
         android:autoLink="web" />
 
 </LinearLayout>
