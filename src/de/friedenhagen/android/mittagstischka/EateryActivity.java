@@ -39,8 +39,6 @@ public class EateryActivity extends Activity {
 
     private TextView contentView;
 
-    private View titleBarView;
-
     private ImageView imageView;
 
     private Eatery eatery;
@@ -56,12 +54,10 @@ public class EateryActivity extends Activity {
         eatery = (Eatery) extras.getSerializable(NAME);
         Log.i(TAG, "eatery:" + eatery);
         assert eatery != null;
-        // progressBarView = (ProgressBar) findViewById(R.id.eatery_progress);
-        titleBarView = findViewById(R.id.eatery_title_bar);
         titleView = (TextView) findViewById(R.id.eatery_title);
         contentView = (TextView) findViewById(R.id.eatery_content);
         imageView = (ImageView) findViewById(R.id.eatery_image);
-        ImageButton homePageButton = (ImageButton) findViewById(R.id.eatery_button_homepage);
+        final ImageButton homePageButton = (ImageButton) findViewById(R.id.eatery_button_homepage);
         if (eatery.homepage == null) {
             homePageButton.setEnabled(false);
         }
