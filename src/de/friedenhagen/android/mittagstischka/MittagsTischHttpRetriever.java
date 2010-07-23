@@ -112,7 +112,9 @@ public class MittagsTischHttpRetriever implements MittagsTischRetriever {
         }
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public JSONArray retrieveEateries() throws ApiException {
         final String response = retrieveString(new HttpGet(MITTAGSTISCH_INDEX));
@@ -128,13 +130,17 @@ public class MittagsTischHttpRetriever implements MittagsTischRetriever {
         }
     }
     
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public String retrieveEateryContent(Integer id) throws ApiException {
         return retrieveString(new HttpGet(MITTAGSTISCH_API + id));
     }
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public Bitmap retrieveEateryPicture(Integer id) throws ApiException {        
         final byte[] bytes = retrieveEateryPictureBytes(id);
