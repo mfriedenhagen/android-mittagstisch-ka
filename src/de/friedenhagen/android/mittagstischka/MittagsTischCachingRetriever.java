@@ -55,7 +55,7 @@ public class MittagsTischCachingRetriever implements MittagsTischRetriever {
     /** {@inheritDoc} */
     @Override
     public JSONArray retrieveEateries() throws ApiException {
-        final String filename = "index.txt";
+        final String filename = "index";
         try {
             final String response = IOUtils.toUtf8String(readFromCache(filename));
             Log.i(TAG, "Read " + response.length() + " bytes from " + filename);
@@ -82,7 +82,7 @@ public class MittagsTischCachingRetriever implements MittagsTischRetriever {
                 final FileOutputStream stream = new FileOutputStream(cacheFile);
                 try {
 
-                    IOUtils.toOutputStream(stream, bytes);
+                    IOUtils.write(bytes, stream);
                 } finally {
                     stream.close();
                 }
@@ -127,7 +127,7 @@ public class MittagsTischCachingRetriever implements MittagsTischRetriever {
     /** {@inheritDoc} */
     @Override
     public String retrieveEateryContent(Integer id) throws ApiException {
-        final String filename = id + ".txt";
+        final String filename = String.valueOf(id);
         try {
             return IOUtils.toUtf8String(readFromCache(filename));
         } catch (NoCacheEntry e) {
@@ -140,7 +140,7 @@ public class MittagsTischCachingRetriever implements MittagsTischRetriever {
     /** {@inheritDoc} */
     @Override
     public Bitmap retrieveEateryPicture(Integer id) throws ApiException {
-        final String filename = id + ".png";
+        final String filename = String.valueOf(id) + ".png";
         byte[] bytes;
         try {
             bytes = readFromCache(filename);            
