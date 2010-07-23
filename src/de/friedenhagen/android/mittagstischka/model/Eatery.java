@@ -22,10 +22,16 @@ public class Eatery implements Serializable {
     
     public final Integer id;
 
+    public final Double latitude;
+    
+    public final Double longitude;
+    
     public Eatery(JSONObject o) {
         try {
             title = o.getString("title");
             id = o.getInt("id");
+            latitude = o.getDouble("lat");
+            longitude = o.getDouble("long");
         } catch (JSONException e) {
             throw new RuntimeException("Message:", e);
         }
