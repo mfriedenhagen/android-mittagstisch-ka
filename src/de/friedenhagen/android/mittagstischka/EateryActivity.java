@@ -4,8 +4,12 @@
 
 package de.friedenhagen.android.mittagstischka;
 
+import java.util.Locale;
+
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
@@ -38,22 +42,24 @@ public class EateryActivity extends Activity {
 
     private ImageView imageView;
 
+    private Eatery eatery;
+
     /** {@inheritDoc} */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.eatery);
+        final Bundle extras = getIntent().getExtras();
+        Log.d(TAG, String.valueOf(extras.keySet()));
+        Log.d(TAG, "isinbundle:" + extras.containsKey(NAME));
+        eatery = (Eatery) extras.getSerializable(NAME);
+        Log.i(TAG, "eatery:" + eatery);
+        assert eatery != null;
         // progressBarView = (ProgressBar) findViewById(R.id.eatery_progress);
         titleBarView = findViewById(R.id.eatery_title_bar);
         titleView = (TextView) findViewById(R.id.eatery_title);
         contentView = (TextView) findViewById(R.id.eatery_content);
         imageView = (ImageView) findViewById(R.id.eatery_image);
-        final Bundle extras = getIntent().getExtras();
-        Log.d(TAG, String.valueOf(extras.keySet()));
-        Log.d(TAG, "isinbundle:" + extras.containsKey(NAME));
-        final Eatery eatery = (Eatery) extras.getSerializable(NAME);
-        Log.i(TAG, "eatery:" + eatery);
-        assert eatery != null;
         titleView.setText(eatery.title);
         new GetContentTask().execute(eatery.id);
         new GetImageTask().execute(eatery.id);
@@ -65,7 +71,7 @@ public class EateryActivity extends Activity {
         @Override
         protected void onPostExecute(String result) {
             contentView.setText(result);
-            // contentView.setMovementMethod(new ScrollingMovementMethod());
+            contentView.setMovementMethod(new ScrollingMovementMethod());
         }
 
         /** {@inheritDoc} */
@@ -104,4 +110,11 @@ public class EateryActivity extends Activity {
         return new MittagsTischCachingRetriever();
     }
 
+    public void onClickGotoMap(final View clickedButton) {
+        final String uriString = String.format(Locale.ENGLISH, "geo:%s,%s?z=19", eatery.longitude, eatery.latitude);
+        final Uri uri = Uri.parse(uriString);
+        final Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(uri);
+        startActivity(intent);
+    }
 }

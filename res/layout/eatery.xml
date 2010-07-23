@@ -37,22 +37,26 @@
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-            <Button
+            <ImageButton
                 android:id="@+id/eatery_button_homepage"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:text="Homepage" />
-            <Button
+                android:text="Homepage"
+                android:src="@android:drawable/btn_star" 
+                />
+            <ImageButton
                 android:id="@+id/eatery_button_map"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:text="Map" />
+                android:text="Map"
+                android:src="@android:drawable/ic_menu_compass"
+                android:onClick="onClickGotoMap"/>
         </TableRow>
     </TableLayout>
     <TextView
         android:id="@+id/eatery_content"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="fill_parent"
         android:text="Loading ..."
         android:scrollbars="vertical"
         android:maxLines="1000"
