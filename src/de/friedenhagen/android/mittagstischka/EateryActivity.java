@@ -18,6 +18,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -60,6 +61,10 @@ public class EateryActivity extends Activity {
         titleView = (TextView) findViewById(R.id.eatery_title);
         contentView = (TextView) findViewById(R.id.eatery_content);
         imageView = (ImageView) findViewById(R.id.eatery_image);
+        ImageButton homePageButton = (ImageButton) findViewById(R.id.eatery_button_homepage);
+        if (eatery.homepage == null) {
+            homePageButton.setEnabled(false);
+        }
         titleView.setText(eatery.title);
         new GetContentTask().execute(eatery.id);
         new GetImageTask().execute(eatery.id);
@@ -111,10 +116,17 @@ public class EateryActivity extends Activity {
     }
 
     public void onClickGotoMap(final View clickedButton) {
-        final String uriString = String.format(Locale.ENGLISH, "geo:%s,%s?z=19", eatery.longitude, eatery.latitude);
+        final String uriString = String.format(Locale.ENGLISH, "geo:%s,%s?z=19", eatery.latitude, eatery.longitude);
         final Uri uri = Uri.parse(uriString);
         final Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(uri);
         startActivity(intent);
     }
+    public void onClickGotoHomepage(final View clickedButton) {        
+        final Uri uri = Uri.parse(eatery.homepage);
+        final Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(uri);
+        startActivity(intent);
+    }
+
 }

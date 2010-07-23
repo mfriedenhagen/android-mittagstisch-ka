@@ -26,12 +26,19 @@ public class Eatery implements Serializable {
     
     public final Double longitude;
     
+    public final String homepage;
+    
     public Eatery(JSONObject o) {
         try {
             title = o.getString("title");
             id = o.getInt("id");
             latitude = o.getDouble("lat");
             longitude = o.getDouble("long");
+            if (o.has("homepage")) {
+                homepage = o.getString("homepage");
+            } else {
+                homepage = null;
+            }
         } catch (JSONException e) {
             throw new RuntimeException("Message:", e);
         }

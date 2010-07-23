@@ -42,8 +42,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:text="Homepage"
-                android:src="@android:drawable/btn_star" 
-                />
+                android:src="@android:drawable/btn_star"
+                android:onClick="onClickGotoHomepage"/>
             <ImageButton
                 android:id="@+id/eatery_button_map"
                 android:layout_width="fill_parent"
