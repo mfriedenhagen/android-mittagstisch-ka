@@ -29,5 +29,7 @@
     <ListView
         android:id="@+id/main_eateries"
         android:layout_width="fill_parent" 
-        android:layout_height="fill_parent" />
+        android:layout_height="fill_parent"
+        android:choiceMode="singleChoice"
+        android:padding="10dip"/>
 </LinearLayout>
