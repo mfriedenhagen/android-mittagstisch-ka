@@ -4,13 +4,13 @@
 
 package de.friedenhagen.android.mittagstischka;
 
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.Arrays;
 
+import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
@@ -24,7 +24,6 @@ import org.json.JSONException;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.util.Log;
 
 /**
@@ -34,6 +33,10 @@ import android.util.Log;
 public class MittagsTischHttpRetriever implements MittagsTischRetriever {
 
     public static final String MITTAGSTISCH_API = "http://mittagstisch-ka.de/app/";
+    
+    public static final String TAG = MittagsTischHttpRetriever.class.getSimpleName();
+    
+    public String etag;
 
     /**
      * Thrown when there were problems contacting the remote API server, either because of a network error, or the
@@ -98,6 +101,9 @@ public class MittagsTischHttpRetriever implements MittagsTischRetriever {
             final HttpResponse response;
             response = httpClient.execute(whatToGet);
             final StatusLine statusLine = response.getStatusLine();
+            final Header[] etags = response.getHeaders("ETag");
+            Log.i(TAG, "ETags=" + Arrays.toString(etags));
+            etag = etags[0].getValue();
             if (statusLine.getStatusCode() != HttpStatus.SC_OK) {
                 throw new ApiException("Status-Line:" + statusLine);
             }
@@ -110,6 +116,13 @@ public class MittagsTischHttpRetriever implements MittagsTischRetriever {
         } catch (IOException e) {
             throw new ApiException("Message:", e);
         }
+    }
+
+    /**
+     * @return the etag
+     */
+    public String getEtag() {
+        return etag;
     }
 
     /**

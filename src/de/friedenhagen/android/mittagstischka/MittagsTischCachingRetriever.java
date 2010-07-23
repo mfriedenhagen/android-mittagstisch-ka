@@ -63,10 +63,20 @@ public class MittagsTischCachingRetriever implements MittagsTischRetriever {
         } catch (NoCacheEntry e) {
             final JSONArray eateries = httpRetriever.retrieveEateries();
             final byte[] bytes = IOUtils.toUtf8Bytes(eateries.toString());
-            writeToCache(filename, bytes);
+            writeToCacheWithEtag(filename, bytes);
             Log.i(TAG, "Wrote " + bytes.length + " bytes to " + filename);
             return eateries;
         }
+    }
+
+    /**
+     * @param filename
+     * @param bytes
+     * @throws ApiException
+     */
+    public void writeToCacheWithEtag(final String filename, final byte[] bytes) throws ApiException {
+        writeToCache(filename, bytes);
+        writeToCache(filename + ".etag", IOUtils.toUtf8Bytes(httpRetriever.getEtag()));
     }
 
     /**
@@ -132,7 +142,7 @@ public class MittagsTischCachingRetriever implements MittagsTischRetriever {
             return IOUtils.toUtf8String(readFromCache(filename));
         } catch (NoCacheEntry e) {
             final String eateryContent = httpRetriever.retrieveEateryContent(id);
-            writeToCache(filename, IOUtils.toUtf8Bytes(eateryContent));
+            writeToCacheWithEtag(filename, IOUtils.toUtf8Bytes(eateryContent));
             return eateryContent;
         }
     }
@@ -146,7 +156,7 @@ public class MittagsTischCachingRetriever implements MittagsTischRetriever {
             bytes = readFromCache(filename);            
         } catch (NoCacheEntry e) {
             bytes = httpRetriever.retrieveEateryPictureBytes(id);
-            writeToCache(filename, bytes);
+            writeToCacheWithEtag(filename, bytes);
         }
         return BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
         
