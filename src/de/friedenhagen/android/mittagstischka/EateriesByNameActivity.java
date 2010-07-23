@@ -1,6 +1,5 @@
 package de.friedenhagen.android.mittagstischka;
 
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -23,9 +22,9 @@ import android.widget.TextView;
 import de.friedenhagen.android.mittagstischka.MittagsTischHttpRetriever.ApiException;
 import de.friedenhagen.android.mittagstischka.model.Eatery;
 
-public class HomeActivity extends Activity implements AnimationListener {
+public class EateriesByNameActivity extends Activity implements AnimationListener {
     
-    private static final String TAG = HomeActivity.class.getSimpleName();
+    private static final String TAG = EateriesByNameActivity.class.getSimpleName();
     
     private Animation slideInView;
 
@@ -43,7 +42,7 @@ public class HomeActivity extends Activity implements AnimationListener {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.eateries_by_name);
         slideInView = AnimationUtils.loadAnimation(this, R.anim.slide_in);
         slideOutView = AnimationUtils.loadAnimation(this, R.anim.slide_out);
         slideInView.setAnimationListener(this);
