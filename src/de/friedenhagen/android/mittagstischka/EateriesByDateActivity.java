@@ -4,10 +4,9 @@
 
 package de.friedenhagen.android.mittagstischka;
 
-import de.friedenhagen.android.mittagstischka.model.EateryDateComparator;
 import android.app.ListActivity;
 import android.os.Bundle;
-import android.util.Log;
+import de.friedenhagen.android.mittagstischka.model.EateryDateComparator;
 
 /**
  * @author mirko

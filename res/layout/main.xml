@@ -19,5 +19,15 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:padding="5dp" />
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="18dip"
+            android:layout_height="18dip"
+            android:layout_marginLeft="10dip"
+            android:visibility="invisible"
+            android:indeterminateOnly="true"
+            android:indeterminateDrawable="@drawable/progress_spin"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateDuration="3500" />
     </LinearLayout>
 </TabHost>

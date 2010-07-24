@@ -42,7 +42,8 @@ public class EateryAdapter extends BaseAdapter {
         if (convertView == null) {
             convertView = new TextView(parent.getContext());                      
         }
-        ((TextView)convertView).setText(eateries.get(position).title);
+        final Eatery eatery = eateries.get(position);
+        ((TextView)convertView).setText(eatery.title + "\n" + eatery.date);
         return convertView;
     }
 }
