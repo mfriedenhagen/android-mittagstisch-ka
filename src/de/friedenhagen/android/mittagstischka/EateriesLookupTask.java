@@ -25,15 +25,13 @@ class EateriesLookupTask extends AsyncTask<Void, String, List<Eatery>> {
     private final MittagsTischRetriever retriever;
     private final Comparator<Eatery> comparator;
     private final CharSequence oldTitle;
-    private final boolean revert;
-
+    
     /**
      * @param eateriesByNameActivity
      */
     EateriesLookupTask(final ListActivity listActivity, final MittagsTischRetriever retriever, final Comparator<Eatery> comparator, final boolean revert) {
         this.listActivity = listActivity;
         this.retriever = retriever;
-        this.revert = revert;
         this.oldTitle = listActivity.getTitle();
         if (revert) {
             this.comparator = Collections.reverseOrder(comparator);
