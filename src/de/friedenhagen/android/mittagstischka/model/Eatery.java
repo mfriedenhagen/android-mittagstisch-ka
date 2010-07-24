@@ -5,7 +5,10 @@
 package de.friedenhagen.android.mittagstischka.model;
 
 import java.io.Serializable;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import org.json.JSONArray;
@@ -28,6 +31,8 @@ public class Eatery implements Serializable {
     
     public final String homepage;
     
+    public final Date date;
+    
     public Eatery(JSONObject o) {
         try {
             title = o.getString("title");
@@ -39,7 +44,13 @@ public class Eatery implements Serializable {
             } else {
                 homepage = null;
             }
+            final String dateAsString = o.getString("date");
+            final SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
+            date = format.parse(dateAsString);            
         } catch (JSONException e) {
+            throw new RuntimeException("Message:", e);
+        } catch (ParseException e) {
+            // TODO Auto-generated catch block
             throw new RuntimeException("Message:", e);
         }
     }

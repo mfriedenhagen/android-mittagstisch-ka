@@ -4,15 +4,17 @@
 
 package de.friedenhagen.android.mittagstischka;
 
+import de.friedenhagen.android.mittagstischka.model.EateryDateComparator;
 import android.app.ListActivity;
 import android.os.Bundle;
-import de.friedenhagen.android.mittagstischka.model.EateryTitleComparator;
+import android.util.Log;
 
 /**
  * @author mirko
  *
  */
-public class EateriesByNameActivity extends ListActivity {
+public class EateriesByDateActivity extends ListActivity {
+        
     
     /** {@inheritDoc} */
     @Override
@@ -20,7 +22,7 @@ public class EateriesByNameActivity extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(getListView());
         getListView().setOnItemClickListener(new EateriesOnItemClickListener(this));
-        new EateriesLookupTask(this, new MittagsTischCachingRetriever(), EateryTitleComparator.INSTANCE, false).execute((Void)null);
+        new EateriesLookupTask(this, new MittagsTischCachingRetriever(), EateryDateComparator.INSTANCE, true).execute((Void)null);
     }
 
 }

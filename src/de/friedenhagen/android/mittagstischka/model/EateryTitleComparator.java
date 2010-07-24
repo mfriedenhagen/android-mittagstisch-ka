@@ -5,15 +5,14 @@
  * 
  * $Id$
  */
-package de.friedenhagen.android.mittagstischka;
+package de.friedenhagen.android.mittagstischka.model;
 
 import java.util.Comparator;
 
-import de.friedenhagen.android.mittagstischka.model.Eatery;
 
 public class EateryTitleComparator implements Comparator<Eatery> {
 
-    final static EateryTitleComparator INSTANCE = new EateryTitleComparator();
+    public final static EateryTitleComparator INSTANCE = new EateryTitleComparator();
 
     private EateryTitleComparator() {
         // no need for instances

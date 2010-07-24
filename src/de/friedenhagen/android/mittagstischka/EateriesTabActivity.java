@@ -26,7 +26,7 @@ public class EateriesTabActivity extends TabActivity {
         setContentView(R.layout.main);
         tabHost = getTabHost();
         addSpec("eateries_by_name", "A-Z", EateriesByNameActivity.class);
-        addSpec("eateries_by_date", "Datum", EateriesByNameActivity.class);
+        addSpec("eateries_by_date", "Datum", EateriesByDateActivity.class);
         tabHost.setCurrentTabByTag("eateries_by_name");
     }
 
