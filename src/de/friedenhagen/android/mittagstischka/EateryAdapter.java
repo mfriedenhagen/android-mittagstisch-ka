@@ -7,6 +7,7 @@
  */
 package de.friedenhagen.android.mittagstischka;
 
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 import android.view.View;
@@ -43,7 +44,8 @@ public class EateryAdapter extends BaseAdapter {
             convertView = new TextView(parent.getContext());                      
         }
         final Eatery eatery = eateries.get(position);
-        ((TextView)convertView).setText(eatery.title + "\n" + eatery.date);
+        final SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
+        ((TextView)convertView).setText(eatery.title + "\n" + format.format(eatery.date));
         return convertView;
     }
 }
