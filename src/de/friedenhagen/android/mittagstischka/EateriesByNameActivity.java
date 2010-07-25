@@ -7,7 +7,7 @@ package de.friedenhagen.android.mittagstischka;
 import android.app.ListActivity;
 import android.os.Bundle;
 import de.friedenhagen.android.mittagstischka.model.EateryTitleComparator;
-import de.friedenhagen.android.mittagstischka.retrievers.MittagsTischCachingRetriever;
+import de.friedenhagen.android.mittagstischka.retrievers.CachingRetriever;
 
 /**
  * @author mirko
@@ -21,7 +21,7 @@ public class EateriesByNameActivity extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(getListView());
         getListView().setOnItemClickListener(new EateriesOnItemClickListener(this));
-        new EateriesLookupTask(this, new MittagsTischCachingRetriever(), EateryTitleComparator.INSTANCE, false).execute((Void)null);
+        new EateriesLookupTask(this, new CachingRetriever(), EateryTitleComparator.INSTANCE, false).execute((Void)null);
     }
 
 }

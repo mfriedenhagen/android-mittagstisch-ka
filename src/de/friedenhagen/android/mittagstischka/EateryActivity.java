@@ -19,9 +19,9 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import de.friedenhagen.android.mittagstischka.model.Eatery;
-import de.friedenhagen.android.mittagstischka.retrievers.MittagsTischCachingRetriever;
-import de.friedenhagen.android.mittagstischka.retrievers.MittagsTischRetriever;
-import de.friedenhagen.android.mittagstischka.retrievers.MittagsTischHttpRetriever.ApiException;
+import de.friedenhagen.android.mittagstischka.retrievers.ApiException;
+import de.friedenhagen.android.mittagstischka.retrievers.CachingRetriever;
+import de.friedenhagen.android.mittagstischka.retrievers.Retriever;
 
 /**
  * @author mirko
@@ -105,8 +105,8 @@ public class EateryActivity extends Activity {
 
     }
 
-    MittagsTischRetriever getMittagsTischRetriever() {
-        return new MittagsTischCachingRetriever();
+    Retriever getMittagsTischRetriever() {
+        return new CachingRetriever();
     }
 
     public void onClickGotoMap(final View clickedButton) {

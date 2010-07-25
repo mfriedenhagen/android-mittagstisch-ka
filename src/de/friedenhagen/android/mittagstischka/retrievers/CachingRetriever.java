@@ -16,33 +16,31 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Environment;
 import android.util.Log;
-import de.friedenhagen.android.mittagstischka.IOUtils;
-import de.friedenhagen.android.mittagstischka.retrievers.MittagsTischHttpRetriever.ApiException;
 
 /**
  * @author mirko
  * 
  */
-public class MittagsTischCachingRetriever implements MittagsTischRetriever {
+public class CachingRetriever implements Retriever {
 
-    private static String TAG = MittagsTischCachingRetriever.class.getSimpleName();
+    private static String TAG = CachingRetriever.class.getSimpleName();
 
     public static class NoCacheEntry extends Exception {
     }
 
-    private final MittagsTischHttpRetriever httpRetriever;
+    private final HttpRetriever httpRetriever;
 
     private final boolean hasExternalStorage;
 
     private final File storageDirectory;
 
-    public MittagsTischCachingRetriever() {
-        httpRetriever = new MittagsTischHttpRetriever();
+    public CachingRetriever() {
+        httpRetriever = new HttpRetriever();
         hasExternalStorage = Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED);
         Log.i(TAG, "hasExternalStorage=" + hasExternalStorage);
         if (hasExternalStorage) {
             storageDirectory = new File(Environment.getExternalStorageDirectory(),
-                    MittagsTischCachingRetriever.class.getName());
+                    CachingRetriever.class.getName());
             storageDirectory.mkdir();
         } else {
             storageDirectory = null;

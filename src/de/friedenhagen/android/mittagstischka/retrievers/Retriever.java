@@ -10,9 +10,8 @@ package de.friedenhagen.android.mittagstischka.retrievers;
 import org.json.JSONArray;
 
 import android.graphics.Bitmap;
-import de.friedenhagen.android.mittagstischka.retrievers.MittagsTischHttpRetriever.ApiException;
 
-public interface MittagsTischRetriever {
+public interface Retriever {
 
     /** {@inheritDoc} */
     public abstract JSONArray retrieveEateries() throws ApiException;

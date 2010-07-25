@@ -2,7 +2,7 @@
  * Copyright 2010 Mirko Friedenhagen 
  */
 
-package de.friedenhagen.android.mittagstischka;
+package de.friedenhagen.android.mittagstischka.retrievers;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

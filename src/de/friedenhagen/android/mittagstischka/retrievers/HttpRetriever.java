@@ -22,7 +22,6 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONArray;
 import org.json.JSONException;
 
-import de.friedenhagen.android.mittagstischka.IOUtils;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -32,37 +31,13 @@ import android.util.Log;
  * @author mirko
  * 
  */
-public class MittagsTischHttpRetriever implements MittagsTischRetriever {
+public class HttpRetriever implements Retriever {
 
     public static final String MITTAGSTISCH_API = "http://mittagstisch-ka.de/app/";
     
-    public static final String TAG = MittagsTischHttpRetriever.class.getSimpleName();
+    public static final String TAG = HttpRetriever.class.getSimpleName();
     
     public String etag;
-
-    /**
-     * Thrown when there were problems contacting the remote API server, either because of a network error, or the
-     * server returned a bad status code.
-     */
-    public static class ApiException extends Exception {
-        public ApiException(String detailMessage, Throwable throwable) {
-            super(detailMessage, throwable);
-        }
-
-        public ApiException(String detailMessage) {
-            super(detailMessage);
-        }
-    }
-
-    /**
-     * Thrown when there were problems parsing the response to an API call, either because the response was empty, or it
-     * was malformed.
-     */
-    public static class ParseException extends Exception {
-        public ParseException(String detailMessage, Throwable throwable) {
-            super(detailMessage, throwable);
-        }
-    }
 
     public final static URI MITTAGSTISCH_INDEX;
 
@@ -79,7 +54,7 @@ public class MittagsTischHttpRetriever implements MittagsTischRetriever {
     /**
      * 
      */
-    public MittagsTischHttpRetriever() {
+    public HttpRetriever() {
         httpClient = new DefaultHttpClient();
     }
 

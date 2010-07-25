@@ -15,9 +15,9 @@ import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.view.View;
 import de.friedenhagen.android.mittagstischka.model.Eatery;
-import de.friedenhagen.android.mittagstischka.retrievers.MittagsTischHttpRetriever;
-import de.friedenhagen.android.mittagstischka.retrievers.MittagsTischRetriever;
-import de.friedenhagen.android.mittagstischka.retrievers.MittagsTischHttpRetriever.ApiException;
+import de.friedenhagen.android.mittagstischka.retrievers.ApiException;
+import de.friedenhagen.android.mittagstischka.retrievers.HttpRetriever;
+import de.friedenhagen.android.mittagstischka.retrievers.Retriever;
 
 class EateriesLookupTask extends AsyncTask<Void, String, List<Eatery>> {
     
@@ -27,7 +27,7 @@ class EateriesLookupTask extends AsyncTask<Void, String, List<Eatery>> {
      * 
      */
     private final ListActivity listActivity;
-    private final MittagsTischRetriever retriever;
+    private final Retriever retriever;
     private final Comparator<Eatery> comparator;
     private final CharSequence oldTitle;
     private ProgressDialog progressDialog;
@@ -35,7 +35,7 @@ class EateriesLookupTask extends AsyncTask<Void, String, List<Eatery>> {
     /**
      * @param eateriesByNameActivity
      */
-    EateriesLookupTask(final ListActivity listActivity, final MittagsTischRetriever retriever, final Comparator<Eatery> comparator, final boolean revert) {
+    EateriesLookupTask(final ListActivity listActivity, final Retriever retriever, final Comparator<Eatery> comparator, final boolean revert) {
         this.listActivity = listActivity;
         this.retriever = retriever;
         this.oldTitle = listActivity.getTitle();
@@ -70,7 +70,7 @@ class EateriesLookupTask extends AsyncTask<Void, String, List<Eatery>> {
         try {
             response = retriever.retrieveEateries();
         } catch (ApiException e) {
-            throw new RuntimeException(TAG + "Error while retrieving data from " + MittagsTischHttpRetriever.MITTAGSTISCH_INDEX, e);
+            throw new RuntimeException(TAG + "Error while retrieving data from " + HttpRetriever.MITTAGSTISCH_INDEX, e);
         }
         return Eatery.fromJsonArray(response);
     }
