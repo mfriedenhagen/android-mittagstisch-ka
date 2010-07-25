@@ -14,17 +14,20 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:padding="10dip"
+        android:layout_margin="10dip"
+        android:layout_gravity="center_horizontal"
         android:orientation="horizontal">
         <ImageView
             android:id="@+id/eatery_image"
             android:layout_width="54dip"
             android:layout_height="54dip"
+            android:layout_margin="10dip"
             android:visibility="visible" />
         <ImageButton
             android:id="@+id/eatery_button_homepage"
             android:layout_width="54dip"
             android:layout_height="54dip"
+            android:layout_margin="10dip"
             android:text="Homepage"
             android:src="@android:drawable/btn_star"
             android:onClick="onClickGotoHomepage" />
@@ -32,6 +35,7 @@
             android:id="@+id/eatery_button_map"
             android:layout_width="54dip"
             android:layout_height="54dip"
+            android:layout_margin="10dip"
             android:text="Map"
             android:src="@android:drawable/ic_menu_compass"
             android:onClick="onClickGotoMap" />
@@ -45,7 +49,7 @@
             android:layout_height="fill_parent"
             android:text="Loading ..."
             android:scrollbars="vertical"
-            android:maxLines="1000"
-            android:autoLink="web" />
+            android:scrollbarStyle="outsideOverlay"
+            android:autoLink="all" />
     </ScrollView>
 </LinearLayout>
