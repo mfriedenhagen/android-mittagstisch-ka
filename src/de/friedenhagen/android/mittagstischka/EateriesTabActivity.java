@@ -27,6 +27,7 @@ public class EateriesTabActivity extends TabActivity {
         tabHost = getTabHost();
         addSpec("eateries_by_name", "A-Z", EateriesByNameActivity.class);
         addSpec("eateries_by_date", "Datum", EateriesByDateActivity.class);
+//        addSpec("eateries_by_distance", "Entfernung", EateriesByDistanceActivity.class);
         tabHost.setCurrentTabByTag("eateries_by_name");
     }
 

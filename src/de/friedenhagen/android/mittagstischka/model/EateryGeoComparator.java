@@ -12,13 +12,13 @@ import java.util.Comparator;
  */
 public class EateryGeoComparator implements Comparator<Eatery> {
 
-    private final long latitude;
+    private final double latitude;
     
-    private final long longitude;
+    private final double longitude;
     /**
      * 
      */
-    public EateryGeoComparator(final long latitude, final long longitude) {
+    public EateryGeoComparator(final double latitude, final double longitude) {
         this.latitude = latitude;
         this.longitude = longitude;
     }

@@ -19,7 +19,7 @@
         <ImageView
             android:id="@+id/eatery_image"
             android:layout_width="54dip"
-            android:layout_height="54dip"            
+            android:layout_height="54dip"
             android:visibility="visible" />
         <ImageButton
             android:id="@+id/eatery_button_homepage"
@@ -36,12 +36,16 @@
             android:src="@android:drawable/ic_menu_compass"
             android:onClick="onClickGotoMap" />
     </LinearLayout>
-    <TextView
-        android:id="@+id/eatery_content"
+    <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:text="Loading ..."
-        android:scrollbars="vertical"
-        android:maxLines="1000"
-        android:autoLink="web" />
+        android:layout_height="fill_parent">
+        <TextView
+            android:id="@+id/eatery_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="Loading ..."
+            android:scrollbars="vertical"
+            android:maxLines="1000"
+            android:autoLink="web" />
+    </ScrollView>
 </LinearLayout>

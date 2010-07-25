@@ -70,7 +70,7 @@ public class EateryActivity extends Activity {
         @Override
         protected void onPostExecute(String result) {
             contentView.setText(result);
-            contentView.setMovementMethod(new ScrollingMovementMethod());
+            //contentView.setMovementMethod(new ScrollingMovementMethod());
         }
 
         /** {@inheritDoc} */
