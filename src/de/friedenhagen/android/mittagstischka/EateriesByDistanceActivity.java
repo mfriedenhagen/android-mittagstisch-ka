@@ -4,28 +4,25 @@
 
 package de.friedenhagen.android.mittagstischka;
 
-import android.app.ListActivity;
+import java.util.Comparator;
+
 import android.location.Location;
 import android.location.LocationManager;
-import android.os.Bundle;
+import de.friedenhagen.android.mittagstischka.model.Eatery;
 import de.friedenhagen.android.mittagstischka.model.EateryGeoComparator;
-import de.friedenhagen.android.mittagstischka.retrievers.CachingRetriever;
 
 /**
  * @author mirko
  *
  */
-public class EateriesByDistanceActivity extends ListActivity {
+public class EateriesByDistanceActivity extends EateriesByAbstractActivity {
     
     /** {@inheritDoc} */
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.eateries_list);
-        getListView().setOnItemClickListener(new EateriesOnItemClickListener(this));
+    protected Comparator<Eatery> getComparator() {
         final LocationManager locationService = (LocationManager) getSystemService(LOCATION_SERVICE);
         final Location location = locationService.getLastKnownLocation(LocationManager.GPS_PROVIDER);        
-        new EateriesLookupTask(this, new CachingRetriever(), new EateryGeoComparator(location.getLatitude(), location.getLongitude()), false).execute((Void)null);
+        return new EateryGeoComparator(location.getLatitude(), location.getLongitude());
     }
 
 }
