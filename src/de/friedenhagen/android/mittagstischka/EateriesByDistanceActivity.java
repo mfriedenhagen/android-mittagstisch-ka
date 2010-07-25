@@ -21,7 +21,7 @@ public class EateriesByDistanceActivity extends ListActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(getListView());
+        setContentView(R.layout.eateries_list);
         getListView().setOnItemClickListener(new EateriesOnItemClickListener(this));
         final LocationManager locationService = (LocationManager) getSystemService(LOCATION_SERVICE);
         final Location location = locationService.getLastKnownLocation(LocationManager.GPS_PROVIDER);        

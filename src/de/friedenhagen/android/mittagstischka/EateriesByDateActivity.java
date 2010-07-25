@@ -20,7 +20,7 @@ public class EateriesByDateActivity extends ListActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(getListView());
+        setContentView(R.layout.eateries_list);
         getListView().setOnItemClickListener(new EateriesOnItemClickListener(this));
         new EateriesLookupTask(this, new CachingRetriever(), EateryDateComparator.INSTANCE, true).execute((Void)null);
     }
