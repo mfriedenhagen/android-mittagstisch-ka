@@ -18,8 +18,10 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import de.friedenhagen.android.mittagstischka.MittagsTischHttpRetriever.ApiException;
 import de.friedenhagen.android.mittagstischka.model.Eatery;
+import de.friedenhagen.android.mittagstischka.retrievers.MittagsTischCachingRetriever;
+import de.friedenhagen.android.mittagstischka.retrievers.MittagsTischRetriever;
+import de.friedenhagen.android.mittagstischka.retrievers.MittagsTischHttpRetriever.ApiException;
 
 /**
  * @author mirko

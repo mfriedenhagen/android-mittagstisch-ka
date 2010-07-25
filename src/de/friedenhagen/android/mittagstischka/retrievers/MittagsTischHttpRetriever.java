@@ -2,7 +2,7 @@
  * Copyright 2010 Mirko Friedenhagen 
  */
 
-package de.friedenhagen.android.mittagstischka;
+package de.friedenhagen.android.mittagstischka.retrievers;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -21,6 +21,8 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONArray;
 import org.json.JSONException;
+
+import de.friedenhagen.android.mittagstischka.IOUtils;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

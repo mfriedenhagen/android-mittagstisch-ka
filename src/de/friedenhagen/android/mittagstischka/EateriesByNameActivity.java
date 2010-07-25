@@ -7,6 +7,7 @@ package de.friedenhagen.android.mittagstischka;
 import android.app.ListActivity;
 import android.os.Bundle;
 import de.friedenhagen.android.mittagstischka.model.EateryTitleComparator;
+import de.friedenhagen.android.mittagstischka.retrievers.MittagsTischCachingRetriever;
 
 /**
  * @author mirko

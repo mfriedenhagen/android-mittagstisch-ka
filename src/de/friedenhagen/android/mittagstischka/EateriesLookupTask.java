@@ -14,10 +14,14 @@ import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.view.View;
-import de.friedenhagen.android.mittagstischka.MittagsTischHttpRetriever.ApiException;
 import de.friedenhagen.android.mittagstischka.model.Eatery;
+import de.friedenhagen.android.mittagstischka.retrievers.MittagsTischHttpRetriever;
+import de.friedenhagen.android.mittagstischka.retrievers.MittagsTischRetriever;
+import de.friedenhagen.android.mittagstischka.retrievers.MittagsTischHttpRetriever.ApiException;
 
 class EateriesLookupTask extends AsyncTask<Void, String, List<Eatery>> {
+    
+    private final static String TAG = EateriesLookupTask.class.getSimpleName();
     
     /**
      * 
@@ -66,7 +70,7 @@ class EateriesLookupTask extends AsyncTask<Void, String, List<Eatery>> {
         try {
             response = retriever.retrieveEateries();
         } catch (ApiException e) {
-            throw new RuntimeException(EateriesByNameActivityOld.TAG + "Error while retrieving data from " + MittagsTischHttpRetriever.MITTAGSTISCH_INDEX, e);
+            throw new RuntimeException(TAG + "Error while retrieving data from " + MittagsTischHttpRetriever.MITTAGSTISCH_INDEX, e);
         }
         return Eatery.fromJsonArray(response);
     }

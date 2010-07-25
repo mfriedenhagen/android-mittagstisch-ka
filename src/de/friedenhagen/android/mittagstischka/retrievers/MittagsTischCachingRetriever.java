@@ -2,7 +2,7 @@
  * Copyright 2010 Mirko Friedenhagen 
  */
 
-package de.friedenhagen.android.mittagstischka;
+package de.friedenhagen.android.mittagstischka.retrievers;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -16,7 +16,8 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Environment;
 import android.util.Log;
-import de.friedenhagen.android.mittagstischka.MittagsTischHttpRetriever.ApiException;
+import de.friedenhagen.android.mittagstischka.IOUtils;
+import de.friedenhagen.android.mittagstischka.retrievers.MittagsTischHttpRetriever.ApiException;
 
 /**
  * @author mirko

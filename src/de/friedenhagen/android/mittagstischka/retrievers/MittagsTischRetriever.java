@@ -5,12 +5,12 @@
  * 
  * $Id$
  */
-package de.friedenhagen.android.mittagstischka;
+package de.friedenhagen.android.mittagstischka.retrievers;
 
 import org.json.JSONArray;
 
 import android.graphics.Bitmap;
-import de.friedenhagen.android.mittagstischka.MittagsTischHttpRetriever.ApiException;
+import de.friedenhagen.android.mittagstischka.retrievers.MittagsTischHttpRetriever.ApiException;
 
 public interface MittagsTischRetriever {
 
