@@ -19,14 +19,12 @@
         <ImageView
             android:id="@+id/eatery_image"
             android:layout_width="54dip"
-            android:layout_height="54dip"
-            android:padding="10dip"
+            android:layout_height="54dip"            
             android:visibility="visible" />
         <ImageButton
             android:id="@+id/eatery_button_homepage"
             android:layout_width="54dip"
             android:layout_height="54dip"
-            android:padding="10dip"
             android:text="Homepage"
             android:src="@android:drawable/btn_star"
             android:onClick="onClickGotoHomepage" />
@@ -34,7 +32,6 @@
             android:id="@+id/eatery_button_map"
             android:layout_width="54dip"
             android:layout_height="54dip"
-            android:padding="10dip"
             android:text="Map"
             android:src="@android:drawable/ic_menu_compass"
             android:onClick="onClickGotoMap" />

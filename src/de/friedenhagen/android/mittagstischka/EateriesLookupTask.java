@@ -11,6 +11,7 @@ import java.util.List;
 import org.json.JSONArray;
 
 import android.app.ListActivity;
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.view.View;
 import de.friedenhagen.android.mittagstischka.MittagsTischHttpRetriever.ApiException;
@@ -25,6 +26,7 @@ class EateriesLookupTask extends AsyncTask<Void, String, List<Eatery>> {
     private final MittagsTischRetriever retriever;
     private final Comparator<Eatery> comparator;
     private final CharSequence oldTitle;
+    private ProgressDialog progressDialog;
     
     /**
      * @param eateriesByNameActivity
@@ -43,7 +45,8 @@ class EateriesLookupTask extends AsyncTask<Void, String, List<Eatery>> {
 
     /** {@inheritDoc} */
     @Override
-    protected void onPreExecute() {        
+    protected void onPreExecute() { 
+        progressDialog = ProgressDialog.show(listActivity, "Loading index...", "About to load the index");
         listActivity.setTitle("Loading ...");            
     }
     
@@ -53,6 +56,7 @@ class EateriesLookupTask extends AsyncTask<Void, String, List<Eatery>> {
         Collections.sort(eateries, comparator);
         listActivity.setListAdapter(new EateryAdapter(eateries));
         listActivity.setTitle(oldTitle);
+        progressDialog.dismiss();
     }
     
     /** {@inheritDoc} */

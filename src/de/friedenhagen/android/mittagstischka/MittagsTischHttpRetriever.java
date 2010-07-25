@@ -135,11 +135,14 @@ public class MittagsTischHttpRetriever implements MittagsTischRetriever {
     }
     
     /** {@inheritDoc} */
-    public JSONArray retrieveEateries(final String response) throws ApiException {        
+    public JSONArray retrieveEateries(final String response) throws ApiException {
+        Log.d(TAG, "Start parsing index");
         try {
             return new JSONArray(response);
         } catch (JSONException e) {
             throw new ApiException("Could not parse " + response, e);
+        } finally {
+            Log.d(TAG, "End parsing index");
         }
     }
     
