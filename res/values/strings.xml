@@ -4,6 +4,8 @@
 <string name="app_name">Mittagstisch Karlsruhe</string>
 <string name="app_descrip">Mittagstisch Karlsruhe</string>
 <string name="app_credits">Mittagstisch Karlsruhe</string>
-<string name="empty_result">No entry found for this word, or problem reading data.</string>
+<string name="empty_result">Keine Resultate oder Probleme beim Laden der Resultate.</string>
 <string name="eateries_title"><i>Liste aller Mittagstisch-Einträge</i></string>
+<string name="progress_title"><b>Index...</b></string>
+<string name="progress_message">Lade Index Daten.</string>
 </resources>

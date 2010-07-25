@@ -13,7 +13,6 @@ import org.json.JSONArray;
 import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
-import android.view.View;
 import de.friedenhagen.android.mittagstischka.model.Eatery;
 import de.friedenhagen.android.mittagstischka.retrievers.ApiException;
 import de.friedenhagen.android.mittagstischka.retrievers.HttpRetriever;
@@ -49,9 +48,11 @@ class EateriesLookupTask extends AsyncTask<Void, String, List<Eatery>> {
 
     /** {@inheritDoc} */
     @Override
-    protected void onPreExecute() { 
-        progressDialog = ProgressDialog.show(listActivity, "Loading index...", "About to load the index");
-        listActivity.setTitle("Loading ...");            
+    protected void onPreExecute() {
+        final String title = listActivity.getResources().getString(R.string.progress_title);
+        final String message = listActivity.getResources().getString(R.string.progress_message);
+        progressDialog = ProgressDialog.show(listActivity, title, message);
+        listActivity.setTitle(title);            
     }
     
     /** {@inheritDoc} */
