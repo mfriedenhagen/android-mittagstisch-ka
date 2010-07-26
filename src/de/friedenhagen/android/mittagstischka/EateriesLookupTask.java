@@ -62,13 +62,11 @@ class EateriesLookupTask extends AsyncTask<Void, String, List<Eatery>> {
     
     /** {@inheritDoc} */
     @Override
-    protected List<Eatery> doInBackground(Void... arg0) {
-        final JSONArray response;
+    protected List<Eatery> doInBackground(Void... arg0) {        
         try {
-            response = retriever.retrieveEateries();
+            return retriever.retrieveEateries();
         } catch (ApiException e) {
             throw new RuntimeException(TAG + "Error while retrieving data from " + HttpRetriever.MITTAGSTISCH_INDEX, e);
-        }
-        return Eatery.fromJsonArray(response);
+        }        
     }
 }

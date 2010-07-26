@@ -4,18 +4,23 @@
 
 package de.friedenhagen.android.mittagstischka.retrievers;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-
-import org.json.JSONArray;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.StreamCorruptedException;
+import java.util.List;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Environment;
 import android.util.Log;
+import de.friedenhagen.android.mittagstischka.model.Eatery;
 
 /**
  * @author mirko
@@ -23,109 +28,110 @@ import android.util.Log;
  */
 public class CachingRetriever implements Retriever {
 
-    private static String TAG = CachingRetriever.class.getSimpleName();
+    private static interface CacheAccess {
 
-    public static class NoCacheEntry extends Exception {
+        Object readCachedObject(final String filename) throws ApiException, NoCacheEntry;
+
+        void writeCachedObject(final String filename, final Object o) throws ApiException;
     }
+
+    private static class StorageCacheAccess implements CacheAccess {
+        private static final int BUFFER_SIZE = 8192*2;
+        private final File storageDirectory;
+
+        public StorageCacheAccess(final File storageDirectory) {
+            this.storageDirectory = storageDirectory;
+            storageDirectory.mkdir();
+        }
+
+        public void writeCachedObject(final String filename, final Object o) throws ApiException {
+            try {
+                final ObjectOutputStream stream = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(
+                        new File(storageDirectory, filename)), BUFFER_SIZE));
+                try {
+                    stream.writeObject(o);
+                } finally {
+                    stream.close();
+                }
+            } catch (FileNotFoundException e) {
+                throw new ApiException(TAG, e);
+            } catch (IOException e) {
+                throw new ApiException(TAG, e);
+            }
+        }
+
+        public Object readCachedObject(final String filename) throws ApiException, NoCacheEntry {
+            final Object o;
+            try {
+                final ObjectInputStream stream = new ObjectInputStream(new BufferedInputStream(new FileInputStream(
+                        new File(storageDirectory, filename)), BUFFER_SIZE));
+                try {
+                    o = stream.readObject();
+                } catch (ClassNotFoundException e) {
+                    throw new ApiException(TAG, e);
+                } finally {
+                    stream.close();
+                }
+            } catch (FileNotFoundException e) {
+                throw new NoCacheEntry();
+            } catch (StreamCorruptedException e) {
+                throw new NoCacheEntry();
+            } catch (IOException e) {
+                throw new NoCacheEntry();
+            }
+            return o;
+        }
+    }
+
+    private static class NoCacheAccess implements CacheAccess {
+
+        @Override
+        public Object readCachedObject(String filename) throws ApiException, NoCacheEntry {
+            throw new NoCacheEntry();
+        }
+
+        @Override
+        public void writeCachedObject(String filename, Object o) throws ApiException {
+            // Just do nothing.
+
+        }
+
+    }
+
+    private static String TAG = CachingRetriever.class.getSimpleName();
 
     private final HttpRetriever httpRetriever;
 
-    private final boolean hasExternalStorage;
-
-    private final File storageDirectory;
+    private final CacheAccess cacheAccess;
 
     public CachingRetriever() {
         httpRetriever = new HttpRetriever();
-        hasExternalStorage = Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED);
+        final boolean hasExternalStorage = Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED);
         Log.i(TAG, "hasExternalStorage=" + hasExternalStorage);
         if (hasExternalStorage) {
-            storageDirectory = new File(Environment.getExternalStorageDirectory(),
-                    CachingRetriever.class.getName());
-            storageDirectory.mkdir();
-        } else {
-            storageDirectory = null;
+            final File storageDirectory = new File(Environment.getExternalStorageDirectory(), "Android/data/" + CachingRetriever.class.getName());
+            storageDirectory.mkdirs();
+            cacheAccess = new StorageCacheAccess(storageDirectory);
+        } else {            
+            cacheAccess = new NoCacheAccess();
+
         }
     }
 
     /** {@inheritDoc} */
+
     @Override
-    public JSONArray retrieveEateries() throws ApiException {
+    public List<Eatery> retrieveEateries() throws ApiException {
         final String filename = "index";
         try {
-            final String response = IOUtils.toUtf8String(readFromCache(filename));
-            Log.i(TAG, "Read " + response.length() + " bytes from " + filename);
-            return httpRetriever.retrieveEateries(response);
-        } catch (NoCacheEntry e) {
-            final JSONArray eateries = httpRetriever.retrieveEateries();
-            final byte[] bytes = IOUtils.toUtf8Bytes(eateries.toString());
-            writeToCacheWithEtag(filename, bytes);
-            Log.i(TAG, "Wrote " + bytes.length + " bytes to " + filename);
+            final Object o = cacheAccess.readCachedObject(filename);
+            @SuppressWarnings("unchecked")
+            final List<Eatery> eateries = (List<Eatery>) o;
             return eateries;
-        }
-    }
-
-    /**
-     * @param filename
-     * @param bytes
-     * @throws ApiException
-     */
-    public void writeToCacheWithEtag(final String filename, final byte[] bytes) throws ApiException {
-        writeToCache(filename, bytes);
-        writeToCache(filename + ".etag", IOUtils.toUtf8Bytes(httpRetriever.getEtag()));
-    }
-
-    /**
-     * @param filename
-     * @param bytes
-     * @throws ApiException
-     */
-    private void writeToCache(final String filename, final byte[] bytes) throws ApiException {
-        if (hasExternalStorage) {
-            final File cacheFile = new File(storageDirectory, filename);
-            Log.d(TAG, "writeToCache: " + cacheFile);
-            try {
-                final FileOutputStream stream = new FileOutputStream(cacheFile);
-                try {
-
-                    IOUtils.write(bytes, stream);
-                } finally {
-                    stream.close();
-                }
-            } catch (FileNotFoundException e1) {
-                throw new ApiException("Message:", e1);
-            } catch (IOException e1) {
-                throw new ApiException("Message:", e1);
-            }
-        }
-    }
-
-    /**
-     * @param filename
-     * @return
-     * @throws ApiException
-     */
-    private byte[] readFromCache(final String filename) throws ApiException, NoCacheEntry {
-        if (hasExternalStorage) {
-            final File cacheFile = new File(storageDirectory, filename);
-            if (cacheFile.exists()) {
-                Log.d(TAG, "readFromCache: " + cacheFile);
-                try {
-                    final FileInputStream stream = new FileInputStream(cacheFile);
-                    try {
-                        return IOUtils.toByteArray(stream);
-                    } finally {
-                        stream.close();
-                    }
-                } catch (FileNotFoundException e) {
-                    throw new ApiException("Message:", e);
-                } catch (IOException e) {
-                    throw new ApiException("Message:", e);
-                }
-            } else {
-                throw new NoCacheEntry();
-            }
-        } else {
-            throw new NoCacheEntry();
+        } catch (NoCacheEntry ignored) {
+            final List<Eatery> eateries = httpRetriever.retrieveEateries();
+            cacheAccess.writeCachedObject(filename, eateries);
+            return eateries;
         }
     }
 
@@ -134,10 +140,10 @@ public class CachingRetriever implements Retriever {
     public String retrieveEateryContent(Integer id) throws ApiException {
         final String filename = String.valueOf(id);
         try {
-            return IOUtils.toUtf8String(readFromCache(filename));
-        } catch (NoCacheEntry e) {
+            return (String) cacheAccess.readCachedObject(filename);
+        } catch (NoCacheEntry ignored) {
             final String eateryContent = httpRetriever.retrieveEateryContent(id);
-            writeToCacheWithEtag(filename, IOUtils.toUtf8Bytes(eateryContent));
+            cacheAccess.writeCachedObject(filename, eateryContent);
             return eateryContent;
         }
     }
@@ -146,15 +152,13 @@ public class CachingRetriever implements Retriever {
     @Override
     public Bitmap retrieveEateryPicture(Integer id) throws ApiException {
         final String filename = String.valueOf(id) + ".png";
-        byte[] bytes;
+        byte[] buffer;
         try {
-            bytes = readFromCache(filename);            
-        } catch (NoCacheEntry e) {
-            bytes = httpRetriever.retrieveEateryPictureBytes(id);
-            writeToCacheWithEtag(filename, bytes);
+            buffer = (byte[]) cacheAccess.readCachedObject(filename);            
+        } catch (NoCacheEntry ignored) {
+            buffer = httpRetriever.retrieveEateryPictureBytes(id);            
+            cacheAccess.writeCachedObject(filename, buffer);            
         }
-        return BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
-        
+        return BitmapFactory.decodeByteArray(buffer, 0, buffer.length);
     }
-
 }

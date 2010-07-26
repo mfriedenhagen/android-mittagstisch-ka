@@ -15,6 +15,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.util.Log;
+
 /**
  * @author mirko
  *
@@ -65,15 +67,17 @@ public class Eatery implements Serializable {
     }
     
     public static List<Eatery> fromJsonArray(JSONArray jsonArray) {
-        final List<Eatery> eateryList = new ArrayList<Eatery>();
+        Log.d(Eatery.class.getSimpleName(), "fromJsonArray: start");
         final int length = jsonArray.length();
+        final List<Eatery> eateryList = new ArrayList<Eatery>(length);        
         for (int i = 0; i < length; i++) {
             try {
                 eateryList.add(Eatery.fromJsonObject((JSONObject)jsonArray.get(i)));
             } catch (JSONException e) {
                 throw new RuntimeException("Message:", e);
             }
-        }        
+        }
+        Log.d(Eatery.class.getSimpleName(), "fromJsonArray: end");
         return eateryList;
     }
 

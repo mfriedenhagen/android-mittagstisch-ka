@@ -9,6 +9,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Arrays;
+import java.util.List;
 
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
@@ -21,6 +22,8 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONArray;
 import org.json.JSONException;
+
+import de.friedenhagen.android.mittagstischka.model.Eatery;
 
 
 import android.graphics.Bitmap;
@@ -106,9 +109,9 @@ public class HttpRetriever implements Retriever {
      * {@inheritDoc}
      */
     @Override
-    public JSONArray retrieveEateries() throws ApiException {
+    public List<Eatery> retrieveEateries() throws ApiException {
         final String response = retrieveString(new HttpGet(MITTAGSTISCH_INDEX));
-        return retrieveEateries(response);
+        return Eatery.fromJsonArray(retrieveEateries(response));
     }
     
     /** {@inheritDoc} */
