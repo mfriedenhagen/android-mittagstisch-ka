@@ -56,11 +56,7 @@ public class HttpRetriever implements Retriever {
     }
 
     private String retrieveString(HttpGet whatToGet) throws ApiException {
-        try {
-            return new String(retrieveBytes(whatToGet), "UTF-8");
-        } catch (UnsupportedEncodingException e) {
-            throw new ApiException("Conversion to UTF-8 failed!", e);
-        }
+        return IOUtils.toUtf8String(retrieveBytes(whatToGet));
     }
 
     /**

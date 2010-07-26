@@ -16,8 +16,6 @@ import java.io.ObjectOutputStream;
 import java.io.StreamCorruptedException;
 import java.util.List;
 
-import android.os.Environment;
-import android.util.Log;
 import de.friedenhagen.android.mittagstischka.model.Eatery;
 
 /**
