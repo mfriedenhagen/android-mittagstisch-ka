@@ -10,7 +10,6 @@ import java.net.URISyntaxException;
 import java.util.List;
 
 import org.apache.http.Header;
-import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.StatusLine;
@@ -18,6 +17,7 @@ import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
 
@@ -75,8 +75,7 @@ public class HttpRetriever implements Retriever {
             if (statusLine.getStatusCode() != HttpStatus.SC_OK) {
                 throw new ApiException("Status-Line:" + statusLine);
             }
-            final HttpEntity entity = response.getEntity();
-            final byte[] byteArray = IOUtils.toByteArray(entity.getContent());
+            final byte[] byteArray = EntityUtils.toByteArray(response.getEntity());
             return byteArray;
         } catch (ClientProtocolException e) {
             throw new ApiException("Message:", e);
