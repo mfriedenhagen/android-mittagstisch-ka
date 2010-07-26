@@ -29,7 +29,7 @@
             android:layout_height="54dip"
             android:layout_margin="10dip"
             android:text="Homepage"
-            android:src="@android:drawable/btn_star"
+            android:src="@android:drawable/ic_menu_info_details"
             android:onClick="onClickGotoHomepage" />
         <ImageButton
             android:id="@+id/eatery_button_map"
