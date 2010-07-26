@@ -4,6 +4,7 @@
 
 package de.friedenhagen.android.mittagstischka;
 
+import java.util.Collections;
 import java.util.Comparator;
 
 import de.friedenhagen.android.mittagstischka.model.Eatery;
@@ -18,7 +19,7 @@ public class EateriesByDateActivity extends EateriesByAbstractActivity {
     /** {@inheritDoc} */
     @Override
     protected Comparator<Eatery> getComparator() {
-        return EateryDateComparator.INSTANCE;
+        return Collections.reverseOrder(EateryDateComparator.INSTANCE);
     }
 
 }

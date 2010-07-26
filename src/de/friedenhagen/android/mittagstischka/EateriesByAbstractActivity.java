@@ -24,7 +24,7 @@ public abstract class EateriesByAbstractActivity extends ListActivity {
         setContentView(R.layout.eateries_list);
         final ListView listView = getListView();
         listView.setOnItemClickListener(new EateriesOnItemClickListener(this));
-        new EateriesLookupTask(this, new CachingRetriever(), getComparator(), true).execute((Void)null);
+        new EateriesLookupTask(this, new CachingRetriever(), getComparator()).execute((Void)null);
     }
     
     /**
