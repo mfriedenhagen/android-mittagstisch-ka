@@ -1,0 +1,4952 @@
+[
+  {
+    "addr": [
+      "Neckar Str. 32", 
+      "76199 Karlsruhe / Weiherfeld"
+    ], 
+    "cat": "Inder", 
+    "date": "20.07.2010", 
+    "homepage": "http://bombay-palace-ka.com/", 
+    "id": 460, 
+    "img": true, 
+    "lat": 48.98565, 
+    "long": 8.39256, 
+    "other": [
+      {
+        "date": "13.12.2006", 
+        "id": 179, 
+        "title": "China Restaurant Lim Heim-Service"
+      }
+    ], 
+    "title": "Bombay Palace", 
+    "url_title": "Neuer\u00f6ffnung Bombay Palace in Weiherfeld"
+  }, 
+  {
+    "addr": [
+      "Griesbachstra\u00dfe 2", 
+      "76185 Karlsruhe"
+    ], 
+    "cat": "Kneipe", 
+    "date": "16.07.2010", 
+    "homepage": "http://www.hoepfnertreff.de/", 
+    "id": 459, 
+    "img": true, 
+    "lat": 48.99825, 
+    "long": 8.37052, 
+    "other": [
+      {
+        "date": "17.02.2007", 
+        "id": 213, 
+        "title": "METRO Karlsruhe"
+      }
+    ], 
+    "title": "Hoepfner Treff", 
+    "url_title": "H\u00f6pfner Treff am Bannwald"
+  }, 
+  {
+    "addr": [
+      "Fritz-Erler-Str. 3", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Junkfood", 
+    "date": "06.07.2010", 
+    "id": 450, 
+    "img": true, 
+    "lat": 49.00896, 
+    "long": 8.41041, 
+    "title": "Marrakesch Imbiss", 
+    "url_title": "Marrakesch Imbiss am Kronenplatz"
+  }, 
+  {
+    "addr": [
+      "Hardtstr. 25", 
+      "76185 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "01.07.2010", 
+    "homepage": "http://www.restaurant-ritter.de/", 
+    "id": 457, 
+    "img": true, 
+    "lat": 49.01228, 
+    "long": 8.35793, 
+    "other": [
+      {
+        "date": "16.02.2006", 
+        "id": 31, 
+        "title": "Pizzeria Zum Ritter"
+      }
+    ], 
+    "title": "Gasthaus Ritter", 
+    "url_title": "Idyllischer Hinterhof des Gasthaus Ritter"
+  }, 
+  {
+    "addr": [
+      "Kantstra\u00dfe 12", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "Grieche", 
+    "date": "29.06.2010", 
+    "homepage": "http://www.panorama-karlsruhe.eu/", 
+    "id": 455, 
+    "img": true, 
+    "lat": 48.99773, 
+    "long": 8.39401, 
+    "other": [
+      {
+        "date": "21.03.2006", 
+        "id": 64, 
+        "title": "LATINO Cocktailbar-Restaurant"
+      }, 
+      {
+        "date": "03.02.2006", 
+        "id": 13, 
+        "title": "Latino "
+      }
+    ], 
+    "title": "Panorama am Kolpingplatz", 
+    "url_title": "Neuer\u00f6ffnung Grieche Panorama (ehemals Latino)"
+  }, 
+  {
+    "addr": [
+      "Lorenzstr.16", 
+      "76135 Karlsruhe"
+    ], 
+    "cat": "International", 
+    "date": "22.06.2010", 
+    "homepage": "http://deinpausenladen.de/", 
+    "id": 454, 
+    "img": true, 
+    "lat": 49.00244, 
+    "long": 8.38300, 
+    "title": "deinpausenladen GmbH", 
+    "url_title": "Dein Pausenladen hinterm ZKM"
+  }, 
+  {
+    "addr": [
+      "Gottesauer Stra\u00dfe 23", 
+      "76131 Karlsruhe"
+    ], 
+    "cat": "Kneipe", 
+    "date": "15.06.2010", 
+    "homepage": "http://www.die-kippe.de", 
+    "id": 452, 
+    "img": true, 
+    "lat": 49.00739, 
+    "long": 8.41941, 
+    "title": "Die Kippe", 
+    "url_title": "Kultkneipe Kippe in der Oststadt"
+  }, 
+  {
+    "addr": [
+      "Rheinstr. 18", 
+      "76185 Karlsruhe"
+    ], 
+    "cat": "D\u00f6neria", 
+    "date": "08.06.2010", 
+    "id": 451, 
+    "img": true, 
+    "lat": 49.01149, 
+    "long": 8.36573, 
+    "title": "Mersin D\u00f6ner und Pizzahaus", 
+    "url_title": "Mersin D\u00f6ner & Pizza Haus"
+  }, 
+  {
+    "cat": "Junkfood", 
+    "date": "22.05.2010", 
+    "id": 448, 
+    "img": true, 
+    "lat": 48.99956, 
+    "long": 8.38006, 
+    "title": "Imbiss beim St. Vincentius "
+  }, 
+  {
+    "addr": [
+      "Schillerstra\u00dfe 4", 
+      "76135 Karlsruhe"
+    ], 
+    "cat": "D\u00f6neria", 
+    "date": "19.05.2010", 
+    "id": 449, 
+    "img": true, 
+    "lat": 49.01025, 
+    "long": 8.37967, 
+    "title": "Helin D\u00f6ner", 
+    "url_title": "D\u00f6ner Helin in der Schillerstra\u00dfe"
+  }, 
+  {
+    "addr": [
+      "Bannwaldallee 48", 
+      "76185 Karlsruhe"
+    ], 
+    "cat": "Kantine", 
+    "date": "17.05.2010", 
+    "homepage": "http://peperoni-lunchbox.de", 
+    "id": 444, 
+    "img": true, 
+    "lat": 48.99589, 
+    "long": 8.37234, 
+    "title": "Bistro lb\u00b2", 
+    "url_title": "Kantine lunchbox in der Bannwaldalle"
+  }, 
+  {
+    "addr": [
+      "Ortenbergstra\u00dfe 8", 
+      "76135 Karlsruhe"
+    ], 
+    "cat": "Junkfood", 
+    "date": "14.05.2010", 
+    "id": 447, 
+    "img": true, 
+    "lat": 48.99074, 
+    "long": 8.37632, 
+    "other": [
+      {
+        "date": "14.08.2006", 
+        "id": 139, 
+        "title": "Walmart-Leichenschmauss - De Pf\u00e4lzer Grill"
+      }
+    ], 
+    "title": "Pf\u00e4lzer Grill neben real Supermarkt", 
+    "url_title": "Fettiges im Pf\u00e4lzer Grill"
+  }, 
+  {
+    "addr": [
+      "Post Galerie", 
+      "Kaiserstra\u00dfe 217", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "International", 
+    "date": "07.05.2010", 
+    "id": 435, 
+    "img": true, 
+    "lat": 49.00938, 
+    "long": 8.39426, 
+    "other": [
+      {
+        "date": "25.02.2007", 
+        "id": 217, 
+        "title": "Pizza, Pasta"
+      }, 
+      {
+        "date": "12.09.2006", 
+        "id": 153, 
+        "title": "Caf\u00e9 Palladio "
+      }
+    ], 
+    "title": "SalatGarten", 
+    "url_title": "SalatGarten in der Post Galerie"
+  }, 
+  {
+    "addr": [
+      "Edgar von Gierke-Strasse", 
+      "76135 Karlsruhe"
+    ], 
+    "cat": "Junkfood", 
+    "date": "29.04.2010", 
+    "id": 445, 
+    "img": true, 
+    "lat": 49.00184, 
+    "long": 8.37909, 
+    "other": [
+      {
+        "date": "26.07.2006", 
+        "id": 130, 
+        "title": "Currywurst hinter dem ZKM"
+      }
+    ], 
+    "title": "Imbissbude und Kiosk", 
+    "url_title": "Currywurst und mehr beim Vincentius"
+  }, 
+  {
+    "addr": [
+      "Hermann-Veit-Stra\u00dfe 3", 
+      "76135 Karlsruhe"
+    ], 
+    "cat": "Grieche", 
+    "date": "26.04.2010", 
+    "id": 443, 
+    "img": true, 
+    "lat": 48.99557, 
+    "long": 8.37808, 
+    "title": "SVK - Gastst\u00e4tte Konstantinos\u200e", 
+    "url_title": "SVK - Gastst\u00e4tte Konstantinos\u200e beim Europabad"
+  }, 
+  {
+    "addr": [
+      "Waldstra\u00dfe 24-28 - Passagehof", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Junkfood", 
+    "date": "29.03.2010", 
+    "homepage": "http://curry76.de/", 
+    "id": 442, 
+    "img": true, 
+    "lat": 49.01071, 
+    "long": 8.39734, 
+    "other": [
+      {
+        "date": "22.02.2006", 
+        "id": 35, 
+        "title": "El Taquito "
+      }
+    ], 
+    "title": "Curry 76", 
+    "url_title": "Beste Currywurst in Karlsruhe - Curry76"
+  }, 
+  {
+    "addr": [
+      "40 Brauerstra\u00dfe", 
+      "76135 Karlsruhe, Germany"
+    ], 
+    "cat": "Asiate", 
+    "date": "23.03.2010", 
+    "id": 440, 
+    "img": true, 
+    "lat": 49.00021, 
+    "long": 8.38555, 
+    "title": "China-City mit Running Sushi Restaurant", 
+    "url_title": "China-City im Filmpalast - endlich wieder gut"
+  }, 
+  {
+    "addr": [
+      "Kriegsstr. 196", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "01.03.2010", 
+    "id": 438, 
+    "img": true, 
+    "lat": 49.00564, 
+    "long": 8.38732, 
+    "other": [
+      {
+        "date": "05.12.2007", 
+        "id": 300, 
+        "title": "New Siam"
+      }, 
+      {
+        "date": "30.03.2006", 
+        "id": 72, 
+        "title": "New Siam"
+      }
+    ], 
+    "title": "New Siam", 
+    "url_title": "Thail\u00e4ndisch im New Siam eine Empfehlung"
+  }, 
+  {
+    "addr": [
+      "Pfinztalstra\u00dfe 35", 
+      "76227 Karlsruhe"
+    ], 
+    "cat": "B\u00e4cker", 
+    "date": "04.02.2010", 
+    "homepage": "http://www.cafe-kehrle.de/", 
+    "id": 434, 
+    "img": true, 
+    "lat": 48.99909, 
+    "long": 8.47071, 
+    "title": "Caf\u00e9 Kehrle", 
+    "url_title": "Karlsruhe Durlach - Cafe Konditorei Kehrle"
+  }, 
+  {
+    "addr": [
+      "Goethestra. 2", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Junkfood", 
+    "date": "28.01.2010", 
+    "id": 432, 
+    "img": true, 
+    "lat": 49.00913, 
+    "long": 8.38146, 
+    "title": "Brasserie JoKo", 
+    "url_title": "Brasserie JoKo - Karlsruhe West"
+  }, 
+  {
+    "cat": "Deutsches", 
+    "date": "01.12.2009", 
+    "id": 429, 
+    "img": true, 
+    "lat": 49.00914, 
+    "long": 8.40371, 
+    "title": "Weihnachtsmarkt in Karlsruhe - bebildert"
+  }, 
+  {
+    "addr": [
+      "Lichthof 7", 
+      "Lorenzstrasse 19", 
+      "76135 Karlsruhe"
+    ], 
+    "cat": "Kantine", 
+    "date": "22.11.2009", 
+    "homepage": "http://zetkaem.de/", 
+    "id": 426, 
+    "img": true, 
+    "lat": 49.00034, 
+    "long": 8.38360, 
+    "other": [
+      {
+        "date": "01.02.2006", 
+        "id": 2, 
+        "title": "ZKM"
+      }
+    ], 
+    "title": "ZetKaem", 
+    "url_title": "ZetKaeM - die teurere Kantine"
+  }, 
+  {
+    "addr": [
+      "Hauptstra\u00dfe 53", 
+      "76287 Rheinstetten-Forchheim"
+    ], 
+    "cat": "Deutsches", 
+    "date": "15.11.2009", 
+    "homepage": "http://www.restaurantschoko.de/cms/content/blogcategory/6/17/", 
+    "id": 419, 
+    "img": true, 
+    "lat": 48.97455, 
+    "long": 8.31590, 
+    "title": "Restaurant Schoko", 
+    "url_title": "Restaurant Schoko in Rheinstetten"
+  }, 
+  {
+    "addr": [
+      "Nelkenstra\u00dfe 19", 
+      "76135 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "08.11.2009", 
+    "id": 425, 
+    "img": true, 
+    "lat": 49.00922, 
+    "long": 8.37650, 
+    "title": "Caf\u00e9 Carr\u00e9", 
+    "url_title": "Cafe Carr\u00e9 - Karlsruhe West"
+  }, 
+  {
+    "addr": [
+      "Hardeckstra\u00dfe 8b", 
+      "76185 Karlsruhe"
+    ], 
+    "cat": "Grieche", 
+    "date": "01.11.2009", 
+    "homepage": "http://www.feinkost-bozkurt.de/", 
+    "id": 424, 
+    "img": true, 
+    "lat": 49.00922, 
+    "long": 8.39412, 
+    "other": [
+      {
+        "date": "26.09.2008", 
+        "id": 365, 
+        "title": "Fai Sushi - Fang den Fisch"
+      }, 
+      {
+        "date": "20.06.2007", 
+        "id": 250, 
+        "title": "Kaiten-Restaurant Karlsruhe"
+      }
+    ], 
+    "title": "Feinkost Kozkurt", 
+    "url_title": "\u00dcberbackenes Fladenbrot - Bozkut - Rezeptidee"
+  }, 
+  {
+    "addr": [
+      "Kaiserallee 23", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "05.10.2009", 
+    "homepage": "http://www.kaisergarten.org/", 
+    "id": 422, 
+    "img": true, 
+    "lat": 49.01038, 
+    "long": 8.38129, 
+    "other": [
+      {
+        "date": "27.05.2008", 
+        "id": 341, 
+        "title": "Kaisergarten"
+      }, 
+      {
+        "date": "17.10.2006", 
+        "id": 160, 
+        "title": "Restaurant Kaisergarten"
+      }, 
+      {
+        "date": "29.06.2006", 
+        "id": 118, 
+        "title": "Restaurant Kaisergarten"
+      }
+    ], 
+    "title": "Restaurant Kaisergarten", 
+    "url_title": "Montags Flammkuchen im Kaisergarten"
+  }, 
+  {
+    "addr": [
+      "Wings of Ka City GmbH", 
+      "Kaiserstra\u00dfe 93", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Junkfood", 
+    "date": "20.09.2009", 
+    "homepage": "http://hooters-karlsruhe.de/", 
+    "id": 421, 
+    "img": true, 
+    "lat": 49.00916, 
+    "long": 8.40913, 
+    "title": "Hooters Karlsruhe", 
+    "url_title": "Neuer\u00f6ffnung - Hooters in Karlsruhe"
+  }, 
+  {
+    "addr": [
+      "Hagsfelder Weg 15", 
+      "76344 Eggenstein-Leopoldshafen"
+    ], 
+    "cat": "Asiate", 
+    "date": "03.08.2009", 
+    "id": 417, 
+    "img": true, 
+    "lat": 49.06836, 
+    "long": 8.39924, 
+    "title": "Yangtse - langer Fluss^MBuffet"
+  }, 
+  {
+    "addr": [
+      "K\u00f6rnerstra\u00dfe 25", 
+      "76135 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "28.07.2009", 
+    "id": 414, 
+    "img": true, 
+    "lat": 49.00930, 
+    "long": 8.37771, 
+    "title": "Trattoria Mare & Monti - Specialit\u00e1 siciliana", 
+    "url_title": "Trattoria Mare & Monti"
+  }, 
+  {
+    "addr": [
+      "Lessingstr. 70", 
+      "76135 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "28.07.2009", 
+    "id": 416, 
+    "img": true, 
+    "lat": 49.00598, 
+    "long": 8.38459, 
+    "title": "Sing-ha", 
+    "url_title": "Thail\u00e4ndisches Bistro Sing-Ha - Update mit Mittagskarte"
+  }, 
+  {
+    "addr": [
+      "Sankt-Florian-Str.14", 
+      "76135 KarlsruheBulach"
+    ], 
+    "cat": "Deutsches", 
+    "date": "23.07.2009", 
+    "homepage": "http://tsv-bulach.de/cms/s-haeusle.html", 
+    "id": 411, 
+    "img": true, 
+    "lat": 48.99019, 
+    "long": 8.38632, 
+    "other": [
+      {
+        "date": "22.06.2006", 
+        "id": 113, 
+        "title": "S\u00b4H\u00e4usle (Karte)"
+      }
+    ], 
+    "title": "Gastst\u00e4tte S'H\u00e4usle", 
+    "url_title": "s H\u00e4usle - TSV Bulach"
+  }, 
+  {
+    "addr": [
+      "Scheffelstr.9", 
+      "76135 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "21.07.2009", 
+    "id": 413, 
+    "img": true, 
+    "lat": 49.00963, 
+    "long": 8.38181, 
+    "title": "My Pizza Service Karlsruhe", 
+    "url_title": "my pizza Service - Kurztest"
+  }, 
+  {
+    "addr": [
+      "Rheinstra\u00dfe 24", 
+      "76185 Karlsruhe - M\u00fchlburg"
+    ], 
+    "cat": "Junkfood", 
+    "date": "20.07.2009", 
+    "id": 412, 
+    "lat": 49.01153, 
+    "long": 8.36193, 
+    "title": "M\u00fchlburger Fischecke", 
+    "url_title": "M\u00fchlburger Fischecke - Frische Fischbr\u00f6tchen wie ..."
+  }, 
+  {
+    "addr": [
+      "Klauprechtstr. 25", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "B\u00e4cker", 
+    "date": "26.06.2009", 
+    "homepage": "http://www.partyservice-brath.de/", 
+    "id": 410, 
+    "img": true, 
+    "lat": 49.00070, 
+    "long": 8.39175, 
+    "title": "Brath Spezialit\u00e4ten-Metzgerei und Partyservice", 
+    "url_title": "LKW: Metzger Brath oder badische Backstub?"
+  }, 
+  {
+    "addr": [
+      "Hildastra\u00dfe 8", 
+      "76646 Bruchsal"
+    ], 
+    "cat": "Asiate", 
+    "date": "15.06.2009", 
+    "homepage": "http://tamnaan.de/restaurant/", 
+    "id": 409, 
+    "img": true, 
+    "lat": 49.12444, 
+    "long": 8.59138, 
+    "title": "Restaurant Tam Naan", 
+    "url_title": "Thai-Restaurant Tam Naan"
+  }, 
+  {
+    "addr": [
+      "Lessingstr. 70", 
+      "76135 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "08.05.2009", 
+    "id": 406, 
+    "img": true, 
+    "lat": 49.00596, 
+    "long": 8.38474, 
+    "title": "Sing-ha", 
+    "url_title": "Sing-ha - Karaoke zum Mittag?"
+  }, 
+  {
+    "addr": [
+      "Durlacher Alle 4", 
+      "76131 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "30.04.2009", 
+    "homepage": "http://www.joeys.de/joeys/163", 
+    "id": 405, 
+    "img": true, 
+    "lat": 49.00947, 
+    "long": 8.41935, 
+    "title": "Joey's in Karlsruhe", 
+    "url_title": "Joeys Pizza wieder in Karlsruhe"
+  }, 
+  {
+    "addr": [
+      "Steinh\u00e4user Str. 2 (Ecke Kriegsstra\u00dfe)", 
+      "76135 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "23.04.2009", 
+    "id": 404, 
+    "img": true, 
+    "lat": 49.00528, 
+    "long": 8.38168, 
+    "other": [
+      {
+        "date": "18.11.2008", 
+        "id": 380, 
+        "title": "Asia Wok"
+      }
+    ], 
+    "title": "Del's Pizza an der Kriegsstra\u00dfe"
+  }, 
+  {
+    "addr": [
+      "Durlacher Allee 109", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "17.04.2009", 
+    "id": 403, 
+    "img": true, 
+    "lat": 49.00469, 
+    "long": 8.44809, 
+    "title": "Mann Mobilia Karlsruhe", 
+    "url_title": "Restaurant im Mann Mobilia"
+  }, 
+  {
+    "addr": [
+      "Heid-und-neu Str. 2", 
+      "76131 Karlsruhe"
+    ], 
+    "cat": "D\u00f6neria", 
+    "date": "16.04.2009", 
+    "id": 402, 
+    "img": true, 
+    "lat": 49.01145, 
+    "long": 8.42382, 
+    "title": "Ost-Stadt-D\u00f6ner", 
+    "url_title": "Ost-Stadt-D\u00f6ner"
+  }, 
+  {
+    "addr": [
+      "Karlstr. 70", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "15.04.2009", 
+    "id": 399, 
+    "img": true, 
+    "lat": 49.00186, 
+    "long": 8.39412, 
+    "other": [
+      {
+        "date": "01.02.2006", 
+        "id": 10, 
+        "title": "Frischemarkt MediterranE"
+      }
+    ], 
+    "title": "Italienische Spezialit\u00e4ten - Mediterrane (Update)"
+  }, 
+  {
+    "addr": [
+      "Welfenstra\u00dfe 18 ", 
+      "76137 Karlsruhe "
+    ], 
+    "cat": "Grieche", 
+    "date": "24.03.2009", 
+    "id": 398, 
+    "img": true, 
+    "lat": 48.99617, 
+    "long": 8.39155, 
+    "other": [
+      {
+        "date": "20.02.2006", 
+        "id": 33, 
+        "title": "Restaurant Sokrates"
+      }
+    ], 
+    "title": "Restaurant Sokrates ", 
+    "url_title": "Restaurant Sokrates"
+  }, 
+  {
+    "addr": [
+      "Klauprechstra\u00dfe 41", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "International", 
+    "date": "20.03.2009", 
+    "id": 396, 
+    "img": true, 
+    "lat": 49.00077, 
+    "long": 8.38863, 
+    "title": "Cafe Creativ Cuisine", 
+    "url_title": "Cafe Creativ Cuisine"
+  }, 
+  {
+    "addr": [
+      "Stephanienstra\u00dfe 2a", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "International", 
+    "date": "19.03.2009", 
+    "id": 397, 
+    "img": true, 
+    "lat": 49.01277, 
+    "long": 8.39823, 
+    "title": "Mogogo - Eritreisches Restaurant", 
+    "url_title": "Eritreisches Restaurant Mogogo"
+  }, 
+  {
+    "addr": [
+      "Ahaweg 6-8", 
+      "76131 Karlsruhe"
+    ], 
+    "cat": "International", 
+    "date": "10.03.2009", 
+    "id": 395, 
+    "img": true, 
+    "lat": 49.01938, 
+    "long": 8.40135, 
+    "title": "Cantiana Majolika", 
+    "url_title": "Cantina Majolika - hipp & stylisch?"
+  }, 
+  {
+    "addr": [
+      "Karlstrasse 53", 
+      "76133 karlsruhe"
+    ], 
+    "cat": "Inder", 
+    "date": "27.02.2009", 
+    "id": 394, 
+    "img": true, 
+    "lat": 49.00391, 
+    "long": 8.39471, 
+    "other": [
+      {
+        "date": "28.02.2006", 
+        "id": 41, 
+        "title": "Taj Palace"
+      }, 
+      {
+        "date": "22.02.2006", 
+        "id": 36, 
+        "title": "Antalya Pizza & Kebab Haus"
+      }
+    ], 
+    "title": "Taj Palace", 
+    "url_title": "Taj Palace - alles beim Alten"
+  }, 
+  {
+    "addr": [
+      "Ludwigsplatz", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "International", 
+    "date": "17.02.2009", 
+    "homepage": "http://www.enchilada.de/index.php?s=&eid=27", 
+    "id": 392, 
+    "img": true, 
+    "lat": 49.00874, 
+    "long": 8.39544, 
+    "other": [
+      {
+        "date": "17.11.2008", 
+        "id": 379, 
+        "title": "Enchilada"
+      }, 
+      {
+        "date": "12.06.2006", 
+        "id": 108, 
+        "title": "Krokodil"
+      }
+    ], 
+    "title": "Enchilada - Karlsruhe", 
+    "url_title": "Enchilada die Zweite"
+  }, 
+  {
+    "addr": [
+      "Karlstra\u00dfe 72", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "12.02.2009", 
+    "id": 391, 
+    "img": true, 
+    "lat": 49.00170, 
+    "long": 8.39408, 
+    "other": [
+      {
+        "date": "27.11.2007", 
+        "id": 294, 
+        "title": "Hans Sachs"
+      }
+    ], 
+    "title": "Schnellrestaurant Saigon Wok", 
+    "url_title": "Schnellrestaurant Saigon Wok"
+  }, 
+  {
+    "addr": [
+      "Hertzstr.15", 
+      "76187 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "10.02.2009", 
+    "id": 390, 
+    "img": true, 
+    "lat": 49.02084, 
+    "long": 8.36518, 
+    "title": "Tong Hoi", 
+    "url_title": "Tong Hoi"
+  }, 
+  {
+    "addr": [
+      "Scheffelstra\u00dfe 55", 
+      "76135 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "05.02.2009", 
+    "id": 389, 
+    "img": true, 
+    "lat": 49.00642, 
+    "long": 8.38184, 
+    "title": "Trattoria La Piazza", 
+    "url_title": "Trattoria La Piazza"
+  }, 
+  {
+    "addr": [
+      "Ebertstr. 9", 
+      "76135 Karlsruhe "
+    ], 
+    "cat": "D\u00f6neria", 
+    "date": "21.01.2009", 
+    "id": 388, 
+    "img": true, 
+    "lat": 48.99406, 
+    "long": 8.39603, 
+    "title": "Bezos Grill", 
+    "url_title": "Bezo's Grill - D\u00f6ner am Albtalbahnhof"
+  }, 
+  {
+    "addr": [
+      "Deutsch - Kroatische Spezialit\u00e4ten", 
+      "Auerstra\u00dfe 50a", 
+      "76227 Karlsruhe - Durlach"
+    ], 
+    "cat": "International", 
+    "date": "12.01.2009", 
+    "homepage": "http://www.dalmatia-restaurant.de/", 
+    "id": 387, 
+    "img": true, 
+    "lat": 48.99526, 
+    "long": 8.46267, 
+    "title": "Restaurant Dalmatia", 
+    "url_title": "Restaurant Dalmatia - kroatisch in Durlach"
+  }, 
+  {
+    "addr": [
+      "Kaiserstra\u00dfe 20 ", 
+      "76133 Karlsruhe "
+    ], 
+    "cat": "Deutsches", 
+    "date": "18.12.2008", 
+    "id": 386, 
+    "img": true, 
+    "lat": 49.00939, 
+    "long": 8.40974, 
+    "title": "Tante K\u00e4the", 
+    "url_title": "Tante K\u00e4the"
+  }, 
+  {
+    "addr": [
+      "Schinnrainstr. 13", 
+      "76227 Karlsruhe-Durlach"
+    ], 
+    "cat": "Grieche", 
+    "date": "04.12.2008", 
+    "id": 385, 
+    "lat": 48.99910, 
+    "long": 8.45730, 
+    "title": "Restaurant Odysseus", 
+    "url_title": "Restaurant Odysseus"
+  }, 
+  {
+    "addr": [
+      "Gastst\u00e4tte Zur S\u00fcdstadt", 
+      "Ettlinger Allee 3", 
+      "76199 Karlsruhe"
+    ], 
+    "cat": "Vereine", 
+    "date": "30.11.2008", 
+    "homepage": "http://www.online-psk.de/cms/iwebs/default.aspx?mmid=4335&smid=16080", 
+    "id": 383, 
+    "img": true, 
+    "lat": 48.98911, 
+    "long": 8.40567, 
+    "title": "Post S\u00fcdstadt Karlsruhe", 
+    "url_title": "PSK - Sportgastst\u00e4tte zur S\u00fcdstadt"
+  }, 
+  {
+    "addr": [
+      "Durlacher Allee 111", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "Supermarkt", 
+    "date": "28.11.2008", 
+    "id": 384, 
+    "lat": 49.00435, 
+    "long": 8.44768, 
+    "title": "H\u00e4hnchenimbiss bei real/Saturn", 
+    "url_title": "H\u00e4hnchen f\u00fcr 1.99\u20ac zur Saturner\u00f6ffnung in Durlach"
+  }, 
+  {
+    "addr": [
+      "Akademiestr. 38-40", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "19.11.2008", 
+    "id": 381, 
+    "img": true, 
+    "lat": 49.01085, 
+    "long": 8.39428, 
+    "other": [
+      {
+        "date": "01.10.2007", 
+        "id": 278, 
+        "title": "allg. Men\u00fcMittagsmen\u00fcSams and More"
+      }
+    ], 
+    "title": "Mille Stelle", 
+    "url_title": "Mille Stelle"
+  }, 
+  {
+    "addr": [
+      "Pfinztalstr- 71", 
+      "76227 Karlsruhe"
+    ], 
+    "cat": "D\u00f6neria", 
+    "date": "12.11.2008", 
+    "id": 378, 
+    "img": true, 
+    "lat": 48.99935, 
+    "long": 8.46756, 
+    "title": "Umut D\u00f6ner & Pizza Haus", 
+    "url_title": "Umut D\u00f6ner & Pizza Haus in Durlach"
+  }, 
+  {
+    "addr": [
+      "Erturul Kizilay", 
+      "Eichelbergstr. 34", 
+      "76189 Karlsruhe"
+    ], 
+    "cat": "Junkfood", 
+    "date": "11.11.2008", 
+    "homepage": "http://www.hotdogspezial.de", 
+    "id": 377, 
+    "lat": 48.99869, 
+    "long": 8.34910, 
+    "title": "Hot Dog Spezial", 
+    "url_title": "Hot Dog Spezial beim HIT Markt"
+  }, 
+  {
+    "addr": [
+      "Lessingstr. 52", 
+      "76135 Karlsruhe"
+    ], 
+    "cat": "Inder", 
+    "date": "05.11.2008", 
+    "id": 376, 
+    "img": true, 
+    "lat": 49.00732, 
+    "long": 8.38488, 
+    "title": "Jaipur Restaurant", 
+    "url_title": "Jaipur Restaurant"
+  }, 
+  {
+    "addr": [
+      "Kleing\u00e4rtnerweg 4", 
+      "76139 Karlsruhe Rintheim"
+    ], 
+    "cat": "Junkfood", 
+    "date": "03.11.2008", 
+    "id": 373, 
+    "img": true, 
+    "lat": 49.01253, 
+    "long": 8.45052, 
+    "title": "Gastst\u00e4tte Rosenst\u00fcble", 
+    "url_title": "H\u00fchnchen im Rosenst\u00fcble"
+  }, 
+  {
+    "addr": [
+      "Kleing\u00e4rtnerweg", 
+      "76139 Karlsruhe"
+    ], 
+    "cat": "Vereine", 
+    "date": "30.10.2008", 
+    "homepage": "http://www.kuhweide-ka.de/", 
+    "id": 375, 
+    "img": true, 
+    "lat": 49.01737, 
+    "long": 8.45404, 
+    "title": "Gastst\u00e4tte Kuhweide", 
+    "url_title": "Gastst\u00e4tte Kuhweide"
+  }, 
+  {
+    "addr": [
+      "Neureuter Hauptstra\u00dfe 300", 
+      "76149 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "23.10.2008", 
+    "id": 372, 
+    "img": true, 
+    "lat": 49.05511, 
+    "long": 8.38134, 
+    "title": "Osteria Da Toni", 
+    "url_title": "Osteria Pizzeria Da Toni in Karlsruhe Neureut"
+  }, 
+  {
+    "addr": [
+      "Carl-Metz-Str. 7", 
+      "76185 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "13.10.2008", 
+    "id": 371, 
+    "img": true, 
+    "lat": 49.00976, 
+    "long": 8.35251, 
+    "title": "WOK Im Famila Center", 
+    "url_title": "WOK im Famila Center"
+  }, 
+  {
+    "addr": [
+      "Zunftstr. 4", 
+      "76227 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "10.10.2008", 
+    "id": 370, 
+    "img": true, 
+    "lat": 48.99943, 
+    "long": 8.47178, 
+    "title": "SONNE - Ristorante Da Rosa", 
+    "url_title": "Sonne - Ristorante Da Rose in Durlach"
+  }, 
+  {
+    "addr": [
+      "Pfinztalstrasse 45", 
+      "76277 Karlsruhe-Durlach"
+    ], 
+    "cat": "International", 
+    "date": "09.10.2008", 
+    "homepage": "http://www.tanburi.de/", 
+    "id": 368, 
+    "img": true, 
+    "lat": 48.99915, 
+    "long": 8.47088, 
+    "title": "Restaurant Caf\u00e9 Tanburi", 
+    "url_title": "Restaurant Caf\u00e9 Tanburi"
+  }, 
+  {
+    "addr": [
+      "B\u00e4renweg 33", 
+      "76149 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "06.10.2008", 
+    "id": 369, 
+    "img": true, 
+    "lat": 49.04504, 
+    "long": 8.38143, 
+    "title": "Ristorante La Signora", 
+    "url_title": "Ristorante La Signora"
+  }, 
+  {
+    "addr": [
+      "Amalienstra\u00dfe 89", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "02.10.2008", 
+    "homepage": "http://www.kaiserplatzl.de/", 
+    "id": 367, 
+    "img": true, 
+    "lat": 49.01015, 
+    "long": 8.38788, 
+    "title": "Prasses Kaiserplatzl", 
+    "url_title": "Prasse's Kaiserplatzl - badisch verw\u00f6hnen lassen"
+  }, 
+  {
+    "addr": [
+      "Hildebrandstra\u00dfe 1", 
+      "76229 Karlsruhe-Durlach"
+    ], 
+    "cat": "Asiate", 
+    "date": "25.09.2008", 
+    "homepage": "http://hanoi-schnellrestaurant.de/", 
+    "id": 366, 
+    "img": true, 
+    "lat": 48.99702, 
+    "long": 8.45944, 
+    "title": "Hanoi Schnellrestaurant", 
+    "url_title": "Asiatisch im Hanoi / Durlach"
+  }, 
+  {
+    "addr": [
+      "Akademiestra\u00dfe 32", 
+      "76133 Karlsruhe "
+    ], 
+    "cat": "International", 
+    "date": "02.09.2008", 
+    "id": 363, 
+    "img": true, 
+    "lat": 49.01117, 
+    "long": 8.39616, 
+    "other": [
+      {
+        "date": "31.05.2006", 
+        "id": 105, 
+        "title": "la rose"
+      }
+    ], 
+    "title": "La Rose", 
+    "url_title": "La Rose: Falaffel wie in Damaskus"
+  }, 
+  {
+    "addr": [
+      "Bachenweg", 
+      "76149 Karlsruhe - Neureut"
+    ], 
+    "cat": "Grieche", 
+    "date": "01.09.2008", 
+    "homepage": "http://www.gaststaette-vogelpark.de/", 
+    "id": 364, 
+    "img": true, 
+    "lat": 49.05376, 
+    "long": 8.37435, 
+    "title": "Gastst\u00e4tte Vogelpark", 
+    "url_title": "Gastst\u00e4tte Vogelpark"
+  }, 
+  {
+    "addr": [
+      "Kaiserstra\u00dfe 176 - Ecke Hirschstra\u00dfe", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Grieche", 
+    "date": "29.08.2008", 
+    "id": 362, 
+    "img": true, 
+    "lat": 49.01022, 
+    "long": 8.39192, 
+    "other": [
+      {
+        "date": "08.11.2007", 
+        "id": 226, 
+        "title": "Asia WOK Schnell-Restaurant"
+      }
+    ], 
+    "title": "Athena Grillimbiss", 
+    "url_title": "Athena Grillimbiss in der Kaiserstra\u00dfe"
+  }, 
+  {
+    "cat": "D\u00f6neria", 
+    "date": "26.08.2008", 
+    "id": 360, 
+    "img": true, 
+    "lat": 49.00889, 
+    "long": 8.39159, 
+    "title": "Star Restaurant"
+  }, 
+  {
+    "addr": [
+      "Rastatter Str. 34", 
+      "76199 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "15.08.2008", 
+    "homepage": "http://www.la-medusa.com/", 
+    "id": 359, 
+    "img": true, 
+    "lat": 48.97444, 
+    "long": 8.40456, 
+    "title": "La Medusa", 
+    "url_title": "Osteria La Medusa"
+  }, 
+  {
+    "addr": [
+      "Gottlob-Schreber-Weg 2", 
+      "76199 Karlsruhe"
+    ], 
+    "cat": "Vereine", 
+    "date": "06.08.2008", 
+    "homepage": "www.zum-elsternest.de", 
+    "id": 355, 
+    "img": true, 
+    "lat": 48.97782, 
+    "long": 8.39589, 
+    "title": "Zum Elsternest (Montag Ruhetag)", 
+    "url_title": "Gartengastst\u00e4tte Elsternest"
+  }, 
+  {
+    "addr": [
+      "Ritterstra\u00dfe 19 (Ecke Gartenstra\u00dfe) ", 
+      "76137 Karlsruhe "
+    ], 
+    "cat": "Grieche", 
+    "date": "01.08.2008", 
+    "homepage": "http://www.rhodos-karlsruhe.de", 
+    "id": 356, 
+    "img": true, 
+    "lat": 49.00391, 
+    "long": 8.39824, 
+    "other": [
+      {
+        "date": "10.05.2006", 
+        "id": 96, 
+        "title": "Carisa Russische K\u00fcche"
+      }
+    ], 
+    "title": "Restaurant Rhodos", 
+    "url_title": "Restaurant Rhodos"
+  }, 
+  {
+    "addr": [
+      "Erbprinzenstra\u00dfe 27 (Ecke B\u00fcrgerstra\u00dfe)", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "22.07.2008", 
+    "id": 354, 
+    "img": true, 
+    "lat": 49.00874, 
+    "long": 8.39699, 
+    "title": "Rosenbaum", 
+    "url_title": "Rosenbaum"
+  }, 
+  {
+    "addr": [
+      "Fritz-Haber-Str. 1", 
+      "76185 Karlsruhe/Gr\u00fcnwinkel"
+    ], 
+    "cat": "Deutsches", 
+    "date": "21.07.2008", 
+    "id": 353, 
+    "img": true, 
+    "lat": 48.99791, 
+    "long": 8.35551, 
+    "title": "Pf\u00e4lzer Imbiss-Spezialit\u00e4ten auf dem Hornbach-Parkplatz", 
+    "url_title": "Pf\u00e4lzer Imbiss-Spezialit\u00e4ten"
+  }, 
+  {
+    "addr": [
+      "Leopoldstr. 28", 
+      "76275 Ettlingen"
+    ], 
+    "cat": "Inder", 
+    "date": "17.07.2008", 
+    "id": 352, 
+    "img": true, 
+    "lat": 48.94005, 
+    "long": 8.40814, 
+    "title": "Shalimar - Indisch-pakistanische Spezialit\u00e4ten", 
+    "url_title": "Das Shalimar in Ettlingen"
+  }, 
+  {
+    "addr": [
+      "Badenwerkstra\u00dfe 1 (Ecke Gartenstra\u00dfe)", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "16.07.2008", 
+    "id": 350, 
+    "img": true, 
+    "lat": 49.00408, 
+    "long": 8.39989, 
+    "title": "Ristorante Santa Lucia", 
+    "url_title": "Ristorante Santa Lucia"
+  }, 
+  {
+    "addr": [
+      "Steigenholstr. 1", 
+      "76275 Ettlingen"
+    ], 
+    "cat": "Italiener", 
+    "date": "15.07.2008", 
+    "homepage": "http://www.culinarium-ettlingen.de/", 
+    "id": 351, 
+    "img": true, 
+    "lat": 48.94577, 
+    "long": 8.41200, 
+    "title": "Culinarium - Feinkost und mehr", 
+    "url_title": "Culinarium Ettlingen"
+  }, 
+  {
+    "addr": [
+      "Lammstr. 12", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "03.07.2008", 
+    "id": 347, 
+    "img": true, 
+    "lat": 49.00845, 
+    "long": 8.40206, 
+    "title": "Onkel Loe's Fine Food House", 
+    "url_title": "Onkel Loe's Fine Food House"
+  }, 
+  {
+    "addr": [
+      "Viktoriastr.7", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Kneipe", 
+    "closed": true, 
+    "date": "02.07.2008", 
+    "homepage": "http://www.viktoriagarten-karlsruhe.de", 
+    "id": 349, 
+    "img": true, 
+    "lat": 49.00649, 
+    "long": 8.38874, 
+    "title": "Viktoriagarten", 
+    "url_title": "Viktoriagarten"
+  }, 
+  {
+    "addr": [
+      "Alte Weingartener Stra\u00dfe 37 ", 
+      "76227 Karlsruhe-Durlach "
+    ], 
+    "cat": "Deutsches", 
+    "date": "01.07.2008", 
+    "id": 348, 
+    "img": true, 
+    "lat": 49.00309, 
+    "long": 8.47826, 
+    "title": "Restaurant Oberm\u00fchle ", 
+    "url_title": "Durlacher Oberm\u00fchle"
+  }, 
+  {
+    "addr": [
+      "Scheffelstr. 2 (Ecke Kaiseralle)", 
+      "76135 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "30.06.2008", 
+    "id": 346, 
+    "lat": 49.01053, 
+    "long": 8.38132, 
+    "title": "China Imbiss Panda", 
+    "url_title": "China Imbiss Panda"
+  }, 
+  {
+    "addr": [
+      "Reinhold-Frank-Str. 46a (Im Geb\u00e4ude des Handelshof)", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "16.06.2008", 
+    "id": 345, 
+    "img": true, 
+    "lat": 49.00975, 
+    "long": 8.38762, 
+    "title": "LE's Asia Schnell Imbiss", 
+    "url_title": "Neuer\u00f6ffnung LE's"
+  }, 
+  {
+    "addr": [
+      "Inhaberin Angelika Philipps", 
+      "Durmersheimer Str. 81a", 
+      "76185 Karlsruhe"
+    ], 
+    "cat": "Vereine", 
+    "date": "10.06.2008", 
+    "homepage": "http://www.kraehennest-karlsruhe.de/", 
+    "id": 344, 
+    "img": true, 
+    "lat": 49.00094, 
+    "long": 8.35182, 
+    "title": "Gastst\u00e4tte Zum Kr\u00e4hennest", 
+    "url_title": "Zum Kr\u00e4hennest"
+  }, 
+  {
+    "addr": [
+      "Stephanienstr. 38-40", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Kneipe", 
+    "date": "06.06.2008", 
+    "homepage": "http://www.badisch-brauhaus.de/", 
+    "id": 343, 
+    "img": true, 
+    "lat": 49.01180, 
+    "long": 8.39386, 
+    "title": "BADISCH BRAUHAUS GmbH", 
+    "url_title": "Badisches Brauhaus"
+  }, 
+  {
+    "addr": [
+      "Gartenstrasse 56b (bei Esso Tanke)", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "International", 
+    "date": "04.06.2008", 
+    "id": 342, 
+    "img": true, 
+    "lat": 49.00453, 
+    "long": 8.38763, 
+    "other": [
+      {
+        "date": "29.04.2008", 
+        "id": 336, 
+        "title": "Beefys Food Lounge"
+      }
+    ], 
+    "title": "BEEFYS Food Lounge", 
+    "url_title": "Beefys Food Lounge - Nachschlag"
+  }, 
+  {
+    "addr": [
+      "Gerwigstra\u00dfe 2 ", 
+      "76131 Karlsruhe "
+    ], 
+    "cat": "Deutsches", 
+    "date": "26.05.2008", 
+    "id": 340, 
+    "lat": 49.00936, 
+    "long": 8.42381, 
+    "title": "Georg Friedrich ", 
+    "url_title": "Gastst\u00e4tte Georg Friedrich"
+  }, 
+  {
+    "addr": [
+      "Daimlerstr. 1-5 (beim Fit-In)", 
+      "76185 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "07.05.2008", 
+    "id": 339, 
+    "img": true, 
+    "lat": 49.02519, 
+    "long": 8.35656, 
+    "title": "Galileo Pizzeria - Bar - Cafe", 
+    "url_title": "Galileo"
+  }, 
+  {
+    "addr": [
+      "Das Indische Restaurant", 
+      "Gr\u00f6tzinger Str. 23", 
+      "76227 Karlsruhe-Durlach"
+    ], 
+    "cat": "Inder", 
+    "date": "02.05.2008", 
+    "homepage": "http://www.maharani-palace.net", 
+    "id": 338, 
+    "img": true, 
+    "lat": 48.99993, 
+    "long": 8.47898, 
+    "title": "Maharani Palace", 
+    "url_title": "Indisch in Durlach - Maharani Palace"
+  }, 
+  {
+    "addr": [
+      "Badener-Tor-Str. 18 (Gegen\u00fcber dem Vogelbr\u00e4u)", 
+      "76275 Ettlingen"
+    ], 
+    "cat": "Kneipe", 
+    "date": "30.04.2008", 
+    "id": 337, 
+    "img": true, 
+    "lat": 48.94140, 
+    "long": 8.40529, 
+    "title": "Caf\u00e9 Palladio", 
+    "url_title": "Palladio Ettlingen"
+  }, 
+  {
+    "addr": [
+      "Direkt bei der ARAL-Tankstelle", 
+      "An der Tagweide 2", 
+      "76139 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "28.04.2008", 
+    "id": 333, 
+    "img": true, 
+    "lat": 49.02043, 
+    "long": 8.45933, 
+    "title": "Bobby's Imbiss", 
+    "url_title": "Die beste Assischale in Bobby's Imbiss?"
+  }, 
+  {
+    "addr": [
+      "Am K\u00fcnstlerhaus 45 ", 
+      "76131 Karlsruhe "
+    ], 
+    "cat": "Italiener", 
+    "closed": true, 
+    "date": "23.04.2008", 
+    "homepage": "http://weisser-stern.de/", 
+    "id": 334, 
+    "img": true, 
+    "lat": 49.00802, 
+    "long": 8.41422, 
+    "title": "Wei\u00dfer Stern", 
+    "url_title": "Wei\u00dfer Stern"
+  }, 
+  {
+    "addr": [
+      "Badener Tor Str. 25", 
+      "76275 Ettlingen"
+    ], 
+    "cat": "Kneipe", 
+    "date": "22.04.2008", 
+    "homepage": "http://lacubanita-ettlingen.de/", 
+    "id": 332, 
+    "img": true, 
+    "lat": 48.94125, 
+    "long": 8.40505, 
+    "title": "La Cubanita Ettlingen GmbH", 
+    "url_title": "La Cubanita in Ettlingen"
+  }, 
+  {
+    "addr": [
+      "Marktstra\u00dfe 2", 
+      "76275 Ettlingen"
+    ], 
+    "cat": "Kneipe", 
+    "date": "17.04.2008", 
+    "homepage": "http://bistro-taeglich.de", 
+    "id": 327, 
+    "img": true, 
+    "lat": 48.94081, 
+    "long": 8.40680, 
+    "title": "Weinsch\u00e4nke zum Sternen bzw. Brasserie Cafe (noch in Bau)", 
+    "url_title": "Bistro T\u00e4glich (Zum Sternen) in Ettlingen"
+  }, 
+  {
+    "addr": [
+      "Kronenstra\u00dfe 5 (zwischen Titanic und K5)", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "15.04.2008", 
+    "id": 331, 
+    "lat": 49.01000, 
+    "long": 8.40796, 
+    "title": "Il Caminetto", 
+    "url_title": "Pizzeria Il Caminetto"
+  }, 
+  {
+    "addr": [
+      "Englerstr. 14", 
+      "76181 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "11.04.2008", 
+    "id": 330, 
+    "img": true, 
+    "lat": 49.01003, 
+    "long": 8.41135, 
+    "title": "Ballerman ", 
+    "url_title": "Ballermann"
+  }, 
+  {
+    "addr": [
+      "Kronenstr. 11", 
+      "76275 Ettlingen"
+    ], 
+    "cat": "Italiener", 
+    "date": "06.04.2008", 
+    "id": 328, 
+    "img": true, 
+    "lat": 48.94277, 
+    "long": 8.40896, 
+    "title": "Ristorante Portobello"
+  }, 
+  {
+    "addr": [
+      "Marktstr. 16", 
+      "76275 Ettlingen"
+    ], 
+    "cat": "Asiate", 
+    "date": "26.03.2008", 
+    "id": 326, 
+    "img": true, 
+    "lat": 48.94127, 
+    "long": 8.40772, 
+    "title": "China Restaurant Yasmin", 
+    "url_title": "China Restaurant Yasmin"
+  }, 
+  {
+    "addr": [
+      "Kaiserstr. 49", 
+      "76131 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "17.03.2008", 
+    "homepage": "http://www.pizzablitzka.de/", 
+    "id": 325, 
+    "img": true, 
+    "lat": 49.00908, 
+    "long": 8.41227, 
+    "other": [
+      {
+        "date": "19.02.2008", 
+        "id": 319, 
+        "title": "OXford Caf\u00e8"
+      }
+    ], 
+    "title": "Pizza-Blitz", 
+    "url_title": "Pizza Blitz gegen\u00fcber der Uni"
+  }, 
+  {
+    "addr": [
+      "Eckenerstra\u00dfe 1", 
+      "76185 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "14.03.2008", 
+    "homepage": "http://www.rim-wang.de/", 
+    "id": 324, 
+    "img": true, 
+    "lat": 49.00545, 
+    "long": 8.34968, 
+    "title": "Restaurant Rim Wang", 
+    "url_title": "Rim Wang in Karlsruhe Gr\u00fcnwinkel"
+  }, 
+  {
+    "addr": [
+      "Moltkestr. 60 (Eingang Freydorfstr. 1)", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Kantine", 
+    "date": "06.03.2008", 
+    "homepage": "http://www.casino-ofd.de/", 
+    "id": 323, 
+    "img": true, 
+    "lat": 49.01518, 
+    "long": 8.37910, 
+    "title": "Casino der Oberfinanzdirektion Karlsruhe", 
+    "url_title": "Casino der Oberfinanzdirektion"
+  }, 
+  {
+    "addr": [
+      "Pizzeria - Ristorante", 
+      "Pappelallee 8-10", 
+      "75189 Karlsruhe"
+    ], 
+    "cat": "International", 
+    "date": "26.02.2008", 
+    "id": 322, 
+    "img": true, 
+    "lat": 48.99746, 
+    "long": 8.33658, 
+    "title": "San Marco", 
+    "url_title": "San Marco"
+  }, 
+  {
+    "addr": [
+      "Zeppelinstrasse 17", 
+      "76185 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "22.02.2008", 
+    "homepage": "http://www.brauhaus-moninger.de/", 
+    "id": 321, 
+    "img": true, 
+    "lat": 49.00298, 
+    "long": 8.35606, 
+    "title": "Brauhaus Moninger", 
+    "url_title": "Brauhaus Moniger"
+  }, 
+  {
+    "addr": [
+      "Fasanenplatz ", 
+      "76131 Karlsruhe "
+    ], 
+    "cat": "Kneipe", 
+    "date": "07.02.2008", 
+    "homepage": "http://www.cafe-gitanes.de/", 
+    "id": 320, 
+    "img": true, 
+    "lat": 49.00843, 
+    "long": 8.41298, 
+    "title": "Caf\u00e9 Gitanes ", 
+    "url_title": "Caf\u00e9 Gitanes"
+  }, 
+  {
+    "addr": [
+      "Fritschlachweg 17", 
+      "76185 Daxlanden"
+    ], 
+    "cat": "Vereine", 
+    "date": "05.02.2008", 
+    "id": 318, 
+    "img": true, 
+    "lat": 49.00158, 
+    "long": 8.32460, 
+    "title": "Sch\u00fctzenhaus Daxlanden", 
+    "url_title": "Sch\u00fctzenhaus Daxlanden"
+  }, 
+  {
+    "addr": [
+      "Lammstrasse 7", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "International", 
+    "date": "31.01.2008", 
+    "id": 316, 
+    "img": true, 
+    "lat": 49.00933, 
+    "long": 8.40275, 
+    "title": "Noodelz to go", 
+    "url_title": "Noodelz To Go"
+  }, 
+  {
+    "addr": [
+      "Am M\u00fchlburger Bahnhof 12", 
+      "76189 Karlsruhe"
+    ], 
+    "cat": "Vereine", 
+    "date": "28.01.2008", 
+    "id": 310, 
+    "img": true, 
+    "lat": 49.01649, 
+    "long": 8.35132, 
+    "title": "Nat Pod", 
+    "url_title": "Thail\u00e4ndisch im Nat Pob in M\u00fchlburg"
+  }, 
+  {
+    "addr": [
+      "Pizzeria Viva Pizzaservice", 
+      "online bestellen", 
+      "Inh. Fernando Perfetti ", 
+      "Englerstr. 18", 
+      "76275 Ettlingen"
+    ], 
+    "cat": "Italiener", 
+    "date": "28.01.2008", 
+    "id": 315, 
+    "img": true, 
+    "lat": 48.94528, 
+    "long": 8.38201, 
+    "title": "Statt Pagnotelle, Ripiegata und Ufo traditionelles"
+  }, 
+  {
+    "addr": [
+      "Karl-Friedrich-Stra\u00dfe 9", 
+      "Marktplatz im Weinbrennerhaus", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "International", 
+    "date": "24.01.2008", 
+    "homepage": "http://www.besitos.de/", 
+    "id": 312, 
+    "img": true, 
+    "lat": 49.00868, 
+    "long": 8.40423, 
+    "other": [
+      {
+        "date": "21.07.2006", 
+        "id": 128, 
+        "title": "Brasserie \"Weinbrenner\" GmbH & Co. KG "
+      }
+    ], 
+    "title": "Besitos", 
+    "url_title": "Besitos - tapas y mas"
+  }, 
+  {
+    "addr": [
+      "Im Ettlinger Tor Center", 
+      "Karl-Friedrich-Str. 26", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "23.01.2008", 
+    "id": 313, 
+    "lat": 49.00669, 
+    "long": 8.40269, 
+    "title": "Philong Asia Imbiss", 
+    "url_title": "Philong Asian Food"
+  }, 
+  {
+    "addr": [
+      "Hertzstra\u00dfe 45 (Ecke Rudolf-Plank-Stra\u00dfe) ", 
+      "76275 Ettlingen "
+    ], 
+    "cat": "Inder", 
+    "date": "21.01.2008", 
+    "id": 311, 
+    "img": true, 
+    "lat": 48.93414, 
+    "long": 8.37730, 
+    "title": "Luzis - 1000 und eine Nacht ", 
+    "url_title": "Luzis 1000 und eine Nacht"
+  }, 
+  {
+    "addr": [
+      "Rheinstrasse 45", 
+      "76275 Ettlingen"
+    ], 
+    "cat": "Deutsches", 
+    "date": "18.01.2008", 
+    "id": 308, 
+    "img": true, 
+    "lat": 48.94364, 
+    "long": 8.39999, 
+    "title": "Alt Ettlingen", 
+    "url_title": "Alt Ettlingen"
+  }, 
+  {
+    "addr": [
+      "Boschstr. 2", 
+      "76185 Karlsruhe"
+    ], 
+    "cat": "Junkfood", 
+    "date": "17.01.2008", 
+    "homepage": "http://local.google.de/local_url?q=http://www.burgerking.de/&dq=burger+king&f=l&hl=de&near=Durmersheimer+Str.+,+76189+Karlsruhe&oi=miw&sa=X&ct=miw_link&cd=1&cad=homepage&ei=fSmPR7H7KJKE3ALIw_GGDQ&s=AKHjfKL6b7QTj7TlRLGTM8Gb3sV5fuVAFA", 
+    "id": 306, 
+    "img": true, 
+    "lat": 49.02847, 
+    "long": 8.35815, 
+    "title": "Burger King", 
+    "url_title": "Burgerking und FastFoodKultur"
+  }, 
+  {
+    "addr": [
+      "Federbachstra\u00dfe 14 ", 
+      "76189 Karlsruhe "
+    ], 
+    "cat": "Italiener", 
+    "date": "16.01.2008", 
+    "id": 307, 
+    "img": true, 
+    "lat": 49.00508, 
+    "long": 8.32810, 
+    "title": "Pizzeria-Restaurant Casa Rustica ", 
+    "url_title": "Casa Rustica"
+  }, 
+  {
+    "addr": [
+      "Kai Weber-Sieb", 
+      "Fritz-Erler-Stra\u00dfe 1-3", 
+      "D-76133 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "04.01.2008", 
+    "homepage": "http://www.kais-pizza.de/", 
+    "id": 305, 
+    "img": true, 
+    "lat": 49.00860, 
+    "long": 8.41008, 
+    "title": "Kais Pizza Brueckenrestaurant & Heimservice", 
+    "url_title": "Kai's Pizza"
+  }, 
+  {
+    "addr": [
+      "Amalienstra\u00dfe 17 ", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "04.01.2008", 
+    "homepage": "http://www.pastapasta24.de/", 
+    "id": 304, 
+    "img": true, 
+    "lat": 49.00767, 
+    "long": 8.39506, 
+    "title": "La Strada / Pasta Pasta", 
+    "url_title": "La Strada oder Pasta Pasta?"
+  }, 
+  {
+    "addr": [
+      "Daxlander Str. 125", 
+      "76185 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "19.12.2007", 
+    "id": 303, 
+    "img": true, 
+    "lat": 49.00715, 
+    "long": 8.34221, 
+    "title": "Maul-T\u00e4schle", 
+    "url_title": "Maul-T\u00e4schle"
+  }, 
+  {
+    "addr": [
+      "Linkenheimer Allee 8", 
+      "76131 Karlsruhe"
+    ], 
+    "cat": "Vereine", 
+    "date": "08.12.2007", 
+    "homepage": "http://www.restaurant-kaktus.de/", 
+    "id": 301, 
+    "img": true, 
+    "lat": 49.02752, 
+    "long": 8.40802, 
+    "title": "Restaurant Kaktus", 
+    "url_title": "Restaurant Kaktus"
+  }, 
+  {
+    "addr": [
+      "Baumeisterstr. 20", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "B\u00e4cker", 
+    "date": "30.11.2007", 
+    "id": 299, 
+    "lat": 49.00395, 
+    "long": 8.40693, 
+    "title": "B\u00e4ckerei Konditorei Gordani", 
+    "url_title": "B\u00e4ckerei Gordani"
+  }, 
+  {
+    "addr": [
+      "Kaiserpassage 4", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "International", 
+    "date": "26.11.2007", 
+    "homepage": "http://freshsub.de/", 
+    "id": 293, 
+    "img": true, 
+    "lat": 49.01023, 
+    "long": 8.39726, 
+    "title": "FreshSub, Deine Sandwichbar", 
+    "url_title": "Fresh Sub"
+  }, 
+  {
+    "addr": [
+      "Blumenstrasse 25", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Kneipe", 
+    "date": "24.11.2007", 
+    "homepage": "http://www.lacage.info/", 
+    "id": 289, 
+    "img": true, 
+    "lat": 49.00855, 
+    "long": 8.39608, 
+    "title": "La Cage", 
+    "url_title": "La Cage"
+  }, 
+  {
+    "addr": [
+      "Douglasstr. 12", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "D\u00f6neria", 
+    "date": "22.11.2007", 
+    "id": 295, 
+    "img": true, 
+    "lat": 49.01061, 
+    "long": 8.39334, 
+    "title": "Bayram Kebaphaus", 
+    "url_title": "Bayram Kebaphaus"
+  }, 
+  {
+    "addr": [
+      "Adenauerring 36", 
+      "76131 Karlsruhe"
+    ], 
+    "cat": "Vereine", 
+    "date": "20.11.2007", 
+    "homepage": "http://www.fssv-karlsruhe.de/", 
+    "id": 288, 
+    "img": true, 
+    "lat": 49.02346, 
+    "long": 8.39527, 
+    "title": "FSSV Karlsruhe", 
+    "url_title": "FSSV Karlsruhe - Waldgastst\u00e4tte"
+  }, 
+  {
+    "addr": [
+      "Badener-Tor-Stra\u00dfe 3-5 ", 
+      "76275 Ettlingen "
+    ], 
+    "cat": "Italiener", 
+    "date": "13.11.2007", 
+    "id": 287, 
+    "img": true, 
+    "lat": 48.94083, 
+    "long": 8.40633, 
+    "title": "Caf\u00e9 Tiziano ", 
+    "url_title": "Cafe Tiziano"
+  }, 
+  {
+    "addr": [
+      "Kriegsstr. 206", 
+      "76135 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "07.11.2007", 
+    "homepage": "http://www.osteria-calabrisella.de", 
+    "id": 286, 
+    "img": true, 
+    "lat": 49.00557, 
+    "long": 8.38490, 
+    "other": [
+      {
+        "date": "01.08.2006", 
+        "id": 133, 
+        "title": "Mini Italia - g\u00fcnstig und gut"
+      }, 
+      {
+        "date": "13.03.2006", 
+        "id": 53, 
+        "title": "Mini Italia (Karte)"
+      }
+    ], 
+    "title": "Osteria Calabrisella", 
+    "url_title": "Aus Mini Italia wird Osteria Calabrisella"
+  }, 
+  {
+    "cat": "B\u00e4cker", 
+    "date": "01.11.2007", 
+    "id": 283, 
+    "img": true, 
+    "lat": 49.00163, 
+    "long": 8.40679, 
+    "title": "Backshop am Werderplatz"
+  }, 
+  {
+    "addr": [
+      "Lohwiesenweg 12-14", 
+      "76135 Karlsruhe"
+    ], 
+    "cat": "Vereine", 
+    "date": "31.10.2007", 
+    "homepage": "http://www.bulachersc.de/", 
+    "id": 284, 
+    "img": true, 
+    "lat": 48.98015, 
+    "long": 8.37750, 
+    "title": "SC Bulach", 
+    "url_title": "Restaurant Biergarten Bulacher SC - Griechisch im Abseits"
+  }, 
+  {
+    "addr": [
+      "Amalienstra\u00dfe 75", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "D\u00f6neria", 
+    "date": "26.10.2007", 
+    "id": 285, 
+    "img": true, 
+    "lat": 49.00942, 
+    "long": 8.39005, 
+    "title": "Men\u00fckarteSofra Pizza Kebap Haus", 
+    "url_title": "Sofra - Neuer\u00f6ffnung"
+  }, 
+  {
+    "addr": [
+      "Adenauerring 17", 
+      "76131 Karlsruhe"
+    ], 
+    "cat": "Kneipe", 
+    "date": "22.10.2007", 
+    "homepage": "http://www.ksc-clubhaus.de/", 
+    "id": 282, 
+    "img": true, 
+    "lat": 49.01906, 
+    "long": 8.41217, 
+    "title": "KSC-Clubhaus, am Wildparkstadion", 
+    "url_title": "Clubhaus des Bayern-J\u00e4gers (KSC)"
+  }, 
+  {
+    "addr": [
+      "Horbachstr. 2", 
+      "76275 Ettlingen"
+    ], 
+    "cat": "Italiener", 
+    "date": "19.10.2007", 
+    "id": 281, 
+    "img": true, 
+    "lat": 48.93637, 
+    "long": 8.40688, 
+    "title": "Ristorante-Pizzeria J\u00e4gerstube", 
+    "url_title": "Zur J\u00e4gerstube"
+  }, 
+  {
+    "addr": [
+      "Klostergasse 8   ", 
+      "76275 Ettlingen "
+    ], 
+    "cat": "International", 
+    "date": "10.10.2007", 
+    "homepage": "http://www.brasserie.pot-au-feu.de/", 
+    "id": 279, 
+    "img": true, 
+    "lat": 48.93999, 
+    "long": 8.40624, 
+    "title": "Brasserie Pot au Feu          ", 
+    "url_title": "Pot au Feu - Essen in f\u00fcrstlichem Umfeld"
+  }, 
+  {
+    "addr": [
+      "Sophienstr. 80", 
+      "76135 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "08.10.2007", 
+    "id": 280, 
+    "img": true, 
+    "lat": 49.00775, 
+    "long": 8.38535, 
+    "title": "Gasthof Gro\u00dfer Kurf\u00fcrst", 
+    "url_title": "Gro\u00dfer Kurf\u00fcrst"
+  }, 
+  {
+    "addr": [
+      "Kronenstr. 24", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "International", 
+    "date": "27.09.2007", 
+    "homepage": "http://la-baguette-ka.de/", 
+    "id": 276, 
+    "img": true, 
+    "lat": 49.00928, 
+    "long": 8.40833, 
+    "title": "La Baguette", 
+    "url_title": "La Baguette"
+  }, 
+  {
+    "addr": [
+      "Rheinstra\u00dfe 4", 
+      "76275 Ettlingen"
+    ], 
+    "cat": "Kneipe", 
+    "date": "26.09.2007", 
+    "homepage": "http://www.vogelbraeu.de/ettlingen/2_2_2.html", 
+    "id": 277, 
+    "lat": 48.94174, 
+    "long": 8.40494, 
+    "title": "Vogel Br\u00e4u Ettlingen", 
+    "url_title": "Der Vogel Hausbr\u00e4u Ettlingen"
+  }, 
+  {
+    "addr": [
+      "Hirschstra\u00dfe 2 ", 
+      "76133 Karlsruhe "
+    ], 
+    "cat": "Deutsches", 
+    "date": "07.09.2007", 
+    "id": 275, 
+    "img": true, 
+    "lat": 49.01108, 
+    "long": 8.39179, 
+    "other": [
+      {
+        "date": "05.06.2006", 
+        "id": 106, 
+        "title": "bistro DAXX"
+      }
+    ], 
+    "title": "Bistro Bar Paris ", 
+    "url_title": "Cafe Paris"
+  }, 
+  {
+    "addr": [
+      "Akademiestra\u00dfe 41", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "International", 
+    "date": "07.09.2007", 
+    "id": 271, 
+    "img": true, 
+    "lat": 49.01068, 
+    "long": 8.39592, 
+    "other": [
+      {
+        "date": "19.02.2007", 
+        "id": 214, 
+        "title": "La Salsa, Der schnelle Mexikaner"
+      }, 
+      {
+        "date": "07.04.2006", 
+        "id": 76, 
+        "title": "Oriental Grill"
+      }, 
+      {
+        "date": "04.04.2006", 
+        "id": 73, 
+        "title": "Yin Yang"
+      }
+    ], 
+    "title": "Arabian Express", 
+    "url_title": "Arabian Express (geschlossen!)"
+  }, 
+  {
+    "addr": [
+      "Steinmannstr. 1", 
+      "76199 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "03.09.2007", 
+    "homepage": "http://www.tus-rueppurr.de/", 
+    "id": 274, 
+    "img": true, 
+    "lat": 48.97325, 
+    "long": 8.41554, 
+    "title": "Turn- u. Sportverein 1874 R\u00fcppurr", 
+    "url_title": "Restaurant - Cafe Steinmann"
+  }, 
+  {
+    "addr": [
+      "Durlacher Allee 24 ", 
+      "76131 Karlsruhe "
+    ], 
+    "cat": "Kneipe", 
+    "date": "31.08.2007", 
+    "homepage": "http://www.diezwiebel.com/", 
+    "id": 273, 
+    "img": true, 
+    "lat": 49.00839, 
+    "long": 8.41909, 
+    "title": "Die Zwiebel", 
+    "url_title": "Die Zwiebel"
+  }, 
+  {
+    "addr": [
+      "Vorholzstr. 13", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "International", 
+    "date": "31.08.2007", 
+    "id": 272, 
+    "lat": 48.99948, 
+    "long": 8.39382, 
+    "title": "Kilimandscharo", 
+    "url_title": "Kilimandscharo, leider nur am Abend"
+  }, 
+  {
+    "addr": [
+      "Restaurant auf dem Turmberg", 
+      "Reichardtstr. 22", 
+      "76227 Karlsruhe-Durlach"
+    ], 
+    "cat": "Deutsches", 
+    "date": "27.08.2007", 
+    "homepage": "http://www.klenerts.de/", 
+    "id": 270, 
+    "img": true, 
+    "lat": 48.99674, 
+    "long": 8.48517, 
+    "title": "Klenerts", 
+    "url_title": "Klenerts, Restaurant mit Ausblick"
+  }, 
+  {
+    "addr": [
+      "Killisfeldstr. 64 A", 
+      "76227 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "22.08.2007", 
+    "id": 267, 
+    "img": true, 
+    "lat": 48.99411, 
+    "long": 8.44869, 
+    "title": "Caf\u00e9 D'Accord", 
+    "url_title": "Caf\u00e9 D'Accord bei Pneuhage Reifendienste"
+  }, 
+  {
+    "addr": [
+      "Adlerstra\u00dfe 34", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "07.08.2007", 
+    "id": 269, 
+    "img": true, 
+    "lat": 49.00752, 
+    "long": 8.40749, 
+    "title": "Zum kleinen Ketterer", 
+    "url_title": "Zum kleinen Ketterer"
+  }, 
+  {
+    "addr": [
+      "Gewann Langenheck 1", 
+      "76227 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "02.08.2007", 
+    "homepage": "http://gasthaus-oberwald.de/", 
+    "id": 268, 
+    "img": true, 
+    "lat": 48.98536, 
+    "long": 8.43932, 
+    "title": "Gasthaus Oberwald", 
+    "url_title": "Gasthaus Oberwald"
+  }, 
+  {
+    "addr": [
+      "Hirschstr. 3", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "27.07.2007", 
+    "id": 265, 
+    "img": true, 
+    "lat": 49.01068, 
+    "long": 8.39195, 
+    "title": "Seng Sushi China Restaurant", 
+    "url_title": "Seng Sushi China Restaurant"
+  }, 
+  {
+    "addr": [
+      "Lange Strasse 94", 
+      "76199 Karlsruhe (R\u00fcppurr)"
+    ], 
+    "cat": "Deutsches", 
+    "date": "20.07.2007", 
+    "id": 266, 
+    "img": true, 
+    "lat": 48.96661, 
+    "long": 8.39761, 
+    "title": "Zum Strauss", 
+    "url_title": "Zum Strauss"
+  }, 
+  {
+    "addr": [
+      "Waldstra\u00dfe 95", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "16.07.2007", 
+    "homepage": "http://www.kraeuterkueche-karlsruhe.de/", 
+    "id": 264, 
+    "img": true, 
+    "lat": 49.00943, 
+    "long": 8.40115, 
+    "title": "Biorestaurant Kr\u00e4uterk\u00fcche", 
+    "url_title": "Biorestaurant Kr\u00e4uterk\u00fcche"
+  }, 
+  {
+    "addr": [
+      "Pfinztalstra\u00dfe 71", 
+      "76227 Karlsruhe-Durlach"
+    ], 
+    "cat": "Italiener", 
+    "date": "12.07.2007", 
+    "id": 263, 
+    "img": true, 
+    "lat": 48.99948, 
+    "long": 8.46681, 
+    "other": [
+      {
+        "date": "27.04.2007", 
+        "id": 240, 
+        "title": "Bagelz"
+      }
+    ], 
+    "title": "Pizzeria da Pino", 
+    "url_title": "Da Pino in Durlach"
+  }, 
+  {
+    "addr": [
+      "Morgenstr. 22", 
+      "76137 Karlsruhe - S\u00fcdstadt"
+    ], 
+    "cat": "Grieche", 
+    "date": "09.07.2007", 
+    "id": 262, 
+    "img": true, 
+    "lat": 49.00112, 
+    "long": 8.41541, 
+    "title": "Restaurant Ipiros", 
+    "url_title": "Restaurant Ipiros - Hammerpreise"
+  }, 
+  {
+    "addr": [
+      "Alte Schmiede GmbH", 
+      "Fiduciastr. 2", 
+      "76227 Karlsruhe"
+    ], 
+    "cat": "International", 
+    "date": "04.07.2007", 
+    "homepage": "http://diner-durlach.de", 
+    "id": 261, 
+    "img": true, 
+    "lat": 48.99509, 
+    "long": 8.44990, 
+    "title": "American Diner Durlach", 
+    "url_title": "American Diner Durlach"
+  }, 
+  {
+    "addr": [
+      "R\u00fcppurrer-Str. 1", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "02.07.2007", 
+    "id": 260, 
+    "img": true, 
+    "lat": 49.00541, 
+    "long": 8.41113, 
+    "title": "F\u00fcnf Sterne China Restaurant", 
+    "url_title": "F\u00fcnf Sterne China Restaurant im Scheck-In"
+  }, 
+  {
+    "addr": [
+      "Wilhelmstr. 69", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "27.06.2007", 
+    "id": 259, 
+    "img": true, 
+    "lat": 48.99842, 
+    "long": 8.40611, 
+    "title": "Alpenhorn", 
+    "url_title": "Alpenhorn in Karlsruher S\u00fcdstadt"
+  }, 
+  {
+    "addr": [
+      "Ritterstra\u00dfe 10", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "26.06.2007", 
+    "homepage": "http://www.nudailys.com", 
+    "id": 258, 
+    "img": true, 
+    "lat": 49.00930, 
+    "long": 8.40084, 
+    "title": "NuDailys Karlsruhe", 
+    "url_title": "L\u00e4sterpause im NuDailys"
+  }, 
+  {
+    "addr": [
+      "Steubenstr. 18", 
+      "76185 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "25.06.2007", 
+    "id": 256, 
+    "img": true, 
+    "lat": 49.01728, 
+    "long": 8.36077, 
+    "title": "Oberer See (&ldquo;Das Gasthaus im Gr\u00fcnen&rdquo;)", 
+    "url_title": "Oberer See"
+  }, 
+  {
+    "addr": [
+      "Bahnhofplatz 2", 
+      "Schwarzwaldstube", 
+      "76137 S\u00fcdweststadt - Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "22.06.2007", 
+    "id": 254, 
+    "img": true, 
+    "lat": 48.99500, 
+    "long": 8.40236, 
+    "title": "Schlosshotel Karlsruhe", 
+    "url_title": "Schlosshotel"
+  }, 
+  {
+    "addr": [
+      "Ettlinger Allee 7", 
+      "76199 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "21.06.2007", 
+    "id": 253, 
+    "img": true, 
+    "lat": 48.98557, 
+    "long": 8.40488, 
+    "title": "La Pineta", 
+    "url_title": "La Pineta mit Stadionatmosph\u00e4re"
+  }, 
+  {
+    "addr": [
+      "Kuhlager-Seele-Weg 3 ", 
+      "76199 Karlsruhe "
+    ], 
+    "cat": "Vereine", 
+    "date": "21.06.2007", 
+    "id": 252, 
+    "img": true, 
+    "lat": 48.97877, 
+    "long": 8.41839, 
+    "title": "Zwitscherstube im KGV Kuhlager-Seele e.V. ", 
+    "url_title": "Zwitscherstube im KGV Kuhlager-Seele e.V."
+  }, 
+  {
+    "addr": [
+      "Gottesauer Stra\u00dfe 19 ", 
+      "76131 Karlsruhe "
+    ], 
+    "cat": "Kneipe", 
+    "date": "20.06.2007", 
+    "id": 251, 
+    "img": true, 
+    "lat": 49.00758, 
+    "long": 8.41899, 
+    "title": "Ostend", 
+    "url_title": "Ostend"
+  }, 
+  {
+    "addr": [
+      "Kaiserstra\u00dfe 217 ", 
+      "76133 Karlsruhe "
+    ], 
+    "cat": "Junkfood", 
+    "date": "15.06.2007", 
+    "homepage": "http://www.subway-sandwiches.de/", 
+    "id": 249, 
+    "img": true, 
+    "lat": 49.00923, 
+    "long": 8.39428, 
+    "other": [
+      {
+        "date": "26.04.2007", 
+        "id": 238, 
+        "title": "Asia Snack"
+      }
+    ], 
+    "title": "SUBWAY Restaurants", 
+    "url_title": "Subway in der Postgalerie"
+  }, 
+  {
+    "addr": [
+      "Amalienbadstrasse 36", 
+      "76227 Karlsruhe-Durlach"
+    ], 
+    "cat": "Italiener", 
+    "date": "14.06.2007", 
+    "homepage": "http://www.borsalino-ka.de/", 
+    "id": 248, 
+    "img": true, 
+    "lat": 48.99664, 
+    "long": 8.46367, 
+    "title": "Ristorante Borsalino", 
+    "url_title": "Ristorante Borsalino"
+  }, 
+  {
+    "addr": [
+      "Hirschstr. 17", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Kneipe", 
+    "date": "06.06.2007", 
+    "homepage": "http://www.ginkgo-ka.de/aktuell.php", 
+    "id": 247, 
+    "img": true, 
+    "lat": 49.00823, 
+    "long": 8.39171, 
+    "title": "GINKGO - Bar - Food - Music", 
+    "url_title": "Gingko, Club - Bar - Lounge"
+  }, 
+  {
+    "addr": [
+      "Hans-Thoma-Stra\u00dfe 3", 
+      "76133 Karlsruhe "
+    ], 
+    "cat": "International", 
+    "closed": true, 
+    "date": "04.06.2007", 
+    "id": 246, 
+    "img": true, 
+    "lat": 49.01170, 
+    "long": 8.39930, 
+    "title": "Caf\u00e9 Salomon ", 
+    "url_title": "Caf\u00e9 Salomon"
+  }, 
+  {
+    "addr": [
+      "Rastatterstra\u00dfe 64 (direkt an der Straba-Haltestelle Tulpenstrasse)", 
+      "76199 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "30.05.2007", 
+    "id": 245, 
+    "img": true, 
+    "lat": 48.97130, 
+    "long": 8.40380, 
+    "title": "Hotel, Restaurant Albhof", 
+    "url_title": "Restaurant Albhof"
+  }, 
+  {
+    "addr": [
+      "Amalienstr. 81", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "22.05.2007", 
+    "id": 239, 
+    "img": true, 
+    "lat": 49.00982, 
+    "long": 8.38877, 
+    "title": "Eiscaf\u00e9 Venezia", 
+    "url_title": "Eiscafe Venecia"
+  }, 
+  {
+    "addr": [
+      "Kaiserallee 9", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "19.05.2007", 
+    "id": 244, 
+    "img": true, 
+    "lat": 49.01024, 
+    "long": 8.38563, 
+    "title": "Trompeter von S\u00e4ckingen", 
+    "url_title": "Der Trompeter von S\u00e4ckingen"
+  }, 
+  {
+    "addr": [
+      "Waldstr. 24", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "16.05.2007", 
+    "id": 243, 
+    "img": true, 
+    "lat": 49.01059, 
+    "long": 8.39752, 
+    "other": [
+      {
+        "date": "31.07.2006", 
+        "id": 132, 
+        "title": "Asia Dynasty Restaurant"
+      }
+    ], 
+    "title": "Asia Dynasty Restaurant", 
+    "url_title": "Asia Dynasty Reloaded"
+  }, 
+  {
+    "addr": [
+      "Hardtstrasse 45a", 
+      "76145 Karlsruhe"
+    ], 
+    "cat": "Grieche", 
+    "date": "10.05.2007", 
+    "homepage": "http://ka.stadtwiki.net/Korfu", 
+    "id": 242, 
+    "img": true, 
+    "lat": 49.01479, 
+    "long": 8.36037, 
+    "title": "Restaurant Korfu", 
+    "url_title": "Korfu in M\u00fchlburg"
+  }, 
+  {
+    "addr": [
+      "Gottlob-Schreber-Weg 3", 
+      "76199 Karlsruhe"
+    ], 
+    "cat": "Grieche", 
+    "date": "08.05.2007", 
+    "id": 241, 
+    "img": true, 
+    "lat": 48.97726, 
+    "long": 8.39261, 
+    "title": "Restaurant Gartenzwerg", 
+    "url_title": "Vereinsgastst\u00e4tte Gartenzwerg"
+  }, 
+  {
+    "addr": [
+      "Fam. Marschner ", 
+      "Litzenhardtstra\u00dfe 101 ", 
+      "76187 Karlsruhe"
+    ], 
+    "cat": "Vereine", 
+    "date": "17.04.2007", 
+    "homepage": "http://ka.stadtwiki.net/Traube_%28Bulach%29", 
+    "id": 237, 
+    "img": true, 
+    "lat": 48.98674, 
+    "long": 8.38015, 
+    "title": "Gastst\u00e4tte Traube  - nur Dienstag ge\u00f6ffnet.", 
+    "url_title": "Vereinsgastst\u00e4tte Traube in Bulach"
+  }, 
+  {
+    "addr": [
+      "Willy-Brandt-Allee 3", 
+      "76131 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "15.04.2007", 
+    "homepage": "http://www.efa-schlemmergarten.de", 
+    "id": 234, 
+    "img": true, 
+    "lat": 49.01531, 
+    "long": 8.39778, 
+    "title": "EFA-Schlemmergarten", 
+    "url_title": "EFA Schlemmergarten"
+  }, 
+  {
+    "addr": [
+      "Akademiestra\u00dfe 38-40", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "12.04.2007", 
+    "homepage": "http://dernudelladen-ka.de/", 
+    "id": 235, 
+    "img": true, 
+    "lat": 49.01085, 
+    "long": 8.39396, 
+    "title": "der nudelladen", 
+    "url_title": "der nudelladen / pasta - cucina - vino"
+  }, 
+  {
+    "addr": [
+      "Kaiserallee / Ecker Scheffelstr.", 
+      "76135 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "30.03.2007", 
+    "id": 233, 
+    "img": true, 
+    "lat": 49.01043, 
+    "long": 8.38168, 
+    "title": "German's Diner", 
+    "url_title": "German's Diner"
+  }, 
+  {
+    "addr": [
+      "Griesbachstra\u00dfe 2", 
+      "76185 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "29.03.2007", 
+    "id": 232, 
+    "img": true, 
+    "lat": 49.00100, 
+    "long": 8.36734, 
+    "title": "Hoepfner Treff", 
+    "url_title": "Hoepfner Treff"
+  }, 
+  {
+    "addr": [
+      "Bahnhofplatz 6", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "29.03.2007", 
+    "homepage": "http://www.am-tiergarten-karlsruhe.de/", 
+    "id": 231, 
+    "img": true, 
+    "lat": 48.99480, 
+    "long": 8.40054, 
+    "title": "Cafe am Tiergarten", 
+    "url_title": "Hotel und Caf\u00e9 Leucht"
+  }, 
+  {
+    "addr": [
+      "Kapellenstra\u00dfe 50", 
+      "76131 Oststadt, Karlsruhe"
+    ], 
+    "cat": "Kneipe", 
+    "date": "22.03.2007", 
+    "id": 230, 
+    "img": true, 
+    "lat": 49.00739, 
+    "long": 8.41410, 
+    "title": "Der Vogelbr\u00e4u", 
+    "url_title": "Vogelbr\u00e4u Karlsruhe"
+  }, 
+  {
+    "addr": [
+      "Amalienbadstr. 16", 
+      "Vogel Hausbr\u00e4u", 
+      "76229 karlsruhe - Durlach"
+    ], 
+    "cat": "Deutsches", 
+    "date": "21.03.2007", 
+    "homepage": "http://www.vogelbraeu.de/", 
+    "id": 229, 
+    "img": true, 
+    "lat": 48.99843, 
+    "long": 8.46594, 
+    "title": "Vogel Hausbr\u00e4u - Durlach", 
+    "url_title": "Vogelbr\u00e4u in Karlsruhe-Durlach"
+  }, 
+  {
+    "addr": [
+      "Kaiserallee 86", 
+      "76185 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "16.03.2007", 
+    "id": 228, 
+    "img": true, 
+    "lat": 49.01150, 
+    "long": 8.36532, 
+    "title": "Pizzeria Mona Lisa", 
+    "url_title": "Pizzaria Mona Lisa in M\u00fchlburg"
+  }, 
+  {
+    "addr": [
+      "Am Lindscharren 12", 
+      "76275 Ettlingen"
+    ], 
+    "cat": "Deutsches", 
+    "date": "16.03.2007", 
+    "homepage": "http://www.veritas-restaurant.de/", 
+    "id": 225, 
+    "img": true, 
+    "lat": 48.94746, 
+    "long": 8.40942, 
+    "title": "Veritas-Restaurant", 
+    "url_title": "Veritas in Ettlingen"
+  }, 
+  {
+    "addr": [
+      "Inhaber: Sabine Lohner", 
+      "Birkenweg 8", 
+      "76297 Stutensee"
+    ], 
+    "cat": "International", 
+    "date": "14.03.2007", 
+    "homepage": "http://www.flammkuchen-sepp.de/", 
+    "id": 227, 
+    "img": true, 
+    "lat": 49.08136, 
+    "long": 8.46593, 
+    "title": "Flammkuchen-Sepp Party-Service", 
+    "url_title": "Flammkuchen-Sepp in Stutensee-Blankenloch"
+  }, 
+  {
+    "addr": [
+      "Pulverhausstr. 42", 
+      "76135 Karlsruhe"
+    ], 
+    "cat": "Junkfood", 
+    "date": "11.03.2007", 
+    "homepage": "http://mcdonalds.de", 
+    "id": 223, 
+    "img": true, 
+    "lat": 48.98991, 
+    "long": 8.37269, 
+    "title": "McDonald's Restaurant mit McDrive", 
+    "url_title": "Schmecktakel bei McDonalds"
+  }, 
+  {
+    "addr": [
+      "Wichernstr. 5", 
+      "76185 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "01.03.2007", 
+    "id": 222, 
+    "img": true, 
+    "lat": 49.00863, 
+    "long": 8.36799, 
+    "title": "Ristorante Da Paolino", 
+    "url_title": "Ristorante Da Paolino"
+  }, 
+  {
+    "addr": [
+      "Geibelstr. 8", 
+      "76185 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "01.03.2007", 
+    "id": 221, 
+    "img": true, 
+    "lat": 49.01358, 
+    "long": 8.36100, 
+    "title": "Fliederhof", 
+    "url_title": "Fliederhof in Karlsruhe M\u00fchlburg"
+  }, 
+  {
+    "addr": [
+      "Bahnhofplatz 14-16", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "27.02.2007", 
+    "homepage": "http://hotel-residenz-ka.de/de/", 
+    "id": 220, 
+    "img": true, 
+    "lat": 48.99411, 
+    "long": 8.39853, 
+    "title": "Restaurant Ketterer (im Hotel Residenz)", 
+    "url_title": "Ketterer im Hotel Residenz"
+  }, 
+  {
+    "cat": "D\u00f6neria", 
+    "date": "25.02.2007", 
+    "id": 218, 
+    "img": true, 
+    "lat": 49.00949, 
+    "long": 8.40744, 
+    "title": "Preisbrecher K2"
+  }, 
+  {
+    "addr": [
+      "Jollystr. 19", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "09.02.2007", 
+    "id": 211, 
+    "img": true, 
+    "lat": 49.00156, 
+    "long": 8.39244, 
+    "other": [
+      {
+        "date": "10.04.2006", 
+        "id": 77, 
+        "title": "La Tegola"
+      }
+    ], 
+    "title": "La Tegola", 
+    "url_title": "La Tegola Reloaded"
+  }, 
+  {
+    "addr": [
+      "Lange Stra\u00dfe 47", 
+      "76199 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "09.02.2007", 
+    "id": 210, 
+    "img": true, 
+    "lat": 48.96886, 
+    "long": 8.40024, 
+    "title": "Zum Lamm", 
+    "url_title": "Restaurant Zum Lamm - Da Sandro"
+  }, 
+  {
+    "addr": [
+      "Lange Stra\u00dfe 1", 
+      "76199 Karlsruhe "
+    ], 
+    "cat": "International", 
+    "date": "07.02.2007", 
+    "homepage": "http://www.kofflers-heuriger.de/", 
+    "id": 209, 
+    "img": true, 
+    "lat": 48.97225, 
+    "long": 8.40352, 
+    "title": "Kofflers Heuriger GmbH", 
+    "url_title": "Kofflers Heuriger"
+  }, 
+  {
+    "addr": [
+      "Ettlinger Str. 29", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "07.02.2007", 
+    "id": 208, 
+    "img": true, 
+    "lat": 48.99859, 
+    "long": 8.40400, 
+    "title": "Chinesisches Restaurant Hong Kong", 
+    "url_title": "Restaurant Hong Kong"
+  }, 
+  {
+    "addr": [
+      "Grenzstrasse. 2", 
+      "76227 Karlsruhe Durlach-Aue"
+    ], 
+    "cat": "Asiate", 
+    "date": "07.02.2007", 
+    "id": 207, 
+    "img": true, 
+    "lat": 48.99308, 
+    "long": 8.46176, 
+    "title": "Phuc Imbiss", 
+    "url_title": "Phuc Imbiss in Durlach Aue"
+  }, 
+  {
+    "addr": [
+      "Wachhausstr. 15", 
+      "76227 Karlsruhe-Durlach"
+    ], 
+    "cat": "Italiener", 
+    "date": "06.02.2007", 
+    "id": 206, 
+    "img": true, 
+    "lat": 48.99233, 
+    "long": 8.44183, 
+    "title": "La Terrazza", 
+    "url_title": "Pizzeria La Terrazza in Karlsruhe Durlach"
+  }, 
+  {
+    "addr": [
+      "Werderstra\u00dfe 49 (auf dem Werderplatz)", 
+      "76137 Karlsruhe "
+    ], 
+    "cat": "Kneipe", 
+    "date": "05.02.2007", 
+    "homepage": "http://www.gloriabar.de/", 
+    "id": 205, 
+    "img": true, 
+    "lat": 49.00159, 
+    "long": 8.40788, 
+    "other": [
+      {
+        "date": "04.05.2006", 
+        "id": 91, 
+        "title": "Brauerei Max Wolf"
+      }
+    ], 
+    "title": "Gloria S\u00fcd ", 
+    "url_title": "Gloria S\u00fcd"
+  }, 
+  {
+    "cat": "Italiener", 
+    "date": "31.01.2007", 
+    "id": 203, 
+    "img": true, 
+    "lat": 49.00909, 
+    "long": 8.41121, 
+    "title": "Panino und Pasta in der Panineria"
+  }, 
+  {
+    "addr": [
+      "Pfinztalstr. 2 (Am Hengstplatz)", 
+      "76227 Karlsruhe"
+    ], 
+    "cat": "International", 
+    "date": "25.01.2007", 
+    "homepage": "http://www.cubanita.de/", 
+    "id": 202, 
+    "img": true, 
+    "lat": 48.99981, 
+    "long": 8.47559, 
+    "title": "Cubanita", 
+    "url_title": "Cubanita"
+  }, 
+  {
+    "addr": [
+      "Rosa Lume und Sohn ", 
+      "Auer Stra\u00dfe 74 ", 
+      "76227 Karlsruhe "
+    ], 
+    "cat": "Italiener", 
+    "date": "23.01.2007", 
+    "id": 201, 
+    "img": true, 
+    "lat": 48.99313, 
+    "long": 8.46130, 
+    "title": "Ristorante Romulus et Remus ", 
+    "url_title": "Ristorante Romulus et Remus"
+  }, 
+  {
+    "addr": [
+      "Passagehof 28", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "15.01.2007", 
+    "id": 200, 
+    "img": true, 
+    "lat": 49.01064, 
+    "long": 8.39607, 
+    "other": [
+      {
+        "date": "06.04.2006", 
+        "id": 75, 
+        "title": "Maharaja"
+      }
+    ], 
+    "title": "Koreanischer Imbiss"
+  }, 
+  {
+    "addr": [
+      "Palmaienstr. 1", 
+      "76227 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "15.01.2007", 
+    "id": 199, 
+    "img": true, 
+    "lat": 48.99911, 
+    "long": 8.46766, 
+    "title": "Asien Food , Spezialit\u00e4ten aus Vietnam-China-Indonesien-Indien", 
+    "url_title": "Asien Food"
+  }, 
+  {
+    "addr": [
+      "Kaiserstr. 114", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "14.01.2007", 
+    "id": 198, 
+    "img": true, 
+    "lat": 49.00993, 
+    "long": 8.39853, 
+    "title": "China Restaurant Hong-Fat", 
+    "url_title": "China Restaurant Hong-Fat"
+  }, 
+  {
+    "addr": [
+      "N\u00fcrnberger Str. 1", 
+      "76199 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "10.01.2007", 
+    "id": 196, 
+    "img": true, 
+    "lat": 48.98469, 
+    "long": 8.40315, 
+    "title": "Zum Dammerstock", 
+    "url_title": "Gastst\u00e4tte zum Dammerstock"
+  }, 
+  {
+    "addr": [
+      "Karl-Wilhelm-Stra\u00dfe 22 ", 
+      "76131 Karlsruhe "
+    ], 
+    "cat": "D\u00f6neria", 
+    "date": "07.01.2007", 
+    "id": 194, 
+    "img": true, 
+    "lat": 49.01061, 
+    "long": 8.42188, 
+    "title": "Egemen Imbi\u00df ", 
+    "url_title": "Egemen Imbiss"
+  }, 
+  {
+    "addr": [
+      "Rintheimer Stra\u00dfe 2 ", 
+      "76131 Karlsruhe "
+    ], 
+    "cat": "Italiener", 
+    "date": "05.01.2007", 
+    "id": 192, 
+    "img": true, 
+    "lat": 49.01071, 
+    "long": 8.42345, 
+    "title": "Pizzahaus ", 
+    "url_title": "Ristorante Pizzahaus"
+  }, 
+  {
+    "addr": [
+      "Durlacher Alle 11", 
+      "76131 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "05.01.2007", 
+    "id": 190, 
+    "img": true, 
+    "lat": 49.00848, 
+    "long": 8.42083, 
+    "title": "Chiang Mai - Thail\u00e4ndische Spezialit\u00e4ten", 
+    "url_title": "Chiang Mai - thail\u00e4ndisch im Osten"
+  }, 
+  {
+    "addr": [
+      "Crepes Service", 
+      "Holger Braun", 
+      "Betriebswirt des Handwerks", 
+      "Rheinhafenstr. 93", 
+      "76185 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "19.12.2006", 
+    "id": 183, 
+    "img": true, 
+    "lat": 49.00853, 
+    "long": 8.40125, 
+    "title": "Wintervergn\u00fcgen auf dem Friedrichsplatz"
+  }, 
+  {
+    "addr": [
+      "Waldhornstra\u00dfe 31", 
+      "76131 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "19.12.2006", 
+    "homepage": "http://www.tasse-mit-pfiff.de/", 
+    "id": 182, 
+    "img": true, 
+    "lat": 49.00872, 
+    "long": 8.41138, 
+    "title": "Tasse mit Pfiff", 
+    "url_title": "Suppenk\u00fcche - Tasse mit Pfiff"
+  }, 
+  {
+    "addr": [
+      "Jollystr. 1", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "D\u00f6neria", 
+    "date": "16.12.2006", 
+    "id": 181, 
+    "img": true, 
+    "lat": 49.00090, 
+    "long": 8.39366, 
+    "other": [
+      {
+        "date": "16.03.2006", 
+        "id": 57, 
+        "title": "D\u00f6ner Pizza Restaurant MEMO"
+      }, 
+      {
+        "date": "01.02.2006", 
+        "id": 6, 
+        "title": "D\u00f6ner Pizza Restaurant MEMO"
+      }
+    ], 
+    "title": "D\u00f6ner Pizza Restaurant MEMO", 
+    "url_title": "D\u00f6ner MEMO in der S\u00fcdweststadt"
+  }, 
+  {
+    "addr": [
+      "Werderstr. 47", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "International", 
+    "date": "08.12.2006", 
+    "id": 178, 
+    "img": true, 
+    "lat": 49.00160, 
+    "long": 8.40773, 
+    "title": "KO:HI. Sushi und Kaffee", 
+    "url_title": "KO:HI"
+  }, 
+  {
+    "addr": [
+      "Akademiestra\u00dfe 9 /Passagehof", 
+      "76133 Karlsruhe-City"
+    ], 
+    "cat": "Asiate", 
+    "date": "06.12.2006", 
+    "id": 177, 
+    "img": true, 
+    "lat": 49.01133, 
+    "long": 8.39778, 
+    "title": "Goldene Ente Imbiss", 
+    "url_title": "Goldene Ente - Spezialit\u00e4ten aus Fernost"
+  }, 
+  {
+    "addr": [
+      "L\u00f6wenstra\u00dfe 23 (Haltestelle Tulpenstrasse)", 
+      "76199 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "closed": true, 
+    "date": "04.12.2006", 
+    "id": 176, 
+    "img": true, 
+    "lat": 48.96968, 
+    "long": 8.40415, 
+    "title": "Casal Borghese", 
+    "url_title": "Casal Borghese"
+  }, 
+  {
+    "addr": [
+      "Trattoria Da Giovanni", 
+      "Hirschstra\u00dfe 87", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "27.11.2006", 
+    "id": 174, 
+    "img": true, 
+    "lat": 49.00100, 
+    "long": 8.39098, 
+    "other": [
+      {
+        "date": "10.05.2006", 
+        "id": 97, 
+        "title": "Trattoria Da Giovanni"
+      }, 
+      {
+        "date": "24.02.2006", 
+        "id": 38, 
+        "title": "Trattoria Da Giovanni"
+      }
+    ], 
+    "title": "La Dolce vita in KA - S\u00fcdweststadt"
+  }, 
+  {
+    "addr": [
+      "Schlossplatz 19", 
+      "76131 Karlsruhe "
+    ], 
+    "cat": "Kneipe", 
+    "date": "27.11.2006", 
+    "id": 175, 
+    "img": true, 
+    "lat": 49.01074, 
+    "long": 8.40311, 
+    "title": "Multikulti am Schlo\u00dfplatz"
+  }, 
+  {
+    "addr": [
+      "Kaiserallee 93", 
+      "76185 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "23.11.2006", 
+    "id": 173, 
+    "img": true, 
+    "lat": 49.01098, 
+    "long": 8.37162, 
+    "title": "Shanghai Wok", 
+    "url_title": "Shanghai WOK"
+  }, 
+  {
+    "addr": [
+      "Waldstrasse 57", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "14.11.2006", 
+    "homepage": "http://casa-aposto.de/", 
+    "id": 172, 
+    "img": true, 
+    "lat": 49.00886, 
+    "long": 8.39630, 
+    "title": "Casa- Aposta", 
+    "url_title": "Casa Aposto am Ludwigsplatz"
+  }, 
+  {
+    "addr": [
+      "Kriegsstrasse 224", 
+      "76135 Karlsruhe"
+    ], 
+    "cat": "D\u00f6neria", 
+    "date": "13.11.2006", 
+    "id": 170, 
+    "img": true, 
+    "lat": 49.00568, 
+    "long": 8.38172, 
+    "other": [
+      {
+        "date": "06.03.2006", 
+        "id": 44, 
+        "title": "Mevlana Imbiss"
+      }
+    ], 
+    "title": "Mevlana Imbiss", 
+    "url_title": "Re-Test Mevlana"
+  }, 
+  {
+    "addr": [
+      "Kurzheckweg 15", 
+      "76187 Karlsruhe"
+    ], 
+    "cat": "Vereine", 
+    "date": "08.11.2006", 
+    "homepage": "http://www.sc-muehlburg.de/", 
+    "id": 168, 
+    "img": true, 
+    "lat": 49.02237, 
+    "long": 8.34392, 
+    "title": "Sch\u00fctzenclub M\u00fchlburg e.V.", 
+    "url_title": "Sch\u00fctzenclub M\u00fchlburg"
+  }, 
+  {
+    "addr": [
+      "Karl-Wilhelm-Str. 10", 
+      "76131 Karlsruhe"
+    ], 
+    "cat": "Kneipe", 
+    "date": "08.11.2006", 
+    "homepage": "http://www.zumdrachen.de/", 
+    "id": 166, 
+    "img": true, 
+    "lat": 49.00990, 
+    "long": 8.41999, 
+    "title": "Restaurant Zum Drachen", 
+    "url_title": "Zum Drachen"
+  }, 
+  {
+    "addr": [
+      "Douglasstra\u00dfe 11-13 ", 
+      "76133 Karlsruhe "
+    ], 
+    "cat": "Italiener", 
+    "date": "08.11.2006", 
+    "id": 167, 
+    "img": true, 
+    "lat": 49.01050, 
+    "long": 8.39399, 
+    "title": "Rosa Bianca da Dino ", 
+    "url_title": "Rosa Bianca im Karlshof"
+  }, 
+  {
+    "addr": [
+      "Waldstra\u00dfe 50", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "International", 
+    "date": "03.11.2006", 
+    "homepage": "http://www.coppados.de/", 
+    "id": 165, 
+    "img": true, 
+    "lat": 49.00754, 
+    "long": 8.39303, 
+    "title": "Coppa dos Cocktail Bar Restaurant", 
+    "url_title": "Coppa Dos"
+  }, 
+  {
+    "addr": [
+      "Akademiestra\u00dfe 38a ", 
+      "76133 Karlsruhe "
+    ], 
+    "cat": "Kneipe", 
+    "date": "03.11.2006", 
+    "id": 164, 
+    "img": true, 
+    "lat": 49.01104, 
+    "long": 8.39446, 
+    "title": "Max, Cafe, Bar ", 
+    "url_title": "Preisgekr\u00f6ntes Design im Caf\u00e9 Max"
+  }, 
+  {
+    "addr": [
+      "Amalienstr. 49", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "D\u00f6neria", 
+    "date": "26.10.2006", 
+    "id": 163, 
+    "img": true, 
+    "lat": 49.00873, 
+    "long": 8.39208, 
+    "title": "Central Imbiss", 
+    "url_title": "Central Imbiss"
+  }, 
+  {
+    "addr": [
+      "Karl-Friedrich-Stra\u00dfe 22", 
+      "im G.BRAUN-Medienhaus am Rondellplatz", 
+      "76133 Karlsruhe (City)"
+    ], 
+    "cat": "International", 
+    "date": "25.10.2006", 
+    "homepage": "http://www.gelbeseitencafe.de/", 
+    "id": 162, 
+    "img": true, 
+    "lat": 49.00704, 
+    "long": 8.40355, 
+    "title": "Gelbe Seiten Cafe", 
+    "url_title": "Caf\u00e9 Gelbe Seiten im Medienhaus"
+  }, 
+  {
+    "addr": [
+      "Karlstra\u00dfe 46", 
+      "76131 Karlsruhe"
+    ], 
+    "cat": "Kneipe", 
+    "date": "20.10.2006", 
+    "id": 161, 
+    "img": true, 
+    "lat": 49.00500, 
+    "long": 8.39447, 
+    "other": [
+      {
+        "date": "09.03.2006", 
+        "id": 48, 
+        "title": "EDEKA Frische Markt Lukasiewicz"
+      }
+    ], 
+    "title": "Cafe Journal", 
+    "url_title": "\"Wir sind kein Imbiss\" - Cafe Journal"
+  }, 
+  {
+    "addr": [
+      "Gartenstra\u00dfe 26", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Kneipe", 
+    "date": "10.10.2006", 
+    "id": 159, 
+    "img": true, 
+    "lat": 49.00455, 
+    "long": 8.39394, 
+    "title": "Bar, Caf\u00e9, Bistro Hemingway", 
+    "url_title": "Hemingway"
+  }, 
+  {
+    "addr": [
+      "Karlstrasse 58", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "06.10.2006", 
+    "id": 158, 
+    "img": true, 
+    "lat": 49.00352, 
+    "long": 8.39409, 
+    "title": "Restaurant-Cafe S-Bar", 
+    "url_title": "Neuer\u00f6ffnung S-Bar in der S\u00fcdweststadt"
+  }, 
+  {
+    "addr": [
+      "Ritterstra\u00dfe / Ecke Zirkel (hinterm Karstadt-Sport)", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "15.09.2006", 
+    "id": 157, 
+    "img": true, 
+    "lat": 49.01054, 
+    "long": 8.40156, 
+    "title": "Dang Wok's ", 
+    "url_title": "Dang Wok's"
+  }, 
+  {
+    "addr": [
+      "Kaiserstr. 20 / Ecke Fritz-Erlerstra\u00dfe", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "14.09.2006", 
+    "id": 156, 
+    "img": true, 
+    "lat": 49.01106, 
+    "long": 8.37841, 
+    "title": "Wok-Man Heim-Service", 
+    "url_title": "WOK MAN"
+  }, 
+  {
+    "addr": [
+      "Lorenzstra\u00dfe 20 ", 
+      "76135 Karlsruhe "
+    ], 
+    "cat": "Kneipe", 
+    "date": "12.09.2006", 
+    "id": 154, 
+    "img": true, 
+    "lat": 49.00156, 
+    "long": 8.38295, 
+    "title": "Eukalyptus Verlags GmbH ", 
+    "url_title": "Schnittchen und Br\u00f6tchen - Eukalyptus"
+  }, 
+  {
+    "addr": [
+      "Liststra\u00dfe 14 ", 
+      "76185 Karlsruhe "
+    ], 
+    "cat": "Kneipe", 
+    "date": "11.09.2006", 
+    "homepage": "http://www.criti.de/", 
+    "id": 152, 
+    "img": true, 
+    "lat": 49.00564, 
+    "long": 8.36099, 
+    "title": "Critisize", 
+    "url_title": "Critisze am Westbahnhof"
+  }, 
+  {
+    "addr": [
+      "Gr\u00fcnwicklerstrasse 25", 
+      "76135 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "closed": true, 
+    "date": "07.09.2006", 
+    "homepage": "http://da-paolo.net", 
+    "id": 150, 
+    "img": true, 
+    "lat": 48.98825, 
+    "long": 8.37859, 
+    "title": "Da Paolo", 
+    "url_title": "Pizzaria Da Paolo in Bulach"
+  }, 
+  {
+    "cat": "D\u00f6neria", 
+    "date": "05.09.2006", 
+    "id": 149, 
+    "img": true, 
+    "lat": 49.00563, 
+    "long": 8.37270, 
+    "title": "Aroma D\u00f6ner"
+  }, 
+  {
+    "addr": [
+      "Erbprinzenstr. ?", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "04.09.2006", 
+    "id": 148, 
+    "img": true, 
+    "lat": 49.00939, 
+    "long": 8.39527, 
+    "title": "New Wok Restaurant", 
+    "url_title": "New Wok, Karlsruhe Zentrum"
+  }, 
+  {
+    "addr": [
+      "Nelkenstra\u00dfe 27 - Am Gutenbergplatz", 
+      "76135 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "04.09.2006", 
+    "id": 147, 
+    "img": true, 
+    "lat": 49.00873, 
+    "long": 8.37621, 
+    "title": "Gutenberg", 
+    "url_title": "Gasthaus Gutenberg"
+  }, 
+  {
+    "addr": [
+      "Rheinstr. 30 (am Entenfang)", 
+      "76185 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "31.08.2006", 
+    "id": 146, 
+    "img": true, 
+    "lat": 49.01137, 
+    "long": 8.36060, 
+    "title": "Fliegender Italiener ", 
+    "url_title": "Fliegender Italiener"
+  }, 
+  {
+    "addr": [
+      "Kaiserallee 145", 
+      "76185 Karlsruhe"
+    ], 
+    "cat": "D\u00f6neria", 
+    "date": "30.08.2006", 
+    "id": 145, 
+    "img": true, 
+    "lat": 49.01114, 
+    "long": 8.36608, 
+    "title": "Pazarcik Kebaphaus", 
+    "url_title": " pazarcik Pizza & Kebaphaus"
+  }, 
+  {
+    "addr": [
+      "Kantine wird von der Avantgarde Gmbh betrieben", 
+      "Brauerstr.10", 
+      "76135 Karlsruhe"
+    ], 
+    "cat": "Kantine", 
+    "date": "28.08.2006", 
+    "id": 144, 
+    "img": true, 
+    "lat": 49.00346, 
+    "long": 8.38559, 
+    "title": "Arbeitsagentur Karlsruhe", 
+    "url_title": "9 Milliarden und die Arbeitsagenturkantine"
+  }, 
+  {
+    "addr": [
+      "Erbprinzenstr. 40", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "D\u00f6neria", 
+    "date": "24.08.2006", 
+    "id": 143, 
+    "img": true, 
+    "lat": 49.00947, 
+    "long": 8.39547, 
+    "title": "Anadolu Imbiss", 
+    "url_title": "Anadolu D\u00f6ner"
+  }, 
+  {
+    "addr": [
+      "Hansjakob", 
+      "restaurant:cafe:bar", 
+      "St\u00e4ndehausstr. 4", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "23.08.2006", 
+    "id": 142, 
+    "img": true, 
+    "lat": 49.00882, 
+    "long": 8.39980, 
+    "other": [
+      {
+        "date": "27.04.2006", 
+        "id": 88, 
+        "title": "Hansjakob"
+      }
+    ], 
+    "title": "Hans Jacob ohne Klaus?"
+  }, 
+  {
+    "addr": [
+      "Rheinstrasse 42(?)", 
+      "76185 Karlsruhe"
+    ], 
+    "cat": "D\u00f6neria", 
+    "date": "21.08.2006", 
+    "id": 141, 
+    "img": true, 
+    "lat": 49.01162, 
+    "long": 8.35877, 
+    "title": "Erciyes D\u00f6ner Restaurant", 
+    "url_title": "Erciyes D\u00f6ner in der Rheinstrasse"
+  }, 
+  {
+    "addr": [
+      "Rastatter Str. 23", 
+      "76199 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "17.08.2006", 
+    "id": 140, 
+    "img": true, 
+    "lat": 48.97872, 
+    "long": 8.40402, 
+    "title": "Amico Mio", 
+    "url_title": "Amico Mio"
+  }, 
+  {
+    "addr": [
+      "Kreuzstr. 25", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "D\u00f6neria", 
+    "date": "10.08.2006", 
+    "id": 138, 
+    "img": true, 
+    "lat": 49.00669, 
+    "long": 8.40605, 
+    "title": "ALIBABA", 
+    "url_title": "Caf\u00e9 - Grill Alibaba"
+  }, 
+  {
+    "cat": "Kneipe", 
+    "closed": true, 
+    "date": "09.08.2006", 
+    "id": 137, 
+    "img": true, 
+    "lat": 49.00910, 
+    "long": 8.41175, 
+    "title": "Unikat - \"Einzig im Stil - Artig im Preis\""
+  }, 
+  {
+    "addr": [
+      "Karl-Friedrich-Stra\u00dfe 8", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Kneipe", 
+    "closed": true, 
+    "date": "04.08.2006", 
+    "id": 136, 
+    "img": true, 
+    "lat": 49.00902, 
+    "long": 8.40343, 
+    "title": "Die Krone", 
+    "url_title": "Die Krone"
+  }, 
+  {
+    "addr": [
+      "Nowackanlage 1", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "03.08.2006", 
+    "id": 135, 
+    "img": true, 
+    "lat": 49.00376, 
+    "long": 8.40455, 
+    "title": "Gastst\u00e4tte zum Hotel Winzerhaus", 
+    "url_title": "Italienisch im Winzerhaus"
+  }, 
+  {
+    "addr": [
+      "Z\u00e4hringer Str.96", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Kneipe", 
+    "date": "02.08.2006", 
+    "homepage": "http://www.sean-o-caseys.de/", 
+    "id": 134, 
+    "img": true, 
+    "lat": 49.00898, 
+    "long": 8.40288, 
+    "title": "Sean O'Casey's Irish Pub", 
+    "url_title": "Sean O'Casey's Irish Pub"
+  }, 
+  {
+    "cat": "Kneipe", 
+    "date": "27.07.2006", 
+    "id": 131, 
+    "img": true, 
+    "lat": 49.00739, 
+    "long": 8.38688, 
+    "title": "Bier oder Essen - Die Frage im F\u00e4ssle"
+  }, 
+  {
+    "addr": [
+      "Ettlingerstr. 33", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "Kneipe", 
+    "date": "24.07.2006", 
+    "homepage": "http://sockenschuss.net/", 
+    "id": 129, 
+    "img": true, 
+    "lat": 48.99826, 
+    "long": 8.40420, 
+    "title": "Sockenschuss", 
+    "url_title": "Sockenschuss - die total (wahn)witzige Kneipe"
+  }, 
+  {
+    "addr": [
+      "Ettlinger Str. 7 (Ecke Sch\u00fctzenstrasse)", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "D\u00f6neria", 
+    "date": "19.07.2006", 
+    "id": 127, 
+    "img": true, 
+    "lat": 49.00226, 
+    "long": 8.40346, 
+    "title": "K\u00f6pr\u00fc Kebap", 
+    "url_title": "K\u00f6pr\u00fc Kebap"
+  }, 
+  {
+    "addr": [
+      "- Restauration und Biergarten - ", 
+      "Beiertheimer Allee 18a ", 
+      "76137 Karlsruhe "
+    ], 
+    "cat": "Deutsches", 
+    "date": "17.07.2006", 
+    "homepage": "http://www.alterbrauhof.de/", 
+    "id": 126, 
+    "img": true, 
+    "lat": 49.00137, 
+    "long": 8.39707, 
+    "title": "Alter Brauhof ", 
+    "url_title": "Alter Brauhof in der S\u00fcdweststadt"
+  }, 
+  {
+    "addr": [
+      "Karlstra\u00dfe 115 ", 
+      "76137 Karlsruhe "
+    ], 
+    "cat": "Deutsches", 
+    "date": "11.07.2006", 
+    "id": 125, 
+    "img": true, 
+    "lat": 48.99684, 
+    "long": 8.39390, 
+    "title": "Gut badisch Stub ", 
+    "url_title": "Gem\u00fctlichkeit im Kolpinghaus"
+  }, 
+  {
+    "addr": [
+      "Yorckstr. 32 (Ecke Sophienstrasse)", 
+      "76185 Karlsruhe "
+    ], 
+    "cat": "Deutsches", 
+    "date": "07.07.2006", 
+    "id": 124, 
+    "img": true, 
+    "lat": 49.00842, 
+    "long": 8.37294, 
+    "title": "Graf Zeppelin  ", 
+    "url_title": "Hering im Graf Zeppelin"
+  }, 
+  {
+    "addr": [
+      "Kaiserallee 69", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Junkfood", 
+    "date": "05.07.2006", 
+    "homepage": "http://www.wienerwald.de", 
+    "id": 123, 
+    "img": true, 
+    "lat": 49.01072, 
+    "long": 8.37491, 
+    "title": "Wiener Wald", 
+    "url_title": "Heute bleibt die K\u00fcche kalt..."
+  }, 
+  {
+    "addr": [
+      "Rheinstr. 67", 
+      "76185 Karlsruhe M\u00fchlburg"
+    ], 
+    "cat": "Asiate", 
+    "date": "05.07.2006", 
+    "id": 122, 
+    "img": true, 
+    "lat": 49.01156, 
+    "long": 8.35901, 
+    "title": "Lotus China-Thai Imbi\u00df", 
+    "url_title": "Lotus China-Thai Imbiss"
+  }, 
+  {
+    "addr": [
+      "Badische und mediterrane K\u00fcche", 
+      "Gartenstra\u00dfe 2", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "04.07.2006", 
+    "homepage": "http://www.wachtamrhein-karlsruhe.de/", 
+    "id": 121, 
+    "img": true, 
+    "lat": 49.00425, 
+    "long": 8.39799, 
+    "title": "Wacht am Rhein", 
+    "url_title": "Wacht am Rhein"
+  }, 
+  {
+    "addr": [
+      "Grillh\u00e4hnchen f\u00fcr Karlsruhe und die Region", 
+      "Brauerstr. 1B", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "03.07.2006", 
+    "homepage": "http://www.haehnchen-karlsruhe.de/", 
+    "id": 120, 
+    "lat": 49.00475, 
+    "long": 8.38733, 
+    "title": "s\u00b4H\u00e4hnle", 
+    "url_title": "Feuriges H\u00fchnchen im s'H\u00e4hnle"
+  }, 
+  {
+    "addr": [
+      "Sophienstra\u00dfe 126 (Ecke Schillerstrasse)", 
+      "76135 Karlsruhe"
+    ], 
+    "cat": "D\u00f6neria", 
+    "date": "29.06.2006", 
+    "id": 119, 
+    "img": true, 
+    "lat": 49.00805, 
+    "long": 8.37955, 
+    "title": "BEYTI - Kebap & Pizza-Haus", 
+    "url_title": "BEYTI - Kebap & Pizza-Haus"
+  }, 
+  {
+    "addr": [
+      "Stephanienstr. 27a", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "27.06.2006", 
+    "id": 116, 
+    "img": true, 
+    "lat": 49.01178, 
+    "long": 8.39486, 
+    "title": "WOK China-Schnellrestaurant", 
+    "url_title": "China-Schnellrestaurant WOK"
+  }, 
+  {
+    "addr": [
+      "Litzenhardtstr. 12", 
+      "76135 Karlsruhe - Bulach"
+    ], 
+    "cat": "International", 
+    "closed": true, 
+    "date": "23.06.2006", 
+    "id": 114, 
+    "img": true, 
+    "lat": 48.99018, 
+    "long": 8.38453, 
+    "title": "Zur Krone", 
+    "url_title": "Gasthaus zur Krone, Bulach"
+  }, 
+  {
+    "addr": [
+      "Kaiserallee 11 ", 
+      "76133 Karlsruhe "
+    ], 
+    "cat": "Kneipe", 
+    "date": "19.06.2006", 
+    "id": 112, 
+    "img": true, 
+    "lat": 49.00992, 
+    "long": 8.38453, 
+    "title": "Caf\u00e9 Bleu ", 
+    "url_title": "Caf\u00e9 Bleu"
+  }, 
+  {
+    "addr": [
+      "Sch\u00fctzenstr. 65", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "D\u00f6neria", 
+    "date": "17.06.2006", 
+    "id": 111, 
+    "img": true, 
+    "lat": 49.00247, 
+    "long": 8.41077, 
+    "title": "Arzum Kebab Haus", 
+    "url_title": "Arzum Kebab Haus"
+  }, 
+  {
+    "addr": [
+      "Karlstr. 21a", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Kneipe", 
+    "date": "14.06.2006", 
+    "homepage": "http://www.lehner-wirtshaus.de/", 
+    "id": 110, 
+    "img": true, 
+    "lat": 49.00892, 
+    "long": 8.39522, 
+    "title": "Lehner's Wirtshaus Karlsruhe", 
+    "url_title": "Lehner's Wirtshaus"
+  }, 
+  {
+    "addr": [
+      "Sophienstra\u00dfe 35", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "14.06.2006", 
+    "homepage": "http://www.daserio.de/index.php?id=8", 
+    "id": 109, 
+    "lat": 49.00686, 
+    "long": 8.39132, 
+    "title": "Da Serio", 
+    "url_title": "Feinkost \"Da Serio\""
+  }, 
+  {
+    "addr": [
+      "Kreuzstra\u00dfe 10", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Kneipe", 
+    "date": "09.06.2006", 
+    "homepage": "http://www.altebank.de/Seiten/Litfass/Litfass.htm", 
+    "id": 107, 
+    "img": true, 
+    "lat": 49.00894, 
+    "long": 8.40516, 
+    "title": "Litfa\u00df", 
+    "url_title": "Litfass und Litf\u00e4\u00dfle"
+  }, 
+  {
+    "addr": [
+      "Kaiserstr. 164", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "D\u00f6neria", 
+    "date": "27.05.2006", 
+    "id": 104, 
+    "img": true, 
+    "lat": 49.01016, 
+    "long": 8.39289, 
+    "title": "Restaurant Piro", 
+    "url_title": "Restaurant Piro"
+  }, 
+  {
+    "addr": [
+      "Hebelstra\u00dfe 9", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "closed": true, 
+    "date": "23.05.2006", 
+    "homepage": "http://www.hotel-kaiserhof.de/de/linke_navigation/gastronomie/hebelstube.php", 
+    "id": 103, 
+    "img": true, 
+    "lat": 49.00813, 
+    "long": 8.40346, 
+    "title": "Hebelstube", 
+    "url_title": "Hebelstube"
+  }, 
+  {
+    "addr": [
+      "Waldstrasse 66", 
+      "76131 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "23.05.2006", 
+    "id": 102, 
+    "img": true, 
+    "lat": 49.00683, 
+    "long": 8.39198, 
+    "title": "Long Life", 
+    "url_title": "Long Life"
+  }, 
+  {
+    "addr": [
+      "Nelkenstra\u00dfe 19 ", 
+      "76135 Karlsruhe "
+    ], 
+    "cat": "Kneipe", 
+    "date": "17.05.2006", 
+    "id": 101, 
+    "img": true, 
+    "lat": 49.00917, 
+    "long": 8.37620, 
+    "title": "Caf\u00e9 Carr\u00e9 ", 
+    "url_title": "Cafe Carr\u00e9"
+  }, 
+  {
+    "addr": [
+      "Marienstr. 2", 
+      "76137 Karlsruhe "
+    ], 
+    "cat": "International", 
+    "date": "16.05.2006", 
+    "id": 100, 
+    "img": true, 
+    "lat": 49.00402, 
+    "long": 8.40789, 
+    "title": "Palmera Imbiss", 
+    "url_title": "Palmera - Syrischer Imbiss"
+  }, 
+  {
+    "addr": [
+      "Kauserstr. 109", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Inder", 
+    "date": "12.05.2006", 
+    "id": 99, 
+    "img": true, 
+    "lat": 49.00931, 
+    "long": 8.40736, 
+    "title": "Restaurant Continent", 
+    "url_title": "Restautant Continent an der Kaiserstrasse"
+  }, 
+  {
+    "addr": [
+      "Pizzeria Ristorante", 
+      "Sole D'oro", 
+      "Ebertstrasse 16a", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "12.05.2006", 
+    "id": 98, 
+    "img": true, 
+    "lat": 48.99493, 
+    "long": 8.39369, 
+    "title": "Sole D'oro"
+  }, 
+  {
+    "addr": [
+      "B\u00fcrgerstrasse 9E", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "09.05.2006", 
+    "id": 95, 
+    "img": true, 
+    "lat": 49.00781, 
+    "long": 8.39564, 
+    "title": "Chopstick Express", 
+    "url_title": "China oder Thai - Chopstick Express"
+  }, 
+  {
+    "addr": [
+      "Sophienstrasse 112", 
+      "76135 Karlsruhe"
+    ], 
+    "cat": "Grieche", 
+    "date": "08.05.2006", 
+    "id": 94, 
+    "lat": 49.00796, 
+    "long": 8.38109, 
+    "title": "Taverna Bonifatius", 
+    "url_title": "Taverna Bonifatius"
+  }, 
+  {
+    "addr": [
+      "Kaiserstra\u00dfe 147-159", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Kantine", 
+    "date": "08.05.2006", 
+    "id": 93, 
+    "img": true, 
+    "lat": 49.00925, 
+    "long": 8.40177, 
+    "title": "Le Buffet, im Karstadt ", 
+    "url_title": "Le Buffet"
+  }, 
+  {
+    "addr": [
+      "Sophienstr. 84", 
+      "76135 Karlsruhe Weststadt"
+    ], 
+    "cat": "D\u00f6neria", 
+    "date": "05.05.2006", 
+    "id": 92, 
+    "img": true, 
+    "lat": 49.00776, 
+    "long": 8.38487, 
+    "title": "Arena - Pizza und Kebap Haus", 
+    "url_title": "Arena - Pizza und D\u00f6ner Haus"
+  }, 
+  {
+    "addr": [
+      "Kaiserstr. 42", 
+      "76133 karlsruhe"
+    ], 
+    "cat": "D\u00f6neria", 
+    "date": "03.05.2006", 
+    "id": 90, 
+    "img": true, 
+    "lat": 49.00947, 
+    "long": 8.40763, 
+    "title": "K2 D\u00f6ner Kebap Center", 
+    "url_title": "K2 D\u00f6ner Kebap Center"
+  }, 
+  {
+    "addr": [
+      "Wilhelmstr. 19", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "02.05.2006", 
+    "id": 89, 
+    "img": true, 
+    "lat": 49.00278, 
+    "long": 8.40562, 
+    "title": "King Seng Gastronomie, chinesische K\u00fcche", 
+    "url_title": "King Seng Gastronomie in der S\u00fcdstadt"
+  }, 
+  {
+    "addr": [
+      "Kaiserstra\u00dfe 176", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "D\u00f6neria", 
+    "date": "26.04.2006", 
+    "id": 86, 
+    "img": true, 
+    "lat": 49.01022, 
+    "long": 8.39235, 
+    "title": "Pascha Cafe und Restaurant", 
+    "url_title": "Pascha D\u00f6ner iss lecker und macht sc\u00f6neeer"
+  }, 
+  {
+    "addr": [
+      "Am Zwinger 3", 
+      "76227 Karlsruhe - Durlach"
+    ], 
+    "cat": "Italiener", 
+    "date": "25.04.2006", 
+    "id": 84, 
+    "img": true, 
+    "lat": 48.99866, 
+    "long": 8.47108, 
+    "other": [
+      {
+        "date": "02.02.2006", 
+        "id": 11, 
+        "title": "La Dolce Vita"
+      }
+    ], 
+    "title": "La Dolce Vita", 
+    "url_title": "La Dolce Vita"
+  }, 
+  {
+    "addr": [
+      "R\u00fcppurrer Str. 78", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "25.04.2006", 
+    "id": 83, 
+    "img": true, 
+    "lat": 48.99875, 
+    "long": 8.41058, 
+    "title": "Pizzeria Edelwei\u00df", 
+    "url_title": "Pizzeria Edelwei\u00df"
+  }, 
+  {
+    "addr": [
+      "Ludwig-Marum-Stra\u00dfe 1 ", 
+      "76185 Karlsruhe "
+    ], 
+    "cat": "Inder", 
+    "date": "22.04.2006", 
+    "homepage": "http://www.moghul-mahal.de/", 
+    "id": 82, 
+    "img": true, 
+    "lat": 49.01318, 
+    "long": 8.37479, 
+    "title": "Moghul Mahal ", 
+    "url_title": "Moghul Mahal"
+  }, 
+  {
+    "addr": [
+      "Roonstr. 32 (Ecke Brauerstrasse)", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "D\u00f6neria", 
+    "date": "19.04.2006", 
+    "id": 81, 
+    "img": true, 
+    "lat": 49.00222, 
+    "long": 8.38673, 
+    "title": "Best-Imbiss", 
+    "url_title": "Best Imbiss"
+  }, 
+  {
+    "addr": [
+      "Herrenstr. 32", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Kneipe", 
+    "date": "13.04.2006", 
+    "homepage": "www.altebank.de", 
+    "id": 80, 
+    "img": true, 
+    "lat": 49.00889, 
+    "long": 8.39834, 
+    "title": "Alte Bank", 
+    "url_title": "Alte Bank"
+  }, 
+  {
+    "addr": [
+      "Waldstra\u00dfe 55", 
+      "76133 Karlsruhe "
+    ], 
+    "cat": "International", 
+    "date": "12.04.2006", 
+    "homepage": "http://lax-ka.de/", 
+    "id": 79, 
+    "lat": 49.00892, 
+    "long": 8.39657, 
+    "title": "LAX", 
+    "url_title": "gestern noch Caf\u00e9 Salmen, heute schon Lax"
+  }, 
+  {
+    "addr": [
+      "Passagehof 18", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "International", 
+    "date": "11.04.2006", 
+    "id": 78, 
+    "img": true, 
+    "lat": 49.01068, 
+    "long": 8.39683, 
+    "title": "Afrika", 
+    "url_title": "Afrika"
+  }, 
+  {
+    "addr": [
+      "Kaiserstra\u00dfe 142-144 ", 
+      "76133 Karlsruhe "
+    ], 
+    "cat": "Kneipe", 
+    "date": "05.04.2006", 
+    "id": 74, 
+    "img": true, 
+    "lat": 49.01031, 
+    "long": 8.39556, 
+    "title": "Caf\u00e9 Emaille ", 
+    "url_title": "Cafe Emaille"
+  }, 
+  {
+    "addr": [
+      "Breite Str. 58", 
+      "76135 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "closed": true, 
+    "date": "29.03.2006", 
+    "id": 70, 
+    "img": true, 
+    "lat": 48.99151, 
+    "long": 8.38959, 
+    "title": "Pizzeria Bell' Arte", 
+    "url_title": "Bell' Arte in Beiertheim"
+  }, 
+  {
+    "addr": [
+      "Sophienstr. 64 (Ecke Reinhold-Frank-Str.)", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "International", 
+    "date": "28.03.2006", 
+    "id": 69, 
+    "img": true, 
+    "lat": 49.00789, 
+    "long": 8.38749, 
+    "title": "Restaurant Shiraz", 
+    "url_title": "Restaurant Shiraz"
+  }, 
+  {
+    "addr": [
+      "Kronenstr. 25 (Kronenplatz, Jubez Geb\u00e4ude)", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "27.03.2006", 
+    "id": 68, 
+    "img": true, 
+    "lat": 49.00803, 
+    "long": 8.40975, 
+    "title": "Pizzaria La Corona", 
+    "url_title": "Pizzaria La Corona"
+  }, 
+  {
+    "addr": [
+      "Z\u00e4hringerstra\u00dfe 96", 
+      "Am Marktplatz", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "24.03.2006", 
+    "id": 67, 
+    "img": true, 
+    "lat": 49.00900, 
+    "long": 8.40310, 
+    "other": [
+      {
+        "date": "10.02.2006", 
+        "id": 23, 
+        "title": "\u5bff\u53f8\u5c4b Shogun"
+      }
+    ], 
+    "title": "Restaurant Shogun", 
+    "url_title": "Shogun (oder roher Fisch f\u00fcr Anf\u00e4nger)"
+  }, 
+  {
+    "addr": [
+      "Wilhelm-Baur-Stra\u00dfe 3a", 
+      "76135 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "23.03.2006", 
+    "homepage": "http://www.brauhaus-kuehler-krug.de", 
+    "id": 66, 
+    "img": true, 
+    "lat": 49.00398, 
+    "long": 8.36855, 
+    "title": "Brauhaus K\u00fchler Krug", 
+    "url_title": "Brauhaus K\u00fchler Krug"
+  }, 
+  {
+    "addr": [
+      "D\u00f6ner & Pizzahaus", 
+      "Hirschstr.", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "D\u00f6neria", 
+    "date": "22.03.2006", 
+    "id": 65, 
+    "img": true, 
+    "lat": 49.00836, 
+    "long": 8.39156, 
+    "title": "Euphrat", 
+    "url_title": "Euphrat"
+  }, 
+  {
+    "addr": [
+      "Kaiserallee 11", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "21.03.2006", 
+    "id": 63, 
+    "img": true, 
+    "lat": 49.01023, 
+    "long": 8.38533, 
+    "title": "Shanghai China Schnellrestaurant", 
+    "url_title": "Shanghai Schnellimbiss, 2. Chance"
+  }, 
+  {
+    "addr": [
+      "Pizzeria Gigi", 
+      "Wilhelmstr. 8 \t", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "20.03.2006", 
+    "id": 62, 
+    "img": true, 
+    "lat": 49.00309, 
+    "long": 8.40552, 
+    "title": "Pizzaria Giggi"
+  }, 
+  {
+    "addr": [
+      "Kneipe - Musik - Essen", 
+      "Waldstra\u00dfe 54", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "17.03.2006", 
+    "id": 59, 
+    "img": true, 
+    "lat": 49.00725, 
+    "long": 8.39248, 
+    "title": "St\u00f6vchen", 
+    "url_title": "G\u00fcnstig im St\u00f6vchen"
+  }, 
+  {
+    "addr": [
+      "Waldstr. 87", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "17.03.2006", 
+    "id": 58, 
+    "img": true, 
+    "lat": 49.00717, 
+    "long": 8.39282, 
+    "title": "Pomodoro", 
+    "url_title": "Pizzeria Pomodoro"
+  }, 
+  {
+    "addr": [
+      "Leopoldstra\u00dfe 18", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "16.03.2006", 
+    "id": 56, 
+    "img": true, 
+    "lat": 49.00812, 
+    "long": 8.38957, 
+    "title": "Restaurant Bangkok", 
+    "url_title": "Restaurant Bangkok"
+  }, 
+  {
+    "addr": [
+      "Karlstr. 95", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "D\u00f6neria", 
+    "date": "15.03.2006", 
+    "id": 55, 
+    "img": true, 
+    "lat": 48.99860, 
+    "long": 8.39412, 
+    "other": [
+      {
+        "date": "13.02.2006", 
+        "id": 27, 
+        "title": "Pizza & D\u00f6ner Haus Mastar"
+      }
+    ], 
+    "title": "Mastar - Pizza & D\u00f6ner Haus", 
+    "url_title": "D\u00f6ner Mastar - diesmal kein Yufka"
+  }, 
+  {
+    "addr": [
+      "Amalienstr. 46", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Inder", 
+    "date": "14.03.2006", 
+    "id": 54, 
+    "img": true, 
+    "lat": 49.00966, 
+    "long": 8.38987, 
+    "other": [
+      {
+        "date": "02.03.2006", 
+        "id": 43, 
+        "title": "l'incontro"
+      }
+    ], 
+    "title": "Punjab", 
+    "url_title": "Punjab Tandoori Restaurant"
+  }, 
+  {
+    "addr": [
+      "Brauerstr. 17", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "10.03.2006", 
+    "id": 52, 
+    "img": true, 
+    "lat": 49.00273, 
+    "long": 8.38676, 
+    "title": "Saigon Restaurant", 
+    "url_title": "Saigon Restaurant, zum zweiten"
+  }, 
+  {
+    "addr": [
+      "Lorenzstr. 2,", 
+      "76135 Karlsruhe"
+    ], 
+    "cat": "B\u00e4cker", 
+    "date": "10.03.2006", 
+    "id": 51, 
+    "lat": 49.00429, 
+    "long": 8.38332, 
+    "title": "B\u00e4ckerei Fl\u00fcgel,", 
+    "url_title": "B\u00e4ckerei Fl\u00fcgel"
+  }, 
+  {
+    "addr": [
+      "Brauerstra\u00dfe 40 ", 
+      "76135 Karlsruhe "
+    ], 
+    "cat": "Asiate", 
+    "date": "09.03.2006", 
+    "id": 50, 
+    "img": true, 
+    "lat": 49.00012, 
+    "long": 8.38570, 
+    "title": "China City ", 
+    "url_title": "Restaurant China-City im Filmpalast"
+  }, 
+  {
+    "addr": [
+      "Kriegsstra\u00dfe 218", 
+      "76135 S\u00fcdweststadt, Karlsruhe"
+    ], 
+    "cat": "Grieche", 
+    "date": "09.03.2006", 
+    "id": 49, 
+    "img": true, 
+    "lat": 49.00561, 
+    "long": 8.38323, 
+    "title": "Poseidon in Karlsruhe", 
+    "url_title": "Poseidon im alten Brauereigeb\u00e4ude"
+  }, 
+  {
+    "addr": [
+      "Sophienstr. 59", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "08.03.2006", 
+    "id": 46, 
+    "img": true, 
+    "lat": 49.00742, 
+    "long": 8.38866, 
+    "title": "Pizzeria Centrale", 
+    "url_title": "Pizzeria Centrale"
+  }, 
+  {
+    "addr": [
+      "Klauprechtstr. 13", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "B\u00e4cker", 
+    "date": "06.03.2006", 
+    "id": 45, 
+    "img": true, 
+    "lat": 49.00076, 
+    "long": 8.39296, 
+    "title": "Caf\u00e9 Lasch - Konditorei - B\u00e4ckerei", 
+    "url_title": "Cafe Lasch"
+  }, 
+  {
+    "addr": [
+      "im Filmpalast am ZKM GmbH ", 
+      "Brauerstra\u00dfe 40 ", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "01.03.2006", 
+    "id": 42, 
+    "img": true, 
+    "lat": 49.00018, 
+    "long": 8.38484, 
+    "title": "Die Fritte GmbH", 
+    "url_title": "Filmpalast: Die Fritte"
+  }, 
+  {
+    "addr": [
+      "Jaroon\u2019s", 
+      "Brauerstra\u00dfe 40 ", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "International", 
+    "date": "27.02.2006", 
+    "id": 39, 
+    "img": true, 
+    "lat": 49.00054, 
+    "long": 8.38542, 
+    "title": "American Diner: Burger zum Mittag"
+  }, 
+  {
+    "addr": [
+      "Steinstr. 23", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "23.02.2006", 
+    "id": 37, 
+    "img": true, 
+    "lat": 49.00642, 
+    "long": 8.40714, 
+    "title": "Cafe Palaver Inh. A. Gr\u00f6ber", 
+    "url_title": "Cafe Palaver"
+  }, 
+  {
+    "addr": [
+      "Auf dem Stephanplatz, hinter der Postgalerie", 
+      "Horst Geppert", 
+      "Alte Friedrichstrasse 29", 
+      "76149 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "21.02.2006", 
+    "id": 34, 
+    "img": true, 
+    "lat": 49.00871, 
+    "long": 8.39480, 
+    "title": "Der Wurschtl", 
+    "url_title": "Der Wurschtl"
+  }, 
+  {
+    "addr": [
+      "Hermann-Veit-Stra\u00dfe 7", 
+      "76135 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "17.02.2006", 
+    "id": 32, 
+    "img": true, 
+    "lat": 48.99653, 
+    "long": 8.37669, 
+    "title": "Bistro Impuls an der Europahalle", 
+    "url_title": "Bistro Impuls"
+  }, 
+  {
+    "addr": [
+      "Gartenstr. 68", 
+      "76135 Karlsruhe"
+    ], 
+    "cat": "Grieche", 
+    "date": "15.02.2006", 
+    "id": 30, 
+    "img": true, 
+    "lat": 49.00443, 
+    "long": 8.38480, 
+    "other": [
+      {
+        "date": "09.02.2006", 
+        "id": 19, 
+        "title": "Athen Palast"
+      }
+    ], 
+    "title": "Athen Palast", 
+    "url_title": "Athen Palast"
+  }, 
+  {
+    "addr": [
+      "Leopoldstra\u00dfe 18", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "14.02.2006", 
+    "id": 29, 
+    "img": true, 
+    "lat": 49.00830, 
+    "long": 8.38959, 
+    "title": "Bangkok Foodland", 
+    "url_title": "Thail\u00e4ndischer Schnellimbiss / Restaurant Bangkok Foodland"
+  }, 
+  {
+    "addr": [
+      "Kaiserallee 11", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "14.02.2006", 
+    "id": 28, 
+    "img": true, 
+    "lat": 49.01018, 
+    "long": 8.38480, 
+    "title": "Shanghai China Schnellrestaurant", 
+    "url_title": "Shanghai China Schnellrestaurant"
+  }, 
+  {
+    "cat": "Supermarkt", 
+    "date": "11.02.2006", 
+    "id": 26, 
+    "img": true, 
+    "lat": 49.00213, 
+    "long": 8.38898, 
+    "title": "nah und gut - Edeka Supermarkt"
+  }, 
+  {
+    "addr": [
+      "Lorenzstr. 29", 
+      "76135 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "09.02.2006", 
+    "id": 22, 
+    "img": true, 
+    "lat": 48.99997, 
+    "long": 8.38392, 
+    "other": [
+      {
+        "date": "01.02.2006", 
+        "id": 7, 
+        "title": "EL29"
+      }
+    ], 
+    "title": "EL 29", 
+    "url_title": "Zweiter Versuch: Brasserie EL29"
+  }, 
+  {
+    "addr": [
+      "Jollystr. 27", 
+      "76137 Karlsruhe "
+    ], 
+    "cat": "B\u00e4cker", 
+    "date": "09.02.2006", 
+    "id": 21, 
+    "img": true, 
+    "lat": 49.00181, 
+    "long": 8.39196, 
+    "title": "B\u00e4ckerei Meier", 
+    "url_title": "B\u00e4ckerei & Konditorei Meier"
+  }, 
+  {
+    "addr": [
+      "Karlstr. 71", 
+      "76133 Karlsruhe"
+    ], 
+    "cat": "Deutsches", 
+    "date": "09.02.2006", 
+    "id": 20, 
+    "img": true, 
+    "lat": 49.00016, 
+    "long": 8.39421, 
+    "title": "Feldschl\u00f6sschen", 
+    "url_title": "\"gut b\u00fcrgerlich\" - Feldschl\u00f6sschen"
+  }, 
+  {
+    "addr": [
+      "Filmpalast am ZKM", 
+      "Brauerstra\u00dfe 40", 
+      "76135 Kalrsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "08.02.2006", 
+    "id": 18, 
+    "img": true, 
+    "lat": 49.00051, 
+    "long": 8.38498, 
+    "title": "Pflichtveranstaltung: Hollywood im Kinopalast"
+  }, 
+  {
+    "addr": [
+      "Karlstra\u00dfe 69", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "Italiener", 
+    "date": "08.02.2006", 
+    "id": 17, 
+    "img": true, 
+    "lat": 49.00089, 
+    "long": 8.39429, 
+    "other": [
+      {
+        "date": "02.02.2006", 
+        "id": 12, 
+        "title": "Da Gianni - Ristorante (im Hotel Santo)"
+      }
+    ], 
+    "title": "Da Gianni", 
+    "url_title": "Restaurant Da Gianni"
+  }, 
+  {
+    "addr": [
+      "Ebertstra\u00dfe 40", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "Supermarkt", 
+    "date": "06.02.2006", 
+    "id": 16, 
+    "img": true, 
+    "lat": 48.99534, 
+    "long": 8.38855, 
+    "title": "Rewe-Nahkauf Dittes", 
+    "url_title": "Nahkauf Ebertstrasse"
+  }, 
+  {
+    "addr": [
+      "Ebertstrasse 44", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "06.02.2006", 
+    "id": 15, 
+    "img": true, 
+    "lat": 48.99537, 
+    "long": 8.38802, 
+    "title": "Asia Shop Lang \t", 
+    "url_title": "Asia Shop Lang"
+  }, 
+  {
+    "addr": [
+      "Brauerstr. 17", 
+      "76137 Karlsruhe"
+    ], 
+    "cat": "Asiate", 
+    "date": "01.02.2006", 
+    "id": 8, 
+    "lat": 49.00151, 
+    "long": 8.38665, 
+    "title": "Saigon Restaurant", 
+    "url_title": "Chinaimbi\u00df Saigon"
+  }
+]
