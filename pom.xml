@@ -43,12 +43,13 @@
                 <configuration>
                     <sdk>
                         <!-- platform or api level (api level 4 = platform 1.6) -->
-                        <platform>4</platform>
+                        <platform>7</platform>
                     </sdk>
                     <emulator>
                         <!-- the name of the avd device to use for starting the emulator -->
-                        <avd>Wildfier</avd>
+                        <avd>${avdId}</avd>
                     </emulator>
+                    <device>${device}</device>
                     <deleteConflictingFiles>true</deleteConflictingFiles>
                     <undeployBeforeDeploy>true</undeployBeforeDeploy>
                 </configuration>
@@ -61,4 +62,12 @@
             </plugin>
         </plugins>
     </build>
+    <properties>
+        <!--
+            compare: http://docs.codehaus.org/display/MAVENUSER/POM+Element+for+Source+File+Encoding
+        -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <avdId>Wildfire</avdId>
+        <device>emulator</device>
+    </properties>
 </project>
