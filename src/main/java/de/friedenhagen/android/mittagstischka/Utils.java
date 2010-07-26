@@ -25,8 +25,11 @@ public final class Utils {
 
     public final static File calculateStorageDirectory() {
         if (hasExternalStorage()) {
-            return new File(Environment.getExternalStorageDirectory(), "Android/data/"
+            final File storageDirectory = new File(Environment.getExternalStorageDirectory(), "Android/data/"
                     + CachingRetriever.class.getName());
+            storageDirectory.mkdirs();
+            Log.i(TAG, "storageDirectory=" + storageDirectory);
+            return storageDirectory;
         } else {
             throw new RuntimeException("No external storage");
         }
