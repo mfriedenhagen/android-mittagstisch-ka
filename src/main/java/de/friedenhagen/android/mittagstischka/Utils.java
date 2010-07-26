@@ -16,17 +16,17 @@ import de.friedenhagen.android.mittagstischka.retrievers.Retriever;
  * @author mirko
  * 
  */
-public final class Utils {
+final class Utils {
 
     private final static String TAG = Utils.class.getSimpleName();
 
     private Utils() {
     };
 
-    public final static File calculateStorageDirectory() {
+    final static File calculateStorageDirectory() {
         if (hasExternalStorage()) {
             final File storageDirectory = new File(Environment.getExternalStorageDirectory(), "Android/data/"
-                    + CachingRetriever.class.getName());
+                    + Utils.class.getPackage().getName());
             storageDirectory.mkdirs();
             Log.i(TAG, "storageDirectory=" + storageDirectory);
             return storageDirectory;
@@ -38,7 +38,7 @@ public final class Utils {
     /**
      * @return
      */
-    public static boolean hasExternalStorage() {
+    static boolean hasExternalStorage() {
         final boolean hasExternalStorage = Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED);
         Log.i(TAG, "hasExternalStorage=" + hasExternalStorage);
         return hasExternalStorage;
@@ -46,9 +46,9 @@ public final class Utils {
 
     static Retriever getRetriever() {
         if (hasExternalStorage()) {
-            return new CachingRetriever(new HttpRetriever(), calculateStorageDirectory());
+            return CachingRetriever.createWithStorageCache(new HttpRetriever(), calculateStorageDirectory());
         } else {
-            return new CachingRetriever(new HttpRetriever());
+            return CachingRetriever.createWithoutCache(new HttpRetriever());
         }
     }
 }

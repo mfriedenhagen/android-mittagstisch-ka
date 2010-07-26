@@ -5,7 +5,6 @@
 package de.friedenhagen.android.mittagstischka.retrievers;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;

@@ -32,12 +32,12 @@ public class CachingRetriever implements Retriever {
     }
 
     private static class StorageCacheAccess implements CacheAccess {
-        private static final int BUFFER_SIZE = 8192*2;
+        private static final int BUFFER_SIZE = 8192 * 2;
+
         private final File storageDirectory;
 
         public StorageCacheAccess(final File storageDirectory) {
             this.storageDirectory = storageDirectory;
-            storageDirectory.mkdir();
         }
 
         public void writeCachedObject(final String filename, final Object o) throws ApiException {
@@ -100,17 +100,24 @@ public class CachingRetriever implements Retriever {
 
     private final CacheAccess cacheAccess;
 
-    public CachingRetriever(final HttpRetriever httpRetriever, final File storageDirectory) {
+    public static CachingRetriever createWithStorageCache(final HttpRetriever httpRetriever, final File storageDirectory) {
+        return new CachingRetriever(httpRetriever, storageDirectory);
+    }
+
+    public static CachingRetriever createWithoutCache(final HttpRetriever httpRetriever) {
+        return new CachingRetriever(httpRetriever);
+    }
+
+    CachingRetriever(final HttpRetriever httpRetriever, final File storageDirectory) {
         this.httpRetriever = httpRetriever;
-        storageDirectory.mkdirs();
         cacheAccess = new StorageCacheAccess(storageDirectory);
     }
-    
-    public CachingRetriever(final HttpRetriever httpRetriever) {
+
+    CachingRetriever(final HttpRetriever httpRetriever) {
         this.httpRetriever = httpRetriever;
         cacheAccess = new NoCacheAccess();
     }
-    
+
     /** {@inheritDoc} */
     @Override
     public List<Eatery> retrieveEateries() throws ApiException {
@@ -146,10 +153,10 @@ public class CachingRetriever implements Retriever {
         final String filename = String.valueOf(id) + ".png";
         byte[] buffer;
         try {
-            buffer = (byte[]) cacheAccess.readCachedObject(filename);            
+            buffer = (byte[]) cacheAccess.readCachedObject(filename);
         } catch (NoCacheEntry ignored) {
-            buffer = httpRetriever.retrieveEateryPicture(id);            
-            cacheAccess.writeCachedObject(filename, buffer);            
+            buffer = httpRetriever.retrieveEateryPicture(id);
+            cacheAccess.writeCachedObject(filename, buffer);
         }
         return buffer;
     }

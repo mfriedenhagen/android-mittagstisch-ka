@@ -11,8 +11,6 @@ import java.util.List;
 
 import de.friedenhagen.android.mittagstischka.model.Eatery;
 
-import android.graphics.Bitmap;
-
 public interface Retriever {
 
     /** {@inheritDoc} */
