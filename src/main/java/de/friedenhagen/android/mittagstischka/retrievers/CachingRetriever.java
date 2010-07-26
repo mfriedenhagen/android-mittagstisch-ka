@@ -16,8 +16,6 @@ import java.io.ObjectOutputStream;
 import java.io.StreamCorruptedException;
 import java.util.List;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Environment;
 import android.util.Log;
 import de.friedenhagen.android.mittagstischka.model.Eatery;
@@ -104,22 +102,18 @@ public class CachingRetriever implements Retriever {
 
     private final CacheAccess cacheAccess;
 
-    public CachingRetriever() {
-        httpRetriever = new HttpRetriever();
-        final boolean hasExternalStorage = Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED);
-        Log.i(TAG, "hasExternalStorage=" + hasExternalStorage);
-        if (hasExternalStorage) {
-            final File storageDirectory = new File(Environment.getExternalStorageDirectory(), "Android/data/" + CachingRetriever.class.getName());
-            storageDirectory.mkdirs();
-            cacheAccess = new StorageCacheAccess(storageDirectory);
-        } else {            
-            cacheAccess = new NoCacheAccess();
-
-        }
+    public CachingRetriever(final HttpRetriever httpRetriever, final File storageDirectory) {
+        this.httpRetriever = httpRetriever;
+        storageDirectory.mkdirs();
+        cacheAccess = new StorageCacheAccess(storageDirectory);
     }
-
+    
+    public CachingRetriever(final HttpRetriever httpRetriever) {
+        this.httpRetriever = httpRetriever;
+        cacheAccess = new NoCacheAccess();
+    }
+    
     /** {@inheritDoc} */
-
     @Override
     public List<Eatery> retrieveEateries() throws ApiException {
         final String filename = "index";
@@ -150,15 +144,15 @@ public class CachingRetriever implements Retriever {
 
     /** {@inheritDoc} */
     @Override
-    public Bitmap retrieveEateryPicture(Integer id) throws ApiException {
+    public byte[] retrieveEateryPicture(Integer id) throws ApiException {
         final String filename = String.valueOf(id) + ".png";
         byte[] buffer;
         try {
             buffer = (byte[]) cacheAccess.readCachedObject(filename);            
         } catch (NoCacheEntry ignored) {
-            buffer = httpRetriever.retrieveEateryPictureBytes(id);            
+            buffer = httpRetriever.retrieveEateryPicture(id);            
             cacheAccess.writeCachedObject(filename, buffer);            
         }
-        return BitmapFactory.decodeByteArray(buffer, 0, buffer.length);
+        return buffer;
     }
 }

@@ -10,7 +10,6 @@ import android.app.ListActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 import de.friedenhagen.android.mittagstischka.model.Eatery;
-import de.friedenhagen.android.mittagstischka.retrievers.CachingRetriever;
 
 /**
  * @author mirko
@@ -24,7 +23,7 @@ public abstract class EateriesByAbstractActivity extends ListActivity {
         setContentView(R.layout.eateries_list);
         final ListView listView = getListView();
         listView.setOnItemClickListener(new EateriesOnItemClickListener(this));
-        new EateriesLookupTask(this, new CachingRetriever(), getComparator()).execute((Void)null);
+        new EateriesLookupTask(this, Utils.getRetriever(), getComparator()).execute((Void)null);
     }
     
     /**

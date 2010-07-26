@@ -9,6 +9,7 @@ import java.util.Locale;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -19,8 +20,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import de.friedenhagen.android.mittagstischka.model.Eatery;
 import de.friedenhagen.android.mittagstischka.retrievers.ApiException;
-import de.friedenhagen.android.mittagstischka.retrievers.CachingRetriever;
-import de.friedenhagen.android.mittagstischka.retrievers.Retriever;
 
 /**
  * @author mirko
@@ -69,14 +68,14 @@ public class EateryActivity extends Activity {
         @Override
         protected void onPostExecute(String result) {
             contentView.setText(result);
-            //contentView.setMovementMethod(new ScrollingMovementMethod());
+            // contentView.setMovementMethod(new ScrollingMovementMethod());
         }
 
         /** {@inheritDoc} */
         @Override
         protected String doInBackground(Integer... params) {
             try {
-                return getMittagsTischRetriever().retrieveEateryContent(params[0]);
+                return Utils.getRetriever().retrieveEateryContent(params[0]);
             } catch (ApiException e) {
                 throw new RuntimeException("Message:", e);
             }
@@ -96,16 +95,13 @@ public class EateryActivity extends Activity {
         @Override
         protected Bitmap doInBackground(Integer... params) {
             try {
-                return getMittagsTischRetriever().retrieveEateryPicture(params[0]);
+                final byte[] pictureBytes = Utils.getRetriever().retrieveEateryPicture(params[0]);
+                return BitmapFactory.decodeByteArray(pictureBytes, 0, pictureBytes.length);
             } catch (ApiException e) {
                 throw new RuntimeException("Message:", e);
             }
         }
 
-    }
-
-    Retriever getMittagsTischRetriever() {
-        return new CachingRetriever();
     }
 
     public void onClickGotoMap(final View clickedButton) {
@@ -115,7 +111,8 @@ public class EateryActivity extends Activity {
         intent.setData(uri);
         startActivity(intent);
     }
-    public void onClickGotoHomepage(final View clickedButton) {        
+
+    public void onClickGotoHomepage(final View clickedButton) {
         final Uri uri = Uri.parse(eatery.homepage);
         final Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(uri);

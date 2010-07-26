@@ -22,6 +22,6 @@ public interface Retriever {
     public abstract String retrieveEateryContent(Integer id) throws ApiException;
 
     /** {@inheritDoc} */
-    public abstract Bitmap retrieveEateryPicture(Integer id) throws ApiException;
+    public abstract byte[] retrieveEateryPicture(Integer id) throws ApiException;
 
 }
