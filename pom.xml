@@ -81,6 +81,12 @@
                         <classpathContainer>com.android.ide.eclipse.adt.ANDROID_FRAMEWORK</classpathContainer>
                         <classpathContainer>org.eclipse.jdt.launching.JRE_CONTAINER</classpathContainer>
                     </classpathContainers>
+                    <sourceExcludes>
+                        <sourceExclude>${project.build.directory}/generated-sources/r/**/*.java</sourceExclude>
+                    </sourceExcludes>
+                    <sourceIncludes>
+                        <sourceInclude>${project.basedir}/gen/**/*.java</sourceInclude>
+                    </sourceIncludes>                    
                 </configuration>
             </plugin>
         </plugins>
