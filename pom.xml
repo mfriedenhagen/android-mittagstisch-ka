@@ -10,7 +10,17 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>apk</packaging>
     <name>Mittagstisch Karlsruhe</name>
-
+    <description>An Android App to access the data provided by http://mittagstisch-ka.de/</description>
+    <url>http://github.com/mfriedenhagen/android-mittagstisch-ka/</url>
+    <scm>
+        <connection>scm:git:git://github.com/mfriedenhagen/android-mittagstisch-ka.git</connection>
+        <developerConnection>git@github.com:mfriedenhagen/android-mittagstisch-ka.git</developerConnection>
+        <url>http://github.com/mfriedenhagen/android-mittagstisch-ka</url>
+    </scm>
+    <issueManagement>
+        <system>GitHub</system>
+        <url>http://github.com/mfriedenhagen/android-mittagstisch-ka/issues</url>
+    </issueManagement>
     <dependencies>
         <dependency>
             <groupId>com.google.android</groupId>
@@ -81,12 +91,6 @@
                         <classpathContainer>com.android.ide.eclipse.adt.ANDROID_FRAMEWORK</classpathContainer>
                         <classpathContainer>org.eclipse.jdt.launching.JRE_CONTAINER</classpathContainer>
                     </classpathContainers>
-                    <sourceExcludes>
-                        <sourceExclude>${project.build.directory}/generated-sources/r/**/*.java</sourceExclude>
-                    </sourceExcludes>
-                    <sourceIncludes>
-                        <sourceInclude>${project.basedir}/gen/**/*.java</sourceInclude>
-                    </sourceIncludes>                    
                 </configuration>
             </plugin>
         </plugins>
