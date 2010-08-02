@@ -47,6 +47,10 @@ public class HttpRetriever implements Retriever {
         }
     }
 
+    HttpRetriever(final HttpClient httpClient) {
+        this.httpClient = httpClient;
+    }
+    
     /**
      * 
      */
@@ -101,7 +105,7 @@ public class HttpRetriever implements Retriever {
     }
 
     /** {@inheritDoc} */
-    public JSONArray retrieveEateries(final String response) throws ApiException {
+    JSONArray retrieveEateries(final String response) throws ApiException {
         try {
             return new JSONArray(response);
         } catch (JSONException e) {
