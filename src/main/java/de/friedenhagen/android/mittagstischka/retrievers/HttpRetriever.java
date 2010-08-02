@@ -69,7 +69,7 @@ public class HttpRetriever implements Retriever {
      * @throws ClientProtocolException
      * @throws ApiException
      */
-    private byte[] retrieveBytes(HttpGet whatToGet) throws ApiException {
+    byte[] retrieveBytes(HttpGet whatToGet) throws ApiException {
         try {
             final HttpResponse response;
             response = httpClient.execute(whatToGet);

@@ -32,8 +32,11 @@ public class CachingRetriever implements Retriever {
     }
 
     private static class StorageCacheAccess implements CacheAccess {
+        
+        /** Buffersize for reading from store. */
         private static final int BUFFER_SIZE = 8192 * 2;
 
+        /** where to store the cache files. */
         private final File storageDirectory;
 
         public StorageCacheAccess(final File storageDirectory) {
@@ -59,8 +62,10 @@ public class CachingRetriever implements Retriever {
         public Object readCachedObject(final String filename) throws ApiException, NoCacheEntry {
             final Object o;
             try {
-                final ObjectInputStream stream = new ObjectInputStream(new BufferedInputStream(new FileInputStream(
-                        new File(storageDirectory, filename)), BUFFER_SIZE));
+                final File storageFile = new File(storageDirectory, filename);
+                final FileInputStream storageInputStream = new FileInputStream(
+                        storageFile);
+                final ObjectInputStream stream = new ObjectInputStream(new BufferedInputStream(storageInputStream, BUFFER_SIZE));
                 try {
                     o = stream.readObject();
                 } catch (ClassNotFoundException e) {
