@@ -9,7 +9,7 @@
   </skin>
   <body>
     <links>
-        <item>http://mittagstisch-ka.de/</item>
+        <item name="Mittagstisch KA" href="http://mittagstisch-ka.de/"/>        
     </links>
     <menu ref="reports"/>
   </body>
