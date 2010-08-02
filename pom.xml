@@ -12,9 +12,13 @@
     <name>Mittagstisch Karlsruhe</name>
     <description>An Android App to access the data provided by http://mittagstisch-ka.de/</description>
     <url>http://github.com/mfriedenhagen/android-mittagstisch-ka/</url>
+    <ciManagement>
+        <system>Hudson</system>
+        <url>http://s312195779.online.de/hudson/job/android-mittagstisch-ka/</url>
+    </ciManagement>
     <scm>
         <connection>scm:git:git://github.com/mfriedenhagen/android-mittagstisch-ka.git</connection>
-        <developerConnection>git@github.com:mfriedenhagen/android-mittagstisch-ka.git</developerConnection>
+        <developerConnection>scm:git:git@github.com:mfriedenhagen/android-mittagstisch-ka.git</developerConnection>
         <url>http://github.com/mfriedenhagen/android-mittagstisch-ka</url>
     </scm>
     <issueManagement>
