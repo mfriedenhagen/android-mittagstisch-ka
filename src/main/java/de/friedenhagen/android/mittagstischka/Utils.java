@@ -18,7 +18,7 @@ import de.friedenhagen.android.mittagstischka.retrievers.Retriever;
  */
 final class Utils {
 
-    private final static String TAG = Utils.class.getSimpleName();
+    private final static String TAG = Constants.LOG_PREFIX + Utils.class.getSimpleName();
 
     private Utils() {
     };

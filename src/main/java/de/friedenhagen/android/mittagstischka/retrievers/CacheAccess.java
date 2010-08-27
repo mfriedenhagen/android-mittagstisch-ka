@@ -24,7 +24,7 @@ interface CacheAccess {
      */
     static class StorageCacheAccess implements CacheAccess {
 
-        private final String TAG = Constants.LOG_PREFIX + StorageCacheAccess.class.getSimpleName();
+        private final static String TAG = Constants.LOG_PREFIX + StorageCacheAccess.class.getSimpleName();
         
         /** Buffersize for reading from store. */
         private static final int BUFFER_SIZE = 8192 * 2;

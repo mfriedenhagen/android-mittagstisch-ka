@@ -29,7 +29,7 @@ public class EateryActivity extends Activity {
 
     private static final String NAME = Eatery.class.getName();
 
-    private final static String TAG = EateryActivity.class.getSimpleName();
+    private final static String TAG = Constants.LOG_PREFIX + EateryActivity.class.getSimpleName();
 
     private TextView titleView;
 

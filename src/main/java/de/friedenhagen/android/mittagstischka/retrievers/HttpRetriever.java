@@ -21,6 +21,7 @@ import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
 
+import de.friedenhagen.android.mittagstischka.Constants;
 import de.friedenhagen.android.mittagstischka.model.Eatery;
 
 /**
@@ -29,9 +30,9 @@ import de.friedenhagen.android.mittagstischka.model.Eatery;
  */
 public class HttpRetriever implements Retriever {
 
-    public static final String MITTAGSTISCH_API = "http://mittagstisch-ka.de/app/";
+    public final static String MITTAGSTISCH_API = "http://mittagstisch-ka.de/app/";
 
-    public static final String TAG = HttpRetriever.class.getSimpleName();
+    private final static String TAG = Constants.LOG_PREFIX + HttpRetriever.class.getSimpleName();
 
     public String etag;
 
@@ -82,9 +83,9 @@ public class HttpRetriever implements Retriever {
             final byte[] byteArray = EntityUtils.toByteArray(response.getEntity());
             return byteArray;
         } catch (ClientProtocolException e) {
-            throw new ApiException("Message:", e);
+            throw new ApiException(TAG, e);
         } catch (IOException e) {
-            throw new ApiException("Message:", e);
+            throw new ApiException(TAG, e);
         }
     }
 
@@ -109,7 +110,7 @@ public class HttpRetriever implements Retriever {
         try {
             return new JSONArray(response);
         } catch (JSONException e) {
-            throw new ApiException("Could not parse " + response, e);
+            throw new ApiException(TAG + "Could not parse " + response, e);
         }
     }
 

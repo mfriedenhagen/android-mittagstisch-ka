@@ -18,7 +18,7 @@ import de.friedenhagen.android.mittagstischka.retrievers.Retriever;
 
 class EateriesLookupTask extends AsyncTask<Void, String, List<Eatery>> {
     
-    private final static String TAG = EateriesLookupTask.class.getSimpleName();
+    private final static String TAG = Constants.LOG_PREFIX + EateriesLookupTask.class.getSimpleName();
     
     /**
      * 
