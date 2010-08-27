@@ -1,4 +1,6 @@
-bin
-gen
-assets
-target
+.classpath
+.project
+.settings/
+bin/
+gen/
+target/
