@@ -4,6 +4,9 @@
     package="de.friedenhagen.android.mittagstischka"
     android:versionCode="1"
     android:versionName="1.0">
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="7" />
     <application
         android:icon="@drawable/icon"
         android:label="@string/app_name"
@@ -76,9 +79,11 @@
         </activity>
     </application>
     <uses-permission
-        android:name="android.permission.INTERNET"/>
+        android:name="android.permission.INTERNET" />
     <uses-permission
-        android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission
-        android:name="android.permission.ACCESS_FINE_LOCATION"/>
+        android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE" />
 </manifest> 
