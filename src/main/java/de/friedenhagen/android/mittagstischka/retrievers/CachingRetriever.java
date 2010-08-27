@@ -4,102 +4,19 @@
 
 package de.friedenhagen.android.mittagstischka.retrievers;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.io.StreamCorruptedException;
 import java.util.List;
 
+import de.friedenhagen.android.mittagstischka.Constants;
 import de.friedenhagen.android.mittagstischka.model.Eatery;
 
 /**
+ * Depending on the availability of a SD-card this decorator
+ * will write a cache to the SD-card.
  * @author mirko
  * 
  */
-public class CachingRetriever implements Retriever {
-
-    private static interface CacheAccess {
-
-        Object readCachedObject(final String filename) throws ApiException, NoCacheEntry;
-
-        void writeCachedObject(final String filename, final Object o) throws ApiException;
-    }
-
-    private static class StorageCacheAccess implements CacheAccess {
-        
-        /** Buffersize for reading from store. */
-        private static final int BUFFER_SIZE = 8192 * 2;
-
-        /** where to store the cache files. */
-        private final File storageDirectory;
-
-        public StorageCacheAccess(final File storageDirectory) {
-            this.storageDirectory = storageDirectory;
-        }
-
-        public void writeCachedObject(final String filename, final Object o) throws ApiException {
-            try {
-                final ObjectOutputStream stream = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(
-                        new File(storageDirectory, filename)), BUFFER_SIZE));
-                try {
-                    stream.writeObject(o);
-                } finally {
-                    stream.close();
-                }
-            } catch (FileNotFoundException e) {
-                throw new ApiException(TAG, e);
-            } catch (IOException e) {
-                throw new ApiException(TAG, e);
-            }
-        }
-
-        public Object readCachedObject(final String filename) throws ApiException, NoCacheEntry {
-            final Object o;
-            try {
-                final File storageFile = new File(storageDirectory, filename);
-                final FileInputStream storageInputStream = new FileInputStream(
-                        storageFile);
-                final ObjectInputStream stream = new ObjectInputStream(new BufferedInputStream(storageInputStream, BUFFER_SIZE));
-                try {
-                    o = stream.readObject();
-                } catch (ClassNotFoundException e) {
-                    throw new ApiException(TAG, e);
-                } finally {
-                    stream.close();
-                }
-            } catch (FileNotFoundException e) {
-                throw new NoCacheEntry();
-            } catch (StreamCorruptedException e) {
-                throw new NoCacheEntry();
-            } catch (IOException e) {
-                throw new NoCacheEntry();
-            }
-            return o;
-        }
-    }
-
-    private static class NoCacheAccess implements CacheAccess {
-
-        @Override
-        public Object readCachedObject(String filename) throws ApiException, NoCacheEntry {
-            throw new NoCacheEntry();
-        }
-
-        @Override
-        public void writeCachedObject(String filename, Object o) throws ApiException {
-            // Just do nothing.
-
-        }
-
-    }
-
-    private static String TAG = CachingRetriever.class.getSimpleName();
+public class CachingRetriever implements Retriever {    
 
     private final HttpRetriever httpRetriever;
 
@@ -115,12 +32,12 @@ public class CachingRetriever implements Retriever {
 
     CachingRetriever(final HttpRetriever httpRetriever, final File storageDirectory) {
         this.httpRetriever = httpRetriever;
-        cacheAccess = new StorageCacheAccess(storageDirectory);
+        cacheAccess = new CacheAccess.StorageCacheAccess(storageDirectory);
     }
 
     CachingRetriever(final HttpRetriever httpRetriever) {
         this.httpRetriever = httpRetriever;
-        cacheAccess = new NoCacheAccess();
+        cacheAccess = new CacheAccess.NoCacheAccess();
     }
 
     /** {@inheritDoc} */
