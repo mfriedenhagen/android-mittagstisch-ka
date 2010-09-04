@@ -6,5 +6,5 @@
     android:layout_height="wrap_content"
     android:choiceMode="singleChoice"
     android:textFilterEnabled="true"
-    android:dividerHeight="5dip">
+    android:dividerHeight="2dip">
 </ListView>
