@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 
@@ -31,8 +32,10 @@ public class EateriesTabActivity extends TabActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         tabHost = getTabHost();
-        addSpec("eateries_by_name", R.string.tab_alphabetically_title, android.R.drawable.ic_menu_sort_alphabetically, EateriesByNameActivity.class);
-        addSpec("eateries_by_date", R.string.tab_bydate_title, android.R.drawable.ic_menu_month, EateriesByDateActivity.class);
+        addSpec("eateries_by_name", R.string.tab_alphabetically_title, android.R.drawable.ic_menu_sort_alphabetically,
+                EateriesByNameActivity.class);
+        addSpec("eateries_by_date", R.string.tab_bydate_title, android.R.drawable.ic_menu_month,
+                EateriesByDateActivity.class);
         // addSpec("eateries_by_distance", "Entfernung", EateriesByDistanceActivity.class);
         tabHost.setCurrentTabByTag("eateries_by_name");
     }
@@ -44,7 +47,19 @@ public class EateriesTabActivity extends TabActivity {
         inflater.inflate(R.menu.main, menu);
         return super.onCreateOptionsMenu(menu);
     }
-    
+
+    /** {@inheritDoc} */
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.main_info) {
+            final Intent info = new Intent(this, InfoActivity.class);
+            this.startActivity(info);
+            return true;
+        } else {
+            return super.onOptionsItemSelected(item);
+        }
+    }
+
     /**
      * @param tabId
      * @param tabName

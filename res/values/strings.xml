@@ -24,4 +24,12 @@
         name="menu_settings">Einstellungen</string>
     <string
         name="menu_info">Info</string>
+    <string
+        name="info_title">Über diese Anwendung</string>
+    <string
+        name="info_message">
+        &lt;a href=&quot;http://wiki.github.com/mfriedenhagen/android-mittagstisch-ka/&quot;&gt;Homepage&lt;/a&gt;
+        &lt;br/&gt;&lt;br/&gt;
+        &lt;a
+        href=&quot;http://github.com/mfriedenhagen/android-mittagstisch-ka/commit/%s&quot;&gt;Commit %s&lt;/a&gt; </string>
 </resources>
