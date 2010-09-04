@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:visible="true"
+        android:id="@+id/main_menu"
+        android:enabled="true">
+        <item
+            android:icon="@android:drawable/ic_menu_info_details"
+            android:visible="true"
+            android:title="@string/menu_info"
+            android:id="@+id/main_info"
+            android:enabled="true"></item>
+        <item
+            android:icon="@android:drawable/ic_menu_manage"
+            android:visible="true"
+            android:title="@string/menu_settings"
+            android:id="@+id/main_settings"
+            android:enabled="true"></item>
+    </group>
+</menu>
