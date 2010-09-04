@@ -11,6 +11,7 @@
         android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:launchMode="singleTop"
+        android:theme="@style/MittagstischTheme"
         android:debuggable="true">
         <activity
             android:name=".EateriesTabActivity"
