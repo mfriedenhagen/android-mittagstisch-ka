@@ -15,11 +15,9 @@
         <i>Liste aller Mittagstisch-Einträge</i>
     </string>
     <string
-        name="progress_title">
-        <b>Index...</b>
-    </string>
-    <string name="tab_alphabetically_title">A-Z</string>
-    <string name="tab_bydate_title">Datum</string>
+        name="tab_alphabetically_title">A-Z</string>
+    <string
+        name="tab_bydate_title">Datum</string>
     <string
         name="progress_message">Lade Index Daten.</string>
     <string

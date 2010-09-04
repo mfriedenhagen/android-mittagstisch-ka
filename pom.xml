@@ -50,6 +50,26 @@
         <finalName>${project.artifactId}</finalName>
         <plugins>
             <plugin>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.4</version>
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <configuration>
+                            <tasks>
+                                <exec executable="git" output="assets/GITHASH">
+                                    <arg value="rev-parse"/>
+                                    <arg value="HEAD"/>
+                                </exec>
+                            </tasks>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
                 <groupId>com.jayway.maven.plugins.android.generation2</groupId>
                 <artifactId>maven-android-plugin</artifactId>
                 <version>2.5.2</version>
@@ -71,7 +91,7 @@
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <!-- version 2.3 defaults to java 1.5, so no further configuration needed -->
-                <version>2.3.1</version>                
+                <version>2.3.1</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
