@@ -5,3 +5,4 @@ bin/
 gen/
 target/
 assets/GITHASH
+res/values/githash.xml

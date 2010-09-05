@@ -57,10 +57,20 @@
                         <phase>validate</phase>
                         <configuration>
                             <tasks>
-                                <exec executable="git" output="assets/GITHASH">
-                                    <arg value="rev-parse"/>
-                                    <arg value="HEAD"/>
+                                <exec
+                                    executable="git"
+                                    outputproperty="GITHASH">
+                                    <arg
+                                        value="rev-parse" />
+                                    <arg
+                                        value="HEAD" />
                                 </exec>
+                                <echoxml file="res/values/githash.xml">
+                                    <resources>
+                                        <string
+                                            name="info_githash">${GITHASH}</string>
+                                    </resources>
+                                </echoxml>
                             </tasks>
                         </configuration>
                         <goals>
