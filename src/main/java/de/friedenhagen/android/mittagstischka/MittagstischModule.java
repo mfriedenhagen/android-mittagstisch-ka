@@ -25,11 +25,20 @@ public class MittagstischModule extends AbstractAndroidModule {
     @Provides
     Retriever createRetriever() {
         if (Utils.hasExternalStorage()) {
-            return CachingRetriever.createWithStorageCache(new HttpRetriever(), Utils.calculateStorageDirectory());
+            return CachingRetriever.createWithStorageCache(createHttpRetriever(), Utils.calculateStorageDirectory());
         } else {
-            return new HttpRetriever();
+            return CachingRetriever.createWithoutCache(createHttpRetriever());
         }
     }
+
+    /**
+     * @return
+     */
+    @Provides
+    HttpRetriever createHttpRetriever() {
+        return new HttpRetriever();
+    }
+    
     
     
 }
