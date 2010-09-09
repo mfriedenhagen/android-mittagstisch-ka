@@ -6,16 +6,22 @@ package de.friedenhagen.android.mittagstischka;
 
 import java.util.Comparator;
 
+import com.google.inject.Inject;
+
 import roboguice.activity.GuiceListActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 import de.friedenhagen.android.mittagstischka.model.Eatery;
+import de.friedenhagen.android.mittagstischka.retrievers.Retriever;
 
 /**
  * @author mirko
  */
 public abstract class EateriesByAbstractActivity extends GuiceListActivity {
 
+    @Inject
+    private Retriever retriever;
+    
     /** {@inheritDoc} */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +29,7 @@ public abstract class EateriesByAbstractActivity extends GuiceListActivity {
         setContentView(R.layout.eateries_list);
         final ListView listView = getListView();
         listView.setOnItemClickListener(new EateriesOnItemClickListener(this));
-        new EateriesLookupTask(this, Utils.getRetriever(), getComparator()).execute((Void)null);
+        new EateriesLookupTask(this, retriever, getComparator()).execute((Void)null);
     }
     
     /**
