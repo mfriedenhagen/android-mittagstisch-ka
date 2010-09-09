@@ -6,7 +6,7 @@ package de.friedenhagen.android.mittagstischka;
 
 import java.util.Comparator;
 
-import android.app.ListActivity;
+import roboguice.activity.GuiceListActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 import de.friedenhagen.android.mittagstischka.model.Eatery;
@@ -14,7 +14,7 @@ import de.friedenhagen.android.mittagstischka.model.Eatery;
 /**
  * @author mirko
  */
-public abstract class EateriesByAbstractActivity extends ListActivity {
+public abstract class EateriesByAbstractActivity extends GuiceListActivity {
 
     /** {@inheritDoc} */
     @Override

@@ -5,21 +5,27 @@
 package de.friedenhagen.android.mittagstischka;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
-import de.friedenhagen.android.mittagstischka.model.Eatery;
+import com.google.inject.Module;
 
-import android.app.Application;
+import roboguice.application.GuiceApplication;
+import de.friedenhagen.android.mittagstischka.model.Eatery;
 
 /**
  * @author mirko
  * 
  */
-public class MittagstischApplication extends Application {
+public class MittagstischApplication extends GuiceApplication {
 
     private final List<Eatery> eateries = new ArrayList<Eatery>();
 
+    /** {@inheritDoc} */
+    @Override
+    protected void addApplicationModules(List<Module> modules) {
+        modules.add(new MittagstischModule());
+        super.addApplicationModules(modules);
+    }
     /**
      * @param newEateries
      *            the eateries to set

@@ -4,8 +4,8 @@
 
 package de.friedenhagen.android.mittagstischka;
 
+import roboguice.activity.GuiceTabActivity;
 import android.app.Activity;
-import android.app.TabActivity;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -20,7 +20,7 @@ import android.widget.TabHost.TabSpec;
  * @author mirko
  * 
  */
-public class EateriesTabActivity extends TabActivity {
+public class EateriesTabActivity extends GuiceTabActivity {
 
     private final static String TAG = Constants.LOG_PREFIX + EateriesTabActivity.class.getSimpleName();
 

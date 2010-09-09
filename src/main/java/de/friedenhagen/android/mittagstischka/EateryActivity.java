@@ -6,7 +6,9 @@ package de.friedenhagen.android.mittagstischka;
 
 import java.util.Locale;
 
-import android.app.Activity;
+import roboguice.activity.GuiceActivity;
+import roboguice.inject.InjectExtra;
+import roboguice.inject.InjectView;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -25,35 +27,30 @@ import de.friedenhagen.android.mittagstischka.retrievers.ApiException;
  * @author mirko
  * 
  */
-public class EateryActivity extends Activity {
-
-    private static final String NAME = Eatery.class.getName();
+public class EateryActivity extends GuiceActivity {
 
     private final static String TAG = Constants.LOG_PREFIX + EateryActivity.class.getSimpleName();
 
+    @InjectView(R.id.eatery_title)
     private TextView titleView;
 
+    @InjectView(R.id.eatery_content)
     private TextView contentView;
-
+    
+    @InjectView(R.id.eatery_image)
     private ImageView imageView;
-
+    
+    @InjectExtra(value="eatery")
     private Eatery eatery;
+
+    @InjectView(R.id.eatery_button_homepage)
+    private ImageButton homePageButton;
 
     /** {@inheritDoc} */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.eatery);
-        final Bundle extras = getIntent().getExtras();
-        Log.d(TAG, String.valueOf(extras.keySet()));
-        Log.d(TAG, "isinbundle:" + extras.containsKey(NAME));
-        eatery = (Eatery) extras.getSerializable(NAME);
-        Log.i(TAG, "eatery:" + eatery);
-        assert eatery != null;
-        titleView = (TextView) findViewById(R.id.eatery_title);
-        contentView = (TextView) findViewById(R.id.eatery_content);
-        imageView = (ImageView) findViewById(R.id.eatery_image);
-        final ImageButton homePageButton = (ImageButton) findViewById(R.id.eatery_button_homepage);
         if (eatery.homepage == null) {
             homePageButton.setEnabled(false);
         }
@@ -68,7 +65,6 @@ public class EateryActivity extends Activity {
         @Override
         protected void onPostExecute(String result) {
             contentView.setText(result);
-            // contentView.setMovementMethod(new ScrollingMovementMethod());
         }
 
         /** {@inheritDoc} */
