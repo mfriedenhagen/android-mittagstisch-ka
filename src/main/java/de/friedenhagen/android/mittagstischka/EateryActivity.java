@@ -6,6 +6,8 @@ package de.friedenhagen.android.mittagstischka;
 
 import java.util.Locale;
 
+import com.google.inject.Inject;
+
 import roboguice.activity.GuiceActivity;
 import roboguice.inject.InjectExtra;
 import roboguice.inject.InjectView;
@@ -22,6 +24,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import de.friedenhagen.android.mittagstischka.model.Eatery;
 import de.friedenhagen.android.mittagstischka.retrievers.ApiException;
+import de.friedenhagen.android.mittagstischka.retrievers.Retriever;
 
 /**
  * @author mirko
@@ -46,6 +49,9 @@ public class EateryActivity extends GuiceActivity {
     @InjectView(R.id.eatery_button_homepage)
     private ImageButton homePageButton;
 
+    @Inject
+    private Retriever retriever;
+    
     /** {@inheritDoc} */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,7 +77,7 @@ public class EateryActivity extends GuiceActivity {
         @Override
         protected String doInBackground(Integer... params) {
             try {
-                return Utils.getRetriever().retrieveEateryContent(params[0]);
+                return retriever.retrieveEateryContent(params[0]);
             } catch (ApiException e) {
                 throw new RuntimeException("Message:", e);
             }
@@ -91,7 +97,7 @@ public class EateryActivity extends GuiceActivity {
         @Override
         protected Bitmap doInBackground(Integer... params) {
             try {
-                final byte[] pictureBytes = Utils.getRetriever().retrieveEateryPicture(params[0]);
+                final byte[] pictureBytes = retriever.retrieveEateryPicture(params[0]);
                 return BitmapFactory.decodeByteArray(pictureBytes, 0, pictureBytes.length);
             } catch (ApiException e) {
                 throw new RuntimeException("Message:", e);
