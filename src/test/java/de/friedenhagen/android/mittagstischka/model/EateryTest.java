@@ -4,15 +4,13 @@
 
 package de.friedenhagen.android.mittagstischka.model;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.io.InputStream;
 import java.util.Collections;
 import java.util.List;
 
 import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 import org.junit.Before;
 import org.junit.Test;
 

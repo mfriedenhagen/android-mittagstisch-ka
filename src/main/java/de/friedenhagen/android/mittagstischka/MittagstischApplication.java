@@ -7,9 +7,10 @@ package de.friedenhagen.android.mittagstischka;
 import java.util.ArrayList;
 import java.util.List;
 
+import roboguice.application.GuiceApplication;
+
 import com.google.inject.Module;
 
-import roboguice.application.GuiceApplication;
 import de.friedenhagen.android.mittagstischka.model.Eatery;
 
 /**

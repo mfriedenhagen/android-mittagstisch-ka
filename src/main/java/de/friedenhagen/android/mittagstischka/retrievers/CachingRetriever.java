@@ -10,7 +10,6 @@ import java.util.List;
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
 
-import de.friedenhagen.android.mittagstischka.Constants;
 import de.friedenhagen.android.mittagstischka.model.Eatery;
 
 /**

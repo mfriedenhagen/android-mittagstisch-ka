@@ -6,8 +6,6 @@ package de.friedenhagen.android.mittagstischka;
 
 import java.util.Locale;
 
-import com.google.inject.Inject;
-
 import roboguice.activity.GuiceActivity;
 import roboguice.inject.InjectExtra;
 import roboguice.inject.InjectView;
@@ -17,11 +15,13 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.google.inject.Inject;
+
 import de.friedenhagen.android.mittagstischka.model.Eatery;
 import de.friedenhagen.android.mittagstischka.retrievers.ApiException;
 import de.friedenhagen.android.mittagstischka.retrievers.Retriever;

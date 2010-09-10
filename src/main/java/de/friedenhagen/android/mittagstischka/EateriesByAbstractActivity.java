@@ -6,11 +6,12 @@ package de.friedenhagen.android.mittagstischka;
 
 import java.util.Comparator;
 
-import com.google.inject.Inject;
-
 import roboguice.activity.GuiceListActivity;
 import android.os.Bundle;
 import android.widget.ListView;
+
+import com.google.inject.Inject;
+
 import de.friedenhagen.android.mittagstischka.model.Eatery;
 import de.friedenhagen.android.mittagstischka.retrievers.Retriever;
 
