@@ -7,16 +7,19 @@ package de.friedenhagen.android.mittagstischka.retrievers;
 import java.io.File;
 import java.util.List;
 
+import com.google.inject.Inject;
+import com.google.inject.name.Named;
+
 import de.friedenhagen.android.mittagstischka.Constants;
 import de.friedenhagen.android.mittagstischka.model.Eatery;
 
 /**
- * Depending on the availability of a SD-card this decorator
- * will write a cache to the SD-card.
+ * Depending on the availability of a SD-card this decorator will write a cache to the SD-card.
+ * 
  * @author mirko
  * 
  */
-public class CachingRetriever implements Retriever {    
+public class CachingRetriever implements Retriever {
 
     private final HttpRetriever httpRetriever;
 
@@ -30,11 +33,13 @@ public class CachingRetriever implements Retriever {
         return new CachingRetriever(httpRetriever);
     }
 
-    CachingRetriever(final HttpRetriever httpRetriever, final File storageDirectory) {
+    @Inject
+    CachingRetriever(final HttpRetriever httpRetriever, @Named("storageDirectory") final File storageDirectory) {
         this.httpRetriever = httpRetriever;
         cacheAccess = new CacheAccess.StorageCacheAccess(storageDirectory);
     }
-
+    
+    @Inject
     CachingRetriever(final HttpRetriever httpRetriever) {
         this.httpRetriever = httpRetriever;
         cacheAccess = new CacheAccess.NoCacheAccess();
