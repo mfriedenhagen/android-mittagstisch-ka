@@ -8,8 +8,9 @@
         android:id="@+id/eatery_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="10dip"
-        android:textScaleX="2.0"
+        android:layout_alignParentTop="true"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold"
         android:text="Eatery" />
     <LinearLayout
         android:layout_width="fill_parent"
@@ -21,13 +22,13 @@
             android:id="@+id/eatery_image"
             android:layout_width="54dip"
             android:layout_height="54dip"
-            android:layout_margin="10dip"
+            android:layout_margin="2dip"
             android:visibility="visible" />
         <ImageButton
             android:id="@+id/eatery_button_homepage"
             android:layout_width="54dip"
             android:layout_height="54dip"
-            android:layout_margin="10dip"
+            android:layout_margin="2dip"
             android:text="Homepage"
             android:src="@drawable/globe"
             android:onClick="onClickGotoHomepage" />
@@ -35,21 +36,23 @@
             android:id="@+id/eatery_button_map"
             android:layout_width="54dip"
             android:layout_height="54dip"
-            android:layout_margin="10dip"
+            android:layout_margin="2dip"
             android:text="Map"
             android:src="@android:drawable/ic_menu_compass"
             android:onClick="onClickGotoMap" />
     </LinearLayout>
     <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="fill_parent"
+        android:scrollbarStyle="outsideInset">
         <TextView
             android:id="@+id/eatery_content"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="Loading ..."
+            android:textAppearance="?android:attr/textAppearanceMedium"
             android:scrollbars="vertical"
-            android:scrollbarStyle="outsideOverlay"
+            android:scrollbarStyle="outsideInset"
             android:autoLink="all" />
     </ScrollView>
 </LinearLayout>
