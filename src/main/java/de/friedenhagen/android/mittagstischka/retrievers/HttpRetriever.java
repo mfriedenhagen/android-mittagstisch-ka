@@ -16,7 +16,12 @@ import org.apache.http.StatusLine;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.conn.scheme.PlainSocketFactory;
+import org.apache.http.conn.scheme.Scheme;
+import org.apache.http.conn.scheme.SchemeRegistry;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager;
+import org.apache.http.params.BasicHttpParams;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -51,12 +56,16 @@ public class HttpRetriever implements Retriever {
     HttpRetriever(final HttpClient httpClient) {
         this.httpClient = httpClient;
     }
-    
+
     /**
      * 
      */
     public HttpRetriever() {
-        httpClient = new DefaultHttpClient();
+        final BasicHttpParams params = new BasicHttpParams();
+        final SchemeRegistry schreg = new SchemeRegistry();
+        schreg.register(new Scheme("http", PlainSocketFactory.getSocketFactory(), 80));
+        final ThreadSafeClientConnManager connManager = new ThreadSafeClientConnManager(params, schreg);
+        this.httpClient = new DefaultHttpClient(connManager, params);
     }
 
     private String retrieveString(HttpGet whatToGet) throws ApiException {
