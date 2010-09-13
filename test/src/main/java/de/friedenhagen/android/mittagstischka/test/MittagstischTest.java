@@ -4,14 +4,14 @@
 
 package de.friedenhagen.android.mittagstischka.test;
 
+import android.app.Application;
 import android.test.ApplicationTestCase;
-import de.friedenhagen.android.mittagstischka.MittagstischApplication;
 
 /**
  * @author mirko
  *
  */
-public class MittagstischTest extends ApplicationTestCase<MittagstischApplication> {
+public class MittagstischTest extends ApplicationTestCase<Application> {
 
     /**
      * @param applicationClass
