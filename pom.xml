@@ -168,7 +168,7 @@
                 </executions>
             </plugin>
         </plugins>
-                <pluginManagement>
+        <pluginManagement>
             <plugins>
                 <plugin>
                     <artifactId>maven-compiler-plugin</artifactId>
