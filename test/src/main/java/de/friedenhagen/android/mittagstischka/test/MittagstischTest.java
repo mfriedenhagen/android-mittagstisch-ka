@@ -4,21 +4,20 @@
 
 package de.friedenhagen.android.mittagstischka.test;
 
-import android.app.Application;
 import android.test.ApplicationTestCase;
+import de.friedenhagen.android.mittagstischka.MittagstischApplication;
 
 /**
  * @author mirko
  *
  */
-public class MittagstischTest extends ApplicationTestCase<Application> {
+public class MittagstischTest extends ApplicationTestCase<MittagstischApplication> {
 
     /**
      * @param applicationClass
      */
-    public MittagstischTest(Class applicationClass) {
+    public MittagstischTest(Class<MittagstischApplication> applicationClass) {
         super(applicationClass);
-        // TODO Auto-generated constructor stub
     }
 
 }
