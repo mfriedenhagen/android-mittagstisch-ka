@@ -17,6 +17,18 @@
             <plugin>
                 <groupId>com.jayway.maven.plugins.android.generation2</groupId>
                 <artifactId>maven-android-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>post-integration-test</phase>
+                        <goals>
+                            <goal>pull</goal>
+                        </goals>
+                        <configuration>
+                            <source>/data/data/${project.groupId}.mittagstischka/files/TEST-all.xml</source>
+                            <destination>target/surefire-tests/TEST-all.xml</destination>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
@@ -44,6 +56,18 @@
         <dependency>
             <groupId>com.jayway.android.robotium</groupId>
             <artifactId>robotium-solo</artifactId>
+        </dependency>
+        <!-- you *must not* include roboguice and guice into test app! -->
+        <dependency>
+            <groupId>roboguice</groupId>
+            <artifactId>roboguice</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.guice</groupId>
+            <artifactId>guice</artifactId>
+            <classifier>no_aop</classifier>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>
