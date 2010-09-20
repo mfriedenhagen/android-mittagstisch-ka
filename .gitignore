@@ -4,5 +4,4 @@
 bin/
 gen/
 target/
-assets/GITHASH
-res/values/githash.xml
+app/res/values/githash.xml
