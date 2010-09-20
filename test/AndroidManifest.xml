@@ -13,5 +13,5 @@
         android:targetSdkVersion="7" />
     <instrumentation
         android:targetPackage="de.friedenhagen.android.mittagstischka"
-        android:name="android.test.InstrumentationTestRunner" />
+        android:name="com.neenbedankt.android.test.InstrumentationTestRunner" />
 </manifest> 
