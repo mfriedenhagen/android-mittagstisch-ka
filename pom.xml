@@ -6,10 +6,9 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>de.friedenhagen.android</groupId>
     <artifactId>mittagstischka-parent</artifactId>
-    <!-- for a standalone project without parent you need to have a version... -->
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>Mittagstisch Karlsruhe</name>
+    <name>Mittagstisch Karlsruhe Parent POM</name>
     <description>An Android App to access the data provided by http://mittagstisch-ka.de/</description>
     <url>http://github.com/mfriedenhagen/android-mittagstisch-ka/</url>
     <ciManagement>
@@ -30,6 +29,11 @@
             <dependency>
                 <groupId>com.google.android</groupId>
                 <artifactId>android</artifactId>
+                <version>2.1.2</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.android</groupId>
+                <artifactId>android-test</artifactId>
                 <version>2.1.2</version>
             </dependency>
             <dependency>
@@ -55,6 +59,18 @@
                 <artifactId>guice</artifactId>
                 <version>2.0</version>
                 <classifier>no_aop</classifier>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>mittagstischka</artifactId>
+                <version>${project.version}</version>
+                <type>apk</type>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>mittagstischka</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
             </dependency>
         </dependencies>
     </dependencyManagement>
