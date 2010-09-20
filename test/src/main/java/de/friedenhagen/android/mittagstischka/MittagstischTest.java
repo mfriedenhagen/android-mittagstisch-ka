@@ -68,14 +68,36 @@ public class MittagstischTest extends ActivityInstrumentationTestCase2<EateriesT
     }
 
     @MediumTest
-    public void testClickOnDateTab() throws InterruptedException {
+    public void testInfoDialog() {
+        solo.sendKey(Solo.MENU);
+        sleepASecond();
+        solo.clickOnText(tabActivity.getString(R.string.menu_info));
+        final String needle = "Homepage";
+        assertTrue("Needle '" + needle + "' not found!", solo.searchText(needle));
+        solo.assertCurrentActivity("Expected info screen", InfoActivity.class);
+    }
+
+    @MediumTest
+    public void testClickOnDateTab() {
         final ArrayList<View> touchables = tabActivity.getTabHost().getTouchables();
         Log.d(TAG, "touchables = " + touchables);
-        Thread.sleep(TimeUnit.MILLISECONDS.convert(1, TimeUnit.SECONDS));
+        sleepASecond();
         for (final View touchable : touchables) {
             Log.d(TAG, "touchable = " + touchable);
             solo.clickOnView(touchable);
+            sleepASecond();
+        }
+    }
+
+    /**
+     * @throws InterruptedException
+     */
+    void sleepASecond() {
+        try {
             Thread.sleep(TimeUnit.MILLISECONDS.convert(1, TimeUnit.SECONDS));
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            throw new RuntimeException("Could not sleep!", e);
         }
     }
 }
