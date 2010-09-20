@@ -24,7 +24,7 @@
                             <goal>pull</goal>
                         </goals>
                         <configuration>
-                            <source>/data/data/${project.groupId}.mittagstischka/files/TEST-all.xml</source>
+                            <source>/data/data/${project.groupId}.${appArtifactId}/files/TEST-all.xml</source>
                             <destination>target/surefire-tests/TEST-all.xml</destination>
                         </configuration>
                     </execution>
@@ -34,13 +34,13 @@
     </build>
     <dependencies>
         <dependency>
-            <groupId>de.friedenhagen.android</groupId>
-            <artifactId>mittagstischka</artifactId>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>${appArtifactId}</artifactId>
             <type>jar</type>
         </dependency>
         <dependency>
-            <groupId>de.friedenhagen.android</groupId>
-            <artifactId>mittagstischka</artifactId>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>${appArtifactId}</artifactId>
             <type>apk</type>
         </dependency>
         <dependency>
