@@ -42,18 +42,8 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.json</groupId>
-            <artifactId>json</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>roboguice</groupId>
-            <artifactId>roboguice</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.google.code.guice</groupId>
-            <artifactId>guice</artifactId>
-            <classifier>no_aop</classifier>
+            <groupId>com.jayway.android.robotium</groupId>
+            <artifactId>robotium-solo</artifactId>
         </dependency>
     </dependencies>
 </project>

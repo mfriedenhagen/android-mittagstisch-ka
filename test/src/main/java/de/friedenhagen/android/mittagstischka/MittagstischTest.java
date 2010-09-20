@@ -2,7 +2,9 @@
  * Copyright 2010 Mirko Friedenhagen 
  */
 
-package de.friedenhagen.android.mittagstischka.test;
+package de.friedenhagen.android.mittagstischka;
+
+import com.jayway.android.robotium.solo.Solo;
 
 import android.test.ActivityInstrumentationTestCase2;
 import de.friedenhagen.android.mittagstischka.EateriesTabActivity;
@@ -15,6 +17,7 @@ import de.friedenhagen.android.mittagstischka.R;
 public class MittagstischTest extends ActivityInstrumentationTestCase2<EateriesTabActivity> {
 
     private EateriesTabActivity tabActivity;
+    private Solo solo;
 
     /**
      * @param pkg
@@ -29,6 +32,7 @@ public class MittagstischTest extends ActivityInstrumentationTestCase2<EateriesT
     protected void setUp() throws Exception {
         super.setUp();
         tabActivity = this.getActivity();
+        solo = new Solo(getInstrumentation(), tabActivity);
     }
     
     public void testPreconditions() {
