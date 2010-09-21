@@ -77,6 +77,7 @@ public class MittagstischTest extends ActivityInstrumentationTestCase2<EateriesT
 
     @MediumTest
     public void testClickOnDateTab() {
+        solo.waitForActivity(tabActivity.getClass().getSimpleName(), 1000);
         final ArrayList<View> touchables = tabActivity.getTabHost().getTouchables();
         Log.d(TAG, "touchables = " + touchables);
         sleepOneSecond();
