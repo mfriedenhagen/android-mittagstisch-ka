@@ -7,14 +7,12 @@ package de.friedenhagen.android.mittagstischka;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
-import com.jayway.android.robotium.solo.Solo;
-
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.MediumTest;
 import android.util.Log;
 import android.view.View;
-import de.friedenhagen.android.mittagstischka.EateriesTabActivity;
-import de.friedenhagen.android.mittagstischka.R;
+
+import com.jayway.android.robotium.solo.Solo;
 
 /**
  * @author mirko
@@ -42,6 +40,7 @@ public class MittagstischTest extends ActivityInstrumentationTestCase2<EateriesT
         super.setUp();
         tabActivity = this.getActivity();
         solo = new Solo(getInstrumentation(), tabActivity);
+        sleepSeconds(2);
     }
 
     /** {@inheritDoc} */
@@ -52,7 +51,6 @@ public class MittagstischTest extends ActivityInstrumentationTestCase2<EateriesT
         } catch (Throwable e) {
             throw new RuntimeException("Message:", e);
         }
-        tabActivity.finish();
         super.tearDown();
     }
 
@@ -70,7 +68,7 @@ public class MittagstischTest extends ActivityInstrumentationTestCase2<EateriesT
     @MediumTest
     public void testInfoDialog() {
         solo.sendKey(Solo.MENU);
-        sleepASecond();
+        sleepOneSecond();
         solo.clickOnText(tabActivity.getString(R.string.menu_info));
         final String needle = "Homepage";
         assertTrue("Needle '" + needle + "' not found!", solo.searchText(needle));
@@ -79,22 +77,30 @@ public class MittagstischTest extends ActivityInstrumentationTestCase2<EateriesT
 
     @MediumTest
     public void testClickOnDateTab() {
+        solo.waitForActivity(tabActivity.getClass().getSimpleName(), 1000);
         final ArrayList<View> touchables = tabActivity.getTabHost().getTouchables();
         Log.d(TAG, "touchables = " + touchables);
-        sleepASecond();
+        sleepOneSecond();
         for (final View touchable : touchables) {
             Log.d(TAG, "touchable = " + touchable);
             solo.clickOnView(touchable);
-            sleepASecond();
+            sleepOneSecond();
         }
     }
 
     /**
      * @throws InterruptedException
      */
-    void sleepASecond() {
+    void sleepOneSecond() {
+        sleepSeconds(1);
+    }
+
+    /**
+     * @param i
+     */
+    void sleepSeconds(final int i) {
         try {
-            Thread.sleep(TimeUnit.MILLISECONDS.convert(1, TimeUnit.SECONDS));
+            Thread.sleep(TimeUnit.MILLISECONDS.convert(i, TimeUnit.SECONDS));
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
             throw new RuntimeException("Could not sleep!", e);
