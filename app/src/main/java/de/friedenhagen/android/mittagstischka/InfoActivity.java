@@ -25,11 +25,11 @@ public class InfoActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.info);        
+        setContentView(R.layout.info);
         messageView = (TextView) findViewById(android.R.id.text1);
         final String gitHash = getResources().getString(R.string.info_githash);
-        final String message = getResources().getString(R.string.info_message, gitHash, gitHash);
-        Log.d(TAG, "raw_message=" + message);        
+        final String message = getResources().getString(R.string.info_message, gitHash, gitHash.substring(0, 8));
+        Log.d(TAG, "raw_message=" + message);
         messageView.setText(Html.fromHtml(message));
         messageView.setMovementMethod(LinkMovementMethod.getInstance());
     }

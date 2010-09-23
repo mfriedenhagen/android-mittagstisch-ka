@@ -28,8 +28,11 @@
         name="info_title">Mittagstisch Karlsruhe - Info</string>
     <string
         name="info_message">
+        &lt;p&gt;
         &lt;a href=&quot;http://wiki.github.com/mfriedenhagen/android-mittagstisch-ka/&quot;&gt;Homepage&lt;/a&gt;
         &lt;br/&gt;&lt;br/&gt;
         &lt;a
-        href=&quot;http://github.com/mfriedenhagen/android-mittagstisch-ka/commit/%s&quot;&gt;Commit %s&lt;/a&gt; </string>
+        href=&quot;http://github.com/mfriedenhagen/android-mittagstisch-ka/commit/%s&quot;&gt;Commit: %s&lt;/a&gt;
+        &lt;/p&gt; 
+        </string>
 </resources>
