@@ -4,17 +4,12 @@
 
 package de.friedenhagen.android.mittagstischka;
 
-import java.util.List;
-
-import org.junit.Assert;
-
+import junit.framework.Assert;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.MediumTest;
 import android.util.Log;
 
 import com.jayway.android.robotium.solo.Solo;
-
-import de.friedenhagen.android.mittagstischka.model.Eatery;
 
 /**
  * @author mirko
@@ -65,14 +60,11 @@ public class MittagstischTest extends ActivityInstrumentationTestCase2<EateriesT
 
     @MediumTest
     public void testClickOnTabs() {
-        solo.assertCurrentActivity("Expected tab activity", tabActivity.getClass());
-        triggerInfoDialog();
-        solo.goBack();
-        solo.assertCurrentActivity("Expected tab activity", tabActivity.getClass());
         final String title = tabActivity.getString(R.string.app_name);
         assertEquals(title, tabActivity.getTitle());
         clickOnTab(R.string.tab_alphabetically_title);
         clickOnTab(R.string.tab_bydate_title);
+        triggerInfoDialog();
     }
 
     /**
@@ -83,29 +75,37 @@ public class MittagstischTest extends ActivityInstrumentationTestCase2<EateriesT
         Log.d(TAG, "clickOnTab()" + tabTitle);
         solo.clickOnText(tabTitle);
         final MittagstischApplication application = (MittagstischApplication) tabActivity.getApplication();
-        final List<Eatery> eateries = application.getEateries();
-        new WaitUntil() {
+        new WaitUntil("no eateries", 6000) {
             @Override
             boolean until() {
-                return !eateries.isEmpty();
+                return application.hasEateries();
             }
-        }.waitUntil(6000);
+        }.waitUntil();
     }
 
     abstract static class WaitUntil {
 
+        private final long timeoutInMilliSeconds;
+
+        private final String message;
+
         abstract boolean until();
 
-        void waitUntil(long timeoutInMilliSeconds) {
-            final long timeout = System.currentTimeMillis() + timeoutInMilliSeconds;
-            while (until() && timeout < System.currentTimeMillis()) {
+        WaitUntil(final String message, final long timeoutInMilliSeconds) {
+            this.message = message;
+            this.timeoutInMilliSeconds = timeoutInMilliSeconds;
+        }
+
+        void waitUntil() {
+            final long endtime = System.currentTimeMillis() + timeoutInMilliSeconds;
+            while (!until() && System.currentTimeMillis() < endtime) {
                 try {
-                    Thread.sleep(100);
+                    Thread.sleep(50);
                 } catch (InterruptedException e) {
                     throw new RuntimeException("Message:", e);
                 }
             }
-            Assert.assertTrue(until());
+            Assert.assertTrue(message + " after " + timeoutInMilliSeconds + "ms.", until());
         }
 
     }
