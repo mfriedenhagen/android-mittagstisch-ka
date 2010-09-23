@@ -4,14 +4,17 @@
 
 package de.friedenhagen.android.mittagstischka;
 
-import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Assert;
 
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.MediumTest;
 import android.util.Log;
-import android.view.View;
 
 import com.jayway.android.robotium.solo.Solo;
+
+import de.friedenhagen.android.mittagstischka.model.Eatery;
 
 /**
  * @author mirko
@@ -79,5 +82,31 @@ public class MittagstischTest extends ActivityInstrumentationTestCase2<EateriesT
         final String tabTitle = tabActivity.getString(titleId);
         Log.d(TAG, "clickOnTab()" + tabTitle);
         solo.clickOnText(tabTitle);
+        final MittagstischApplication application = (MittagstischApplication) tabActivity.getApplication();
+        final List<Eatery> eateries = application.getEateries();
+        new WaitUntil() {
+            @Override
+            boolean until() {
+                return !eateries.isEmpty();
+            }
+        }.waitUntil(6000);
+    }
+
+    abstract static class WaitUntil {
+
+        abstract boolean until();
+
+        void waitUntil(long timeoutInMilliSeconds) {
+            final long timeout = System.currentTimeMillis() + timeoutInMilliSeconds;
+            while (until() && timeout < System.currentTimeMillis()) {
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException("Message:", e);
+                }
+            }
+            Assert.assertTrue(until());
+        }
+
     }
 }
