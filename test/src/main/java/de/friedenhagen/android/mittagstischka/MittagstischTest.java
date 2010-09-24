@@ -47,6 +47,7 @@ public class MittagstischTest extends ActivityInstrumentationTestCase2<EateriesT
         } catch (Throwable e) {
             throw new RuntimeException("Message:", e);
         }
+        tabActivity.finish();
         super.tearDown();
     }
 
