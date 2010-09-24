@@ -29,13 +29,13 @@ import de.friedenhagen.android.mittagstischka.retrievers.Retriever;
  * 
  */
 public class MittagstischModule extends AbstractAndroidModule {
-    
+
     private final static String TAG = Constants.LOG_PREFIX + MittagstischModule.class.getSimpleName();
 
     /** {@inheritDoc} */
     @Override
     protected void configure() {
-        
+
     }
 
     @Provides
@@ -56,15 +56,14 @@ public class MittagstischModule extends AbstractAndroidModule {
         final SchemeRegistry schreg = new SchemeRegistry();
         schreg.register(new Scheme("http", PlainSocketFactory.getSocketFactory(), 80));
         final ThreadSafeClientConnManager connManager = new ThreadSafeClientConnManager(params, schreg);
-        return new HttpRetriever(new DefaultHttpClient(connManager, params));
+        return new HttpRetriever(new DefaultHttpClient(connManager, params), Constants.API_LOCATION);
     }
-    
+
     @Provides
     @Named("storageDirectory")
     public File calculateStorageDirectory() {
         if (hasExternalStorage()) {
-            final File storageDirectory = new File(Environment.getExternalStorageDirectory(), "Android/data/"
-                    + MittagstischModule.class.getPackage().getName());
+            final File storageDirectory = new File(Environment.getExternalStorageDirectory(), Constants.STORAGE_PATH);
             storageDirectory.mkdirs();
             Log.i(TAG, "storageDirectory=" + storageDirectory);
             return storageDirectory;
@@ -81,5 +80,5 @@ public class MittagstischModule extends AbstractAndroidModule {
         Log.i(TAG, "hasExternalStorage=" + hasExternalStorage);
         return hasExternalStorage;
     }
-    
+
 }

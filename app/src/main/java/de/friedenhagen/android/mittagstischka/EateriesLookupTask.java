@@ -13,7 +13,6 @@ import android.os.AsyncTask;
 import android.widget.Toast;
 import de.friedenhagen.android.mittagstischka.model.Eatery;
 import de.friedenhagen.android.mittagstischka.retrievers.ApiException;
-import de.friedenhagen.android.mittagstischka.retrievers.HttpRetriever;
 import de.friedenhagen.android.mittagstischka.retrievers.Retriever;
 
 class EateriesLookupTask extends AsyncTask<Void, String, List<Eatery>> {
@@ -70,7 +69,7 @@ class EateriesLookupTask extends AsyncTask<Void, String, List<Eatery>> {
                 return eateries;
             } catch (ApiException e) {
                 throw new RuntimeException(
-                        TAG + "Error while retrieving data from " + HttpRetriever.MITTAGSTISCH_INDEX, e);
+                        TAG + "Error while retrieving data", e);
             }
         }
     }

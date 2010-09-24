@@ -13,6 +13,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.junit.Before;
 import org.junit.Test;
 
+import de.friedenhagen.android.mittagstischka.Constants;
 import de.friedenhagen.android.mittagstischka.model.Eatery;
 import de.friedenhagen.android.mittagstischka.model.EateryTitleComparator;
 
@@ -26,7 +27,7 @@ public class HttpRetrieverTestIntegrative {
 
     @Before
     public void createRealHttpClient() {
-        retriever = new HttpRetriever(new DefaultHttpClient());
+        retriever = new HttpRetriever(new DefaultHttpClient(), Constants.API_LOCATION);
     }
 
     /**
@@ -62,7 +63,7 @@ public class HttpRetrieverTestIntegrative {
     public void testRetrieveEateryContent() throws ApiException {
         final Integer id = getFirstId();
         final String content = retriever.retrieveEateryContent(id);
-        assertTrue("No content for " + HttpRetriever.MITTAGSTISCH_API + id, content.length() > 0);
+        assertTrue("No content for " + Constants.API_LOCATION + id, content.length() > 0);
     }
 
     /**
@@ -75,7 +76,7 @@ public class HttpRetrieverTestIntegrative {
     public void testRetrieveEateryPicture() throws ApiException {
         final Integer id = getFirstId();
         final byte[] pictureBytes = retriever.retrieveEateryPicture(id);
-        assertTrue("No picture at " + HttpRetriever.MITTAGSTISCH_API + id + ".jpg", pictureBytes.length > 0);
+        assertTrue("No picture at " + Constants.API_LOCATION + id + ".jpg", pictureBytes.length > 0);
     }
 
     /**

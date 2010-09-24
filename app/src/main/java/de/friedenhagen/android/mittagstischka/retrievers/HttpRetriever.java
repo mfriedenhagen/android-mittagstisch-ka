@@ -5,8 +5,6 @@
 package de.friedenhagen.android.mittagstischka.retrievers;
 
 import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.util.List;
 
 import org.apache.http.Header;
@@ -29,26 +27,17 @@ import de.friedenhagen.android.mittagstischka.model.Eatery;
  */
 public class HttpRetriever implements Retriever {
 
-    public final static String MITTAGSTISCH_API = "http://mittagstisch-ka.de/app/";
-
     private final static String TAG = Constants.LOG_PREFIX + HttpRetriever.class.getSimpleName();
 
     public String etag;
 
-    public final static URI MITTAGSTISCH_INDEX;
-
     private final HttpClient httpClient;
 
-    static {
-        try {
-            MITTAGSTISCH_INDEX = new URI(MITTAGSTISCH_API + "index");
-        } catch (URISyntaxException e) {
-            throw new RuntimeException("Message:", e);
-        }
-    }
+    private final String apiLocation;
 
-    public HttpRetriever(final HttpClient httpClient) {
+    public HttpRetriever(final HttpClient httpClient, final String apiLocation) {
         this.httpClient = httpClient;
+        this.apiLocation = apiLocation;
     }
 
     private String retrieveString(HttpGet whatToGet) throws ApiException {
@@ -93,7 +82,7 @@ public class HttpRetriever implements Retriever {
      */
     @Override
     public List<Eatery> retrieveEateries() throws ApiException {
-        final String response = retrieveString(new HttpGet(MITTAGSTISCH_INDEX));
+        final String response = retrieveString(new HttpGet(apiLocation + "index"));
         return Eatery.fromJsonArray(retrieveEateries(response));
     }
 
@@ -111,7 +100,7 @@ public class HttpRetriever implements Retriever {
      */
     @Override
     public String retrieveEateryContent(Integer id) throws ApiException {
-        return retrieveString(new HttpGet(MITTAGSTISCH_API + id));
+        return retrieveString(new HttpGet(apiLocation + id));
     }
 
     /**
@@ -119,7 +108,7 @@ public class HttpRetriever implements Retriever {
      */
     @Override
     public byte[] retrieveEateryPicture(Integer id) throws ApiException {
-        final HttpGet imageGet = new HttpGet(MITTAGSTISCH_API + id + ".jpg");
+        final HttpGet imageGet = new HttpGet(apiLocation + id + ".jpg");
         return retrieveBytes(imageGet);
     }
 
