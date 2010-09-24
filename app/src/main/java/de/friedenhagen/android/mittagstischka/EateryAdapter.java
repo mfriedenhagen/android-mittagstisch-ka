@@ -23,6 +23,22 @@ public class EateryAdapter extends BaseAdapter {
 
     public final List<Eatery> eateries;
 
+    private static class ViewHolder {
+
+        final TextView titleView;
+
+        final TextView dateView;
+
+        /**
+         * @param titleView
+         * @param dateView
+         */
+        private ViewHolder(TextView titleView, TextView dateView) {
+            this.titleView = titleView;
+            this.dateView = dateView;
+        }
+    }
+
     public EateryAdapter(final List<Eatery> eateries) {
         this.eateries = eateries;
     }
@@ -43,21 +59,25 @@ public class EateryAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {        
+    public View getView(int position, View convertView, ViewGroup parent) {
         final LinearLayout listItemView;
+        final ViewHolder holder;
         if (convertView == null) {
             final Context context = parent.getContext();
             listItemView = (LinearLayout) LayoutInflater.from(context).inflate(R.layout.eateries_list_item, parent,
                     false);
+            final TextView titleView = (TextView) listItemView.findViewById(R.id.eateries_list_item_title);
+            final TextView dateView = (TextView) listItemView.findViewById(R.id.eateries_list_item_date);
+            holder = new ViewHolder(titleView, dateView);
+            listItemView.setTag(holder);
         } else {
             listItemView = (LinearLayout) convertView;
+            holder = (ViewHolder) listItemView.getTag();
         }
-        final TextView titleView = (TextView) listItemView.findViewById(R.id.eateries_list_item_title);
-        final TextView dateView = (TextView) listItemView.findViewById(R.id.eateries_list_item_date);
         final Eatery eatery = eateries.get(position);
         final SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
-        titleView.setText(eatery.title);
-        dateView.setText(format.format(eatery.date));
+        holder.titleView.setText(eatery.title);
+        holder.dateView.setText(format.format(eatery.date));
         return listItemView;
     }
 }
