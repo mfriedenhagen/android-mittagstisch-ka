@@ -75,7 +75,7 @@ public class MittagstischTest extends ActivityInstrumentationTestCase2<EateriesT
         Log.d(TAG, "clickOnTab()" + tabTitle);
         solo.clickOnText(tabTitle);
         final MittagstischApplication application = (MittagstischApplication) tabActivity.getApplication();
-        new WaitUntil("no eateries", 6000) {
+        new WaitUntil("no eateries", 12000) {
             @Override
             boolean until() {
                 return application.hasEateries();
