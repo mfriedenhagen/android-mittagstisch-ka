@@ -120,6 +120,7 @@
                     <artifactId>maven-android-plugin</artifactId>
                     <version>2.6.1-SNAPSHOT</version>
                     <configuration>
+                        <genDirectory>gen</genDirectory>
                         <sdk>
                             <!-- platform or api level (api level 4 = platform 1.6) -->
                             <platform>7</platform>
