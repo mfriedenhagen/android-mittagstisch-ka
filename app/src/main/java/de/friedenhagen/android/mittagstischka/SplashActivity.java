@@ -7,6 +7,7 @@ package de.friedenhagen.android.mittagstischka;
 import roboguice.activity.GuiceActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.google.inject.Inject;
 
@@ -31,10 +32,15 @@ public class SplashActivity extends GuiceActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash);
         new Thread(new Runnable() {
+
+            private final Toast toast = Toast.makeText(application, R.string.progress_message, Toast.LENGTH_LONG);
+
             @Override
             public void run() {
                 try {
+                    toast.show();
                     application.setEateries(retriever.retrieveEateries());
+                    toast.cancel();
                     startActivity(new Intent(SplashActivity.this, EateriesTabActivity.class));
                     SplashActivity.this.finish();
                 } catch (ApiException e) {
