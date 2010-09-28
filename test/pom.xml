@@ -96,7 +96,7 @@
                                 <configuration>
                                     <target>
                                         <echo>
-                                            Using: ANDROID_AVD_USER_PORT=${env.ANDROID_AVD_USER_PORT}
+                                            Using: ANDROID_AVD_USER_PORT=${env.ANDROID_AVD_USER_PORT} to unlock screen.
                                         </echo>
                                         <telnet
                                             server="localhost"
