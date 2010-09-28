@@ -101,9 +101,21 @@
                                 <phase>pre-integration-test</phase>
                                 <configuration>
                                     <target>
+                                        <echo>
+                                            Sending 'event send EV_KEY:KEY_MENU:1 EV_KEY:KEY_MENU:0' to
+                                            :${env.ANDROID_AVD_USER_PORT} and :${env.ANDROID_AVD_ADB_PORT} 
+                                        </echo>
                                         <telnet
                                             server="localhost"
                                             port="${env.ANDROID_AVD_USER_PORT}">
+                                            <read>OK</read>
+                                            <write>event send EV_KEY:KEY_MENU:1 EV_KEY:KEY_MENU:0</write>
+                                            <read>OK</read>
+                                            <write>quit</write>
+                                        </telnet>
+                                        <telnet
+                                            server="localhost"
+                                            port="${env.ANDROID_AVD_ADB_PORT}">
                                             <read>OK</read>
                                             <write>event send EV_KEY:KEY_MENU:1 EV_KEY:KEY_MENU:0</write>
                                             <read>OK</read>
