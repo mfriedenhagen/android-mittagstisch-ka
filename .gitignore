@@ -5,3 +5,4 @@ bin/
 gen/
 target/
 app/res/values/githash.xml
+test/res/values/githash.xml
