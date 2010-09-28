@@ -83,7 +83,6 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-antrun-plugin</artifactId>
-                        <version>1.5</version>
                         <dependencies>
                             <dependency>
                                 <groupId>org.apache.ant</groupId>
