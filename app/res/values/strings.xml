@@ -33,6 +33,10 @@
         &lt;br/&gt;&lt;br/&gt;
         &lt;a
         href=&quot;http://github.com/mfriedenhagen/android-mittagstisch-ka/commit/%s&quot;&gt;Commit: %s&lt;/a&gt;
+        &lt;br/&gt;&lt;br/&gt;
+        Version: %s
+        &lt;br/&gt;&lt;br/&gt;
+        Versioncode: %d
         &lt;/p&gt; 
         </string>
 </resources>
