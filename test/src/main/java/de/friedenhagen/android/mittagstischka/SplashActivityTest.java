@@ -52,7 +52,7 @@ public class SplashActivityTest extends ActivityInstrumentationTestCase2<SplashA
         final String title = splashActivity.getString(R.string.app_name);
         assertEquals(title, splashActivity.getTitle());
         final MittagstischApplication application = (MittagstischApplication) splashActivity.getApplication();
-        new WaitUntil("no eateries", 12000) {
+        new WaitUntil("no eateries", 30000) {
             @Override
             boolean until() {
                 return application.hasEateries();
