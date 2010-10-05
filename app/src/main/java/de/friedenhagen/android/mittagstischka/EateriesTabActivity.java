@@ -36,7 +36,7 @@ public class EateriesTabActivity extends GuiceTabActivity {
                 EateriesByNameActivity.class);
         addSpec("eateries_by_date", R.string.tab_bydate_title, android.R.drawable.ic_menu_month,
                 EateriesByDateActivity.class);
-        // addSpec("eateries_by_distance", "Entfernung", EateriesByDistanceActivity.class);
+        addSpec("eateries_by_distance", R.string.tab_bydist_title, android.R.drawable.ic_menu_compass, EateriesByDistanceActivity.class);
         tabHost.setCurrentTabByTag("eateries_by_name");
     }
 

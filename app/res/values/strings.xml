@@ -19,6 +19,8 @@
     <string
         name="tab_bydate_title">Datum</string>
     <string
+        name="tab_bydist_title">Entfernung</string>
+    <string
         name="progress_message">Lade Index Daten.</string>
     <string
         name="menu_settings">Einstellungen</string>
