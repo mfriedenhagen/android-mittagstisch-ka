@@ -12,6 +12,12 @@
     <artifactId>mittagstischka</artifactId>
     <packaging>apk</packaging>
     <name>Mittagstisch Karlsruhe</name>
+    <description>An Android App to access the data provided by http://mittagstisch-ka.de/</description>
+    <scm>
+        <connection>scm:git:git://github.com/mfriedenhagen/android-mittagstisch-ka.git</connection>
+        <developerConnection>scm:git:git@github.com:mfriedenhagen/android-mittagstisch-ka.git</developerConnection>
+        <url>http://github.com/mfriedenhagen/android-mittagstisch-ka</url>
+    </scm>
     <dependencies>
         <dependency>
             <groupId>com.google.android</groupId>

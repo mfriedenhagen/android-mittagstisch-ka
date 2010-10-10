@@ -12,6 +12,12 @@
     <artifactId>mittagstischkatest</artifactId>
     <packaging>apk</packaging>
     <name>Mittagstisch Karlsruhe Testapp</name>
+    <description>An Android App to test the app for accessing the data provided by http://mittagstisch-ka.de/</description>
+    <scm>
+        <connection>scm:git:git://github.com/mfriedenhagen/android-mittagstisch-ka.git</connection>
+        <developerConnection>scm:git:git@github.com:mfriedenhagen/android-mittagstisch-ka.git</developerConnection>
+        <url>http://github.com/mfriedenhagen/android-mittagstisch-ka</url>
+    </scm>
     <build>
         <plugins>
             <plugin>
@@ -89,7 +95,8 @@
                                 <configuration>
                                     <target>
                                         <echo>
-                                            Using: ANDROID_AVD_USER_PORT=${env.ANDROID_AVD_USER_PORT} to unlock screen.
+                                            Using: ANDROID_AVD_USER_PORT=${env.ANDROID_AVD_USER_PORT} to unlock
+                                            screen.
                                         </echo>
                                         <telnet
                                             server="localhost"
