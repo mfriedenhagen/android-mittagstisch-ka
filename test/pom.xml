@@ -76,46 +76,4 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-    <profiles>
-        <profile>
-            <id>mittagstischka-pre-integration-test-unlock-screen</id>
-            <activation>
-                <property>
-                    <name>env.ANDROID_AVD_USER_PORT</name>
-                </property>
-            </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-antrun-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <phase>pre-integration-test</phase>
-                                <configuration>
-                                    <target>
-                                        <echo>
-                                            Using: ANDROID_AVD_USER_PORT=${env.ANDROID_AVD_USER_PORT} to unlock
-                                            screen.
-                                        </echo>
-                                        <telnet
-                                            server="localhost"
-                                            port="${env.ANDROID_AVD_USER_PORT}">
-                                            <read>OK</read>
-                                            <write>event send EV_KEY:KEY_MENU:1 EV_KEY:KEY_MENU:0</write>
-                                            <read>OK</read>
-                                            <write>quit</write>
-                                        </telnet>
-                                    </target>
-                                </configuration>
-                                <goals>
-                                    <goal>run</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
 </project>
