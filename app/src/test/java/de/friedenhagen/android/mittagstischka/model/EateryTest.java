@@ -6,11 +6,13 @@ package de.friedenhagen.android.mittagstischka.model;
 
 import static org.junit.Assert.assertEquals;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.Collections;
 import java.util.List;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -18,7 +20,7 @@ import de.friedenhagen.android.mittagstischka.retrievers.IOUtils;
 
 /**
  * @author mirko
- *
+ * 
  */
 public class EateryTest {
 
@@ -29,13 +31,18 @@ public class EateryTest {
      */
     @Before
     public void setUp() throws Exception {
+        jsonArray = getEateries();
+    }
+
+    public static JSONArray getEateries() throws JSONException, IOException {
         final InputStream inputStream = EateryTest.class.getResourceAsStream("index");
         try {
             final String index = IOUtils.toUtf8String(IOUtils.toByteArray(inputStream));
-            jsonArray = new JSONArray(index);
+            return new JSONArray(index);
         } finally {
             inputStream.close();
         }
+
     }
 
     /**
@@ -54,7 +61,7 @@ public class EateryTest {
     @Test
     public void testToString() {
         final Eatery eatery = createEateryList().get(0);
-        assertEquals("Eatery(Afrika, 78)", eatery.toString());        
+        assertEquals("Eatery(Afrika, 78)", eatery.toString());
     }
 
     /**

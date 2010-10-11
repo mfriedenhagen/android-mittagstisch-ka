@@ -77,6 +77,23 @@
                 <version>${project.version}</version>
                 <type>jar</type>
             </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-all</artifactId>
+                <version>1.8.5</version>
+            </dependency>
+            <dependency>
+                <groupId>org.powermock.modules</groupId>
+                <artifactId>powermock-module-junit4</artifactId>
+                <version>${powermock.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.powermock.api</groupId>
+                <artifactId>powermock-api-mockito</artifactId>
+                <version>${powermock.version}</version>
+                <scope>test</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <developers>
@@ -193,12 +210,18 @@
         <avdId>Wildfire</avdId>
         <device>emulator</device>
         <appArtifactId>mittagstischka</appArtifactId>
+        <powermock.version>1.4.5</powermock.version>
     </properties>
     <repositories>
         <repository>
             <id>maven2-repository.dev.java.net</id>
             <name>Java.net Repository for Maven</name>
             <url>http://download.java.net/maven/2/</url>
+        </repository>
+        <repository>
+            <id>powermock-repo</id>
+            <name>Repository for powermock</name>
+            <url>http://powermock.googlecode.com/svn/repo/</url>
         </repository>
     </repositories>
     <profiles>
