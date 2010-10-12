@@ -3,7 +3,7 @@
         <Class name="~de\.friedenhagen\.android\.mittagstischka.R.*" />
     </Match>
     <Match>
-        <Class name="~de\.friedenhagen\.android\.mittagstischka\.EateryAdapter">
+        <Class name="~de\.friedenhagen\.android\.mittagstischka\.EateryAdapter" />
         <Bug code="BC_UNCONFIRMED_CAST"/>
     </Match>
 </FindBugsFilter>
