@@ -5,14 +5,17 @@
 package de.friedenhagen.android.mittagstischka.model;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.text.ParseException;
 import java.util.Collections;
 import java.util.List;
 
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -70,6 +73,39 @@ public class EateryTest {
     @Test
     public void testFromJsonArray() {
         assertEquals(320, createEateryList().size());
+    }
+
+    @Test
+    public void testInvalidJSONObject() throws JSONException {
+        final JSONObject jsonObject = new JSONObject("{}");
+        try {
+            Eatery.fromJsonObject(jsonObject);
+            fail("expected RuntimeException");
+        } catch (RuntimeException e) {
+            assertEquals(JSONException.class, e.getCause().getClass());
+        }
+    }
+
+    @Test
+    public void testInvalidDate() throws JSONException {
+        final JSONObject jsonObject = new JSONObject("{'title': 'title', 'id': 1, 'lat': 0.1, 'long': 0.2, 'date': ''}");
+        try {
+            Eatery.fromJsonObject(jsonObject);
+            fail("expected ParseException");
+        } catch (RuntimeException e) {
+            assertEquals(ParseException.class, e.getCause().getClass());
+        }
+    }
+
+    @Test
+    public void testInvalidJSONArray() throws JSONException {
+        final JSONArray jsonArray = new JSONArray("[{}]");
+        try {
+            Eatery.fromJsonArray(jsonArray);
+            fail("expected JSONException");
+        } catch (RuntimeException e) {
+            assertEquals(JSONException.class, e.getCause().getClass());
+        }
     }
 
     /**
