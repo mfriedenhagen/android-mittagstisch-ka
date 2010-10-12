@@ -18,6 +18,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mockito;
 
 import de.friedenhagen.android.mittagstischka.retrievers.IOUtils;
 
@@ -99,7 +100,9 @@ public class EateryTest {
 
     @Test
     public void testInvalidJSONArray() throws JSONException {
-        final JSONArray jsonArray = new JSONArray("[{}]");
+        final JSONArray jsonArray = Mockito.mock(JSONArray.class);
+        Mockito.when(jsonArray.length()).thenReturn(1);
+        Mockito.when(jsonArray.get(0)).thenThrow(new JSONException("Oops"));
         try {
             Eatery.fromJsonArray(jsonArray);
             fail("expected JSONException");
