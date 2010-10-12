@@ -7,15 +7,16 @@ package de.friedenhagen.android.mittagstischka.retrievers;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
+import java.io.Externalizable;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.Serializable;
+import java.io.ObjectInput;
+import java.io.ObjectOutput;
 
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import de.friedenhagen.android.mittagstischka.retrievers.CacheAccess.NoCacheAccess;
@@ -72,12 +73,21 @@ public class CacheAccessTest {
         access.readCachedObject("foo/bar");
     }
 
-    @Test
-    @Ignore
-    public void testCacheAccessUnSuccessfulReadClassNotFound() throws ApiException, NoCacheEntry {
-        final Serializable serializable = new Serializable() {
+    @Test(expected = NoCacheEntry.class)
+    public void testCacheAccessUnSuccessfulReadIOException() throws ApiException, NoCacheEntry {
+        final Externalizable externalizable = new Externalizable() {
+            @Override
+            public void writeExternal(ObjectOutput out) throws IOException {
+                out.writeUTF("foo");
+                out.flush();
+            }
+
+            @Override
+            public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
+                // do nothing
+            }
         };
-        access.writeCachedObject("bar", serializable);
+        access.writeCachedObject("bar", externalizable);
         access.readCachedObject("bar");
     }
 
