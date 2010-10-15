@@ -7,7 +7,6 @@ package de.friedenhagen.android.mittagstischka.model;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -117,12 +116,13 @@ public class EateryTest {
     @Test
     public void serializeToXml() throws Exception {
         Persister persister = new Persister();
-        final Eateries eateryList = new Eateries(createEateryList());
-        final ByteArrayOutputStream out = new ByteArrayOutputStream(eateryList.size() * 20);
-        persister.write(eateryList, out, "utf-8");
+        final Eateries eateriesOriginal = new Eateries(createEateryList());
+        final ByteArrayOutputStream out = new ByteArrayOutputStream(eateriesOriginal.size() * 20);
+        persister.write(eateriesOriginal, out, "utf-8");
         final String string = out.toString("UTF-8");
         //System.out.println(string);
-        persister.read(Eateries.class, string);
+        final Eateries eateries = persister.read(Eateries.class, string);
+        assertEquals(eateriesOriginal.size(), eateries.size());
     }
 
     @Test
