@@ -75,6 +75,13 @@
                 <groupId>org.simpleframework</groupId>
                 <artifactId>simple-xml</artifactId>
                 <version>2.3.6</version>
+                <!-- Attempt to include a core class (java.* or javax.*) in something other [INFO] than a core library. -->
+                <exclusions>
+                    <exclusion>
+                        <groupId>stax</groupId>
+                        <artifactId>stax-api</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>${project.groupId}</groupId>

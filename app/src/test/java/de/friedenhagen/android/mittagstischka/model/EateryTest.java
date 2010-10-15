@@ -121,7 +121,7 @@ public class EateryTest {
         final ByteArrayOutputStream out = new ByteArrayOutputStream(eateryList.size() * 20);
         persister.write(eateryList, out, "utf-8");
         final String string = out.toString("UTF-8");
-        System.out.println(string);
+        //System.out.println(string);
         persister.read(Eateries.class, string);
     }
 
