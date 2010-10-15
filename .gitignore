@@ -1,6 +1,7 @@
 .classpath
 .project
 .settings/
+*.trace
 bin/
 gen/
 target/
