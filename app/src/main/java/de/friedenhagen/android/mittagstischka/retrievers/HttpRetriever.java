@@ -19,6 +19,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 
 import de.friedenhagen.android.mittagstischka.Constants;
+import de.friedenhagen.android.mittagstischka.model.Eateries;
 import de.friedenhagen.android.mittagstischka.model.Eatery;
 
 /**
@@ -81,9 +82,9 @@ public class HttpRetriever implements Retriever {
      * {@inheritDoc}
      */
     @Override
-    public List<Eatery> retrieveEateries() throws ApiException {
+    public Eateries retrieveEateries() throws ApiException {
         final String response = retrieveString(new HttpGet(apiLocation + "index"));
-        return Eatery.fromJsonArray(retrieveEateries(response));
+        return new Eateries(Eatery.fromJsonArray(retrieveEateries(response)));
     }
 
     /** {@inheritDoc} */

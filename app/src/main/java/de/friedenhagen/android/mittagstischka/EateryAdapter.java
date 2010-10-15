@@ -39,8 +39,8 @@ public class EateryAdapter extends BaseAdapter {
         }
     }
 
-    public EateryAdapter(final List<Eatery> eateries) {
-        this.eateries = eateries;
+    public EateryAdapter(final List<Eatery> list) {
+        this.eateries = list;
     }
 
     @Override

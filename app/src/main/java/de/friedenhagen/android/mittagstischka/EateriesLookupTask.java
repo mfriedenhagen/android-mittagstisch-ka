@@ -4,17 +4,16 @@
 
 package de.friedenhagen.android.mittagstischka;
 
-import java.util.Collections;
 import java.util.Comparator;
-import java.util.List;
 
 import android.app.ListActivity;
 import android.os.AsyncTask;
+import de.friedenhagen.android.mittagstischka.model.Eateries;
 import de.friedenhagen.android.mittagstischka.model.Eatery;
 import de.friedenhagen.android.mittagstischka.retrievers.ApiException;
 import de.friedenhagen.android.mittagstischka.retrievers.Retriever;
 
-class EateriesLookupTask extends AsyncTask<Void, String, List<Eatery>> {
+class EateriesLookupTask extends AsyncTask<Void, String, Eateries> {
 
     private final static String TAG = Constants.LOG_PREFIX + EateriesLookupTask.class.getSimpleName();
 
@@ -41,19 +40,18 @@ class EateriesLookupTask extends AsyncTask<Void, String, List<Eatery>> {
 
     /** {@inheritDoc} */
     @Override
-    protected void onPostExecute(final List<Eatery> eateries) {
-        Collections.sort(eateries, comparator);
-        listActivity.setListAdapter(new EateryAdapter(eateries));
+    protected void onPostExecute(final Eateries eateries) {        
+        listActivity.setListAdapter(new EateryAdapter(eateries.getSortedBy(comparator)));
     }
 
     /** {@inheritDoc} */
     @Override
-    protected List<Eatery> doInBackground(Void... arg0) {
+    protected Eateries doInBackground(Void... arg0) {
         if (application.hasEateries()) {
             return application.getEateries();
         } else {
             try {
-                final List<Eatery> eateries = retriever.retrieveEateries();
+                final Eateries eateries = retriever.retrieveEateries();
                 application.setEateries(eateries);
                 return eateries;
             } catch (ApiException e) {

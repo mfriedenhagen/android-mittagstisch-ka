@@ -10,6 +10,7 @@ import java.util.List;
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
 
+import de.friedenhagen.android.mittagstischka.model.Eateries;
 import de.friedenhagen.android.mittagstischka.model.Eatery;
 
 /**
@@ -46,15 +47,15 @@ public class CachingRetriever implements Retriever {
 
     /** {@inheritDoc} */
     @Override
-    public List<Eatery> retrieveEateries() throws ApiException {
+    public Eateries retrieveEateries() throws ApiException {
         final String filename = "index";
         try {
             final Object o = cacheAccess.readCachedObject(filename);
             @SuppressWarnings("unchecked")
             final List<Eatery> eateries = (List<Eatery>) o;
-            return eateries;
+            return new Eateries(eateries);
         } catch (NoCacheEntry ignored) {
-            final List<Eatery> eateries = httpRetriever.retrieveEateries();
+            final Eateries eateries = httpRetriever.retrieveEateries();
             cacheAccess.writeCachedObject(filename, eateries);
             return eateries;
         }

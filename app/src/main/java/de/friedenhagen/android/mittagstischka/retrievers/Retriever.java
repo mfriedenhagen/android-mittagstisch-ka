@@ -7,14 +7,12 @@
  */
 package de.friedenhagen.android.mittagstischka.retrievers;
 
-import java.util.List;
-
-import de.friedenhagen.android.mittagstischka.model.Eatery;
+import de.friedenhagen.android.mittagstischka.model.Eateries;
 
 public interface Retriever {
 
     /** {@inheritDoc} */
-    public abstract List<Eatery> retrieveEateries() throws ApiException;
+    public abstract Eateries retrieveEateries() throws ApiException;
 
     /** {@inheritDoc} */
     public abstract String retrieveEateryContent(Integer id) throws ApiException;

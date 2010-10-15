@@ -4,6 +4,9 @@
 
 package de.friedenhagen.android.mittagstischka.model;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import org.simpleframework.xml.ElementList;
@@ -30,8 +33,18 @@ public class Eateries {
         return list.get(index);
     }
 
+    public List<Eatery> getSortedBy(final Comparator<Eatery> comparator) {
+        final ArrayList<Eatery> arrayList = new ArrayList<Eatery>(list);
+        Collections.sort(arrayList, comparator);
+        return arrayList;
+    }
+
     public int size() {
         return list.size();
+    }
+    
+    public boolean isEmpty() {
+        return list.size() == 0;
     }
 
 }
