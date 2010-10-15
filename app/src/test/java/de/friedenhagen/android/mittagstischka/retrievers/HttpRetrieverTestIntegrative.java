@@ -4,6 +4,7 @@
 
 package de.friedenhagen.android.mittagstischka.retrievers;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.util.Collections;
@@ -14,6 +15,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import de.friedenhagen.android.mittagstischka.Constants;
+import de.friedenhagen.android.mittagstischka.model.Eateries;
 import de.friedenhagen.android.mittagstischka.model.Eatery;
 import de.friedenhagen.android.mittagstischka.model.EateryTitleComparator;
 
@@ -49,8 +51,8 @@ public class HttpRetrieverTestIntegrative {
      */
     @Test
     public void testRetrieveEateries() throws ApiException {
-        final List<Eatery> eateries = retriever.retrieveEateries();
-        assertTrue("Got no eateries?" + eateries, eateries.size() > 0);
+        final Eateries eateries = retriever.retrieveEateries();
+        assertFalse("Got no eateries?" + eateries, eateries.isEmpty());
     }
 
     /**
@@ -83,9 +85,8 @@ public class HttpRetrieverTestIntegrative {
      * @return
      * @throws ApiException
      */
-    Integer getFirstId() throws ApiException {
-        final List<Eatery> eateries = retriever.retrieveEateries();
-        Collections.sort(eateries, EateryTitleComparator.INSTANCE);
+    private Integer getFirstId() throws ApiException {
+        final Eateries eateries = retriever.retrieveEateries();
         final Integer id = eateries.get(0).id;
         return id;
     }
