@@ -39,11 +39,11 @@ public class EateryActivity extends GuiceActivity {
 
     @InjectView(R.id.eatery_content)
     private TextView contentView;
-    
+
     @InjectView(R.id.eatery_image)
     private ImageView imageView;
-    
-    @InjectExtra(value="eatery")
+
+    @InjectExtra(value = "eatery")
     private Eatery eatery;
 
     @InjectView(R.id.eatery_button_homepage)
@@ -51,7 +51,7 @@ public class EateryActivity extends GuiceActivity {
 
     @Inject
     private Retriever retriever;
-    
+
     /** {@inheritDoc} */
     @Override
     protected void onCreate(Bundle savedInstanceState) {

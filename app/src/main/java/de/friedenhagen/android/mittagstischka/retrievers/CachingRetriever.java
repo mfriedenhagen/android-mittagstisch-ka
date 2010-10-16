@@ -5,13 +5,11 @@
 package de.friedenhagen.android.mittagstischka.retrievers;
 
 import java.io.File;
-import java.util.List;
 
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
 
 import de.friedenhagen.android.mittagstischka.model.Eateries;
-import de.friedenhagen.android.mittagstischka.model.Eatery;
 
 /**
  * Depending on the availability of a SD-card this decorator will write a cache to the SD-card.
@@ -38,7 +36,7 @@ public class CachingRetriever implements Retriever {
         this.httpRetriever = httpRetriever;
         cacheAccess = new CacheAccess.StorageCacheAccess(storageDirectory);
     }
-    
+
     @Inject
     CachingRetriever(final HttpRetriever httpRetriever) {
         this.httpRetriever = httpRetriever;
@@ -48,15 +46,11 @@ public class CachingRetriever implements Retriever {
     /** {@inheritDoc} */
     @Override
     public Eateries retrieveEateries() throws ApiException {
-        final String filename = "index";
         try {
-            final Object o = cacheAccess.readCachedObject(filename);
-            @SuppressWarnings("unchecked")
-            final List<Eatery> eateries = (List<Eatery>) o;
-            return new Eateries(eateries);
+            return cacheAccess.readCachedIndex();
         } catch (NoCacheEntry ignored) {
             final Eateries eateries = httpRetriever.retrieveEateries();
-            cacheAccess.writeCachedObject(filename, eateries);
+            cacheAccess.writeCachedIndex(eateries);
             return eateries;
         }
     }
@@ -66,10 +60,10 @@ public class CachingRetriever implements Retriever {
     public String retrieveEateryContent(Integer id) throws ApiException {
         final String filename = String.valueOf(id);
         try {
-            return (String) cacheAccess.readCachedObject(filename);
+            return cacheAccess.readCachedText(filename);
         } catch (NoCacheEntry ignored) {
             final String eateryContent = httpRetriever.retrieveEateryContent(id);
-            cacheAccess.writeCachedObject(filename, eateryContent);
+            cacheAccess.writeCachedText(filename, eateryContent);
             return eateryContent;
         }
     }
@@ -78,13 +72,12 @@ public class CachingRetriever implements Retriever {
     @Override
     public byte[] retrieveEateryPicture(Integer id) throws ApiException {
         final String filename = String.valueOf(id) + ".png";
-        byte[] buffer;
         try {
-            buffer = (byte[]) cacheAccess.readCachedObject(filename);
+            return cacheAccess.readCachedBytes(filename);
         } catch (NoCacheEntry ignored) {
-            buffer = httpRetriever.retrieveEateryPicture(id);
-            cacheAccess.writeCachedObject(filename, buffer);
+            final byte[] buffer = httpRetriever.retrieveEateryPicture(id);
+            cacheAccess.writeCachedBytes(filename, buffer);
+            return buffer;
         }
-        return buffer;
     }
 }

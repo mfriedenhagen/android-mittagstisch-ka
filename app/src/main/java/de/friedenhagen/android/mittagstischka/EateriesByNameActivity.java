@@ -11,10 +11,10 @@ import de.friedenhagen.android.mittagstischka.model.EateryTitleComparator;
 
 /**
  * @author mirko
- *
+ * 
  */
 public class EateriesByNameActivity extends EateriesByAbstractActivity {
-    
+
     /** {@inheritDoc} */
     @Override
     protected Comparator<Eatery> getComparator() {

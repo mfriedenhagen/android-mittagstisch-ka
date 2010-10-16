@@ -120,7 +120,7 @@ public class EateryTest {
         final ByteArrayOutputStream out = new ByteArrayOutputStream(eateriesOriginal.size() * 20);
         persister.write(eateriesOriginal, out, "utf-8");
         final String string = out.toString("UTF-8");
-        //System.out.println(string);
+        // System.out.println(string);
         final Eateries eateries = persister.read(Eateries.class, string);
         assertEquals(eateriesOriginal.size(), eateries.size());
     }

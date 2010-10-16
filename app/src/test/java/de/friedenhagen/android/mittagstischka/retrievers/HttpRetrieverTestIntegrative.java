@@ -7,17 +7,12 @@ package de.friedenhagen.android.mittagstischka.retrievers;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-import java.util.Collections;
-import java.util.List;
-
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.junit.Before;
 import org.junit.Test;
 
 import de.friedenhagen.android.mittagstischka.Constants;
 import de.friedenhagen.android.mittagstischka.model.Eateries;
-import de.friedenhagen.android.mittagstischka.model.Eatery;
-import de.friedenhagen.android.mittagstischka.model.EateryTitleComparator;
 
 /**
  * @author mirko

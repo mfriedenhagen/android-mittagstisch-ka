@@ -6,16 +6,20 @@ package de.friedenhagen.android.mittagstischka.retrievers;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.io.StreamCorruptedException;
+
+import org.simpleframework.xml.core.Persister;
 
 import de.friedenhagen.android.mittagstischka.Constants;
+import de.friedenhagen.android.mittagstischka.model.Eateries;
 
 interface CacheAccess {
 
@@ -25,12 +29,14 @@ interface CacheAccess {
     static class StorageCacheAccess implements CacheAccess {
 
         private final static String TAG = Constants.LOG_PREFIX + StorageCacheAccess.class.getSimpleName();
-        
+
         /** Buffersize for reading from store. */
         private static final int BUFFER_SIZE = 8192 * 2;
 
         /** where to store the cache files. */
         private final File storageDirectory;
+
+        private final Persister persister = new Persister();
 
         /**
          * @param storageDirectory
@@ -41,14 +47,17 @@ interface CacheAccess {
         }
 
         /** {@inheritDoc} */
-        public void writeCachedObject(final String filename, final Object o) throws ApiException {
+        @Override
+        public void writeCachedIndex(final Eateries o) throws ApiException {
             try {
-                final ObjectOutputStream stream = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(
-                        new File(storageDirectory, filename)), BUFFER_SIZE));
+                final File storageFile = new File(storageDirectory, "index");
+                final BufferedWriter writer = new BufferedWriter(new FileWriter(storageFile), BUFFER_SIZE);
                 try {
-                    stream.writeObject(o);
+                    persister.write(o, writer);
+                } catch (Exception e) {
+                    throw new ApiException(TAG, e);
                 } finally {
-                    stream.close();
+                    writer.close();
                 }
             } catch (FileNotFoundException e) {
                 throw new ApiException(TAG, e);
@@ -57,28 +66,80 @@ interface CacheAccess {
             }
         }
 
-        public Object readCachedObject(final String filename) throws ApiException, NoCacheEntry {
-            final Object o;
+        /** {@inheritDoc} */
+        @Override
+        public Eateries readCachedIndex() throws ApiException, NoCacheEntry {
             try {
-                final File storageFile = new File(storageDirectory, filename);
-                final FileInputStream storageInputStream = new FileInputStream(storageFile);
-                final ObjectInputStream stream = new ObjectInputStream(new BufferedInputStream(storageInputStream,
-                        BUFFER_SIZE));
+                final File storageFile = getStorageFile("index");
+                final BufferedReader reader = new BufferedReader(new FileReader(storageFile), BUFFER_SIZE);
                 try {
-                    o = stream.readObject();
-                } catch (ClassNotFoundException e) {
-                    throw new ApiException(TAG + ":" + storageFile, e);
+                    return persister.read(Eateries.class, reader);
+                } catch (Exception e) {
+                    throw new RuntimeException("Message:", e);
+                } finally {
+                    reader.close();
+                }
+            } catch (FileNotFoundException e) {
+                throw new NoCacheEntry();
+            } catch (IOException e) {
+                throw new NoCacheEntry();
+            }
+        }
+
+        /**
+         * @param child
+         * @return
+         */
+        private File getStorageFile(final String child) {
+            return new File(storageDirectory, child);
+        }
+
+        /** {@inheritDoc} */
+        @Override
+        public String readCachedText(String fileName) throws ApiException, NoCacheEntry {
+            return IOUtils.toUtf8String(readCachedBytes(fileName));
+        }
+
+        /** {@inheritDoc} */
+        @Override
+        public byte[] readCachedBytes(String fileName) throws ApiException, NoCacheEntry {
+            try {
+                BufferedInputStream stream = new BufferedInputStream(new FileInputStream(getStorageFile(fileName)),
+                        BUFFER_SIZE);
+                try {
+                    return IOUtils.toByteArray(stream);
                 } finally {
                     stream.close();
                 }
             } catch (FileNotFoundException e) {
                 throw new NoCacheEntry();
-            } catch (StreamCorruptedException e) {
-                throw new NoCacheEntry();
             } catch (IOException e) {
-                throw new NoCacheEntry();
+                throw new ApiException(TAG, e);
             }
-            return o;
+        }
+
+        /** {@inheritDoc} */
+        @Override
+        public void writeCachedText(String filename, String o) throws ApiException {
+            writeCachedBytes(filename, IOUtils.toUtf8Bytes(o));
+        }
+
+        /** {@inheritDoc} */
+        @Override
+        public void writeCachedBytes(String filename, byte[] o) throws ApiException {
+            try {
+                final BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(
+                        getStorageFile(filename)), BUFFER_SIZE);
+                try {
+                    IOUtils.write(o, stream);
+                } finally {
+                    stream.close();
+                }
+            } catch (FileNotFoundException e) {
+                throw new ApiException(TAG, e);
+            } catch (IOException e) {
+                throw new ApiException(TAG, e);
+            }
         }
     }
 
@@ -89,33 +150,91 @@ interface CacheAccess {
 
         /** {@inheritDoc} */
         @Override
-        public Object readCachedObject(String filename) throws ApiException, NoCacheEntry {
+        public Eateries readCachedIndex() throws ApiException, NoCacheEntry {
             throw new NoCacheEntry();
         }
 
         /** {@inheritDoc} */
         @Override
-        public void writeCachedObject(String filename, Object o) throws ApiException {
-            // Just do nothing.
+        public String readCachedText(String fileName) throws ApiException, NoCacheEntry {
+            throw new NoCacheEntry();
+        }
+
+        /** {@inheritDoc} */
+        @Override
+        public byte[] readCachedBytes(String fileName) throws ApiException, NoCacheEntry {
+            throw new NoCacheEntry();
+        }
+
+        /** {@inheritDoc} */
+        @Override
+        public void writeCachedIndex(Eateries o) throws ApiException {
+            // Do nothing
+        }
+
+        /** {@inheritDoc} */
+        @Override
+        public void writeCachedText(String filename, String o) throws ApiException {
+            // Do nothing
+        }
+
+        /** {@inheritDoc} */
+        @Override
+        public void writeCachedBytes(String filename, byte[] o) throws ApiException {
+            // Do nothing
         }
 
     }
 
     /**
-     * Retrieves an Object from the cache throwing {@link NoCacheEntry} when this is not possible.
+     * Retrieves the index from the cache throwing {@link NoCacheEntry} when this is not possible.
      * 
-     * @param filename
-     *            of the cachefile
      * @return cached object
      * @throws ApiException
      *             when other errors occur.
      * @throws NoCacheEntry
      *             when there is no cache entry.
      */
-    Object readCachedObject(final String filename) throws ApiException, NoCacheEntry;
+    Eateries readCachedIndex() throws ApiException, NoCacheEntry;
 
     /**
-     * Writes the object to a cache file.
+     * Retrieves the text from the cache throwing {@link NoCacheEntry} when this is not possible.
+     * 
+     * @param fileName
+     *            name of the text file
+     * @return cached object
+     * @throws ApiException
+     *             when other errors occur.
+     * @throws NoCacheEntry
+     *             when there is no cache entry.
+     */
+    String readCachedText(final String fileName) throws ApiException, NoCacheEntry;
+
+    /**
+     * Retrieves the text from the cache throwing {@link NoCacheEntry} when this is not possible.
+     * 
+     * @param fileName
+     *            name of the image file
+     * @return cached object
+     * @throws ApiException
+     *             when other errors occur.
+     * @throws NoCacheEntry
+     *             when there is no cache entry.
+     */
+    byte[] readCachedBytes(final String fileName) throws ApiException, NoCacheEntry;
+
+    /**
+     * Writes the index to a cache file.
+     * 
+     * @param o
+     *            Eateries to cache.
+     * @throws ApiException
+     *             when other errors occur.
+     */
+    void writeCachedIndex(final Eateries o) throws ApiException;
+
+    /**
+     * Writes the index to a cache file.
      * 
      * @param filename
      *            of the cachefile
@@ -124,6 +243,18 @@ interface CacheAccess {
      * @throws ApiException
      *             when other errors occur.
      */
-    void writeCachedObject(final String filename, final Object o) throws ApiException;
+    void writeCachedText(final String filename, final String o) throws ApiException;
+
+    /**
+     * Writes the index to a cache file.
+     * 
+     * @param filename
+     *            of the cachefile
+     * @param o
+     *            object to cache.
+     * @throws ApiException
+     *             when other errors occur.
+     */
+    void writeCachedBytes(final String filename, final byte[] o) throws ApiException;
 
 }

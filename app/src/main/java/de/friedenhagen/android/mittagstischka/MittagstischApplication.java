@@ -27,12 +27,13 @@ public class MittagstischApplication extends GuiceApplication {
         modules.add(new MittagstischModule());
         super.addApplicationModules(modules);
     }
+
     /**
      * @param eateries
      *            the eateries to set
      */
     public synchronized void setEateries(Eateries eateries) {
-        this.eateries = eateries;        
+        this.eateries = eateries;
     }
 
     /**
@@ -41,7 +42,7 @@ public class MittagstischApplication extends GuiceApplication {
     public synchronized Eateries getEateries() {
         return eateries;
     }
-    
+
     public boolean hasEateries() {
         return !eateries.isEmpty();
     }

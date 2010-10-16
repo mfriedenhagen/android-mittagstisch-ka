@@ -31,7 +31,7 @@ public class EateryDateComparatorTest extends EateryAbstractComparatorTest {
     public void checkSwappedOrder() {
         Collections.sort(list, Collections.reverseOrder(EateryDateComparator.INSTANCE));
         assertEquals("Bombay Palace", first().title);
-        assertEquals("Saigon Restaurant", last().title);        
+        assertEquals("Saigon Restaurant", last().title);
     }
 
 }

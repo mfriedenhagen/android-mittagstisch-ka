@@ -42,7 +42,7 @@ public class Eateries {
     public int size() {
         return list.size();
     }
-    
+
     public boolean isEmpty() {
         return list.size() == 0;
     }

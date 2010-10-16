@@ -40,7 +40,7 @@ class EateriesLookupTask extends AsyncTask<Void, String, Eateries> {
 
     /** {@inheritDoc} */
     @Override
-    protected void onPostExecute(final Eateries eateries) {        
+    protected void onPostExecute(final Eateries eateries) {
         listActivity.setListAdapter(new EateryAdapter(eateries.getSortedBy(comparator)));
     }
 

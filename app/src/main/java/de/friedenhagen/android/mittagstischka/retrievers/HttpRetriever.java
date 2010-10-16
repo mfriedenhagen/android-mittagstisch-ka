@@ -5,7 +5,6 @@
 package de.friedenhagen.android.mittagstischka.retrievers;
 
 import java.io.IOException;
-import java.util.List;
 
 import org.apache.http.Header;
 import org.apache.http.HttpResponse;
