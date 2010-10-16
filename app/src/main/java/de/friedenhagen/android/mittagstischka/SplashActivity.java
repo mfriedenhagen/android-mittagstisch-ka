@@ -39,9 +39,9 @@ public class SplashActivity extends GuiceActivity {
             public void run() {
                 try {
                     toast.show();
-                    // android.os.Debug.startMethodTracing("retrieve");
+//                     android.os.Debug.startMethodTracing("retrieve");
                     application.setEateries(retriever.retrieveEateries());
-                    // android.os.Debug.startMethodTracing("retrieve");
+//                     android.os.Debug.stopMethodTracing();
                     toast.cancel();
                     startActivity(new Intent(SplashActivity.this, EateriesTabActivity.class));
                     SplashActivity.this.finish();
