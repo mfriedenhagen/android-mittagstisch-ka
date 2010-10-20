@@ -11,6 +11,7 @@ import java.util.List;
 
 import org.junit.Before;
 
+
 public abstract class EateryAbstractComparatorTest {
 
     protected List<Eatery> list;
@@ -20,7 +21,7 @@ public abstract class EateryAbstractComparatorTest {
      */
     @Before
     public void createListFrom() throws Exception {
-        list = Eatery.fromJsonArray(EateryTest.getEateries());
+        list = Eatery.fromJsonArray(TUtils.getEateries());
     }
 
     protected Eatery first() {

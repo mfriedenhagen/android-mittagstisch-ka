@@ -8,8 +8,6 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
 import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.text.ParseException;
 import java.util.Collections;
 import java.util.List;
@@ -22,7 +20,6 @@ import org.junit.Test;
 import org.mockito.Mockito;
 import org.simpleframework.xml.core.Persister;
 
-import de.friedenhagen.android.mittagstischka.retrievers.IOUtils;
 
 /**
  * @author mirko
@@ -37,18 +34,7 @@ public class EateryTest {
      */
     @Before
     public void setUp() throws Exception {
-        jsonArray = getEateries();
-    }
-
-    public static JSONArray getEateries() throws JSONException, IOException {
-        final InputStream inputStream = EateryTest.class.getResourceAsStream("index");
-        try {
-            final String index = IOUtils.toUtf8String(IOUtils.toByteArray(inputStream));
-            return new JSONArray(index);
-        } finally {
-            inputStream.close();
-        }
-
+        jsonArray = TUtils.getEateries();
     }
 
     /**

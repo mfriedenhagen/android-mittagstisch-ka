@@ -16,7 +16,7 @@ import org.junit.Test;
 
 import de.friedenhagen.android.mittagstischka.model.Eateries;
 import de.friedenhagen.android.mittagstischka.model.Eatery;
-import de.friedenhagen.android.mittagstischka.model.EateryTest;
+import de.friedenhagen.android.mittagstischka.model.TUtils;
 import de.friedenhagen.android.mittagstischka.retrievers.CacheAccess.NoCacheAccess;
 import de.friedenhagen.android.mittagstischka.retrievers.CacheAccess.StorageCacheAccess;
 
@@ -61,7 +61,7 @@ public class CacheAccessTest {
 
     @Test
     public void testCacheAccessSuccessful() throws ApiException, NoCacheEntry, JSONException, IOException {
-        final Eateries eateries = new Eateries(Eatery.fromJsonArray(EateryTest.getEateries()));
+        final Eateries eateries = new Eateries(Eatery.fromJsonArray(TUtils.getEateries()));
         access.writeCachedIndex(eateries);
         final Eateries eateries2 = access.readCachedIndex();
         assertEquals(eateries.size(), eateries2.size());
