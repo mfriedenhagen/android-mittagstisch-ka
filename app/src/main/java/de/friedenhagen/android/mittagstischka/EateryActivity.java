@@ -15,6 +15,7 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -61,6 +62,7 @@ public class EateryActivity extends GuiceActivity {
             homePageButton.setEnabled(false);
         }
         titleView.setText(eatery.title);
+        Log.d(TAG, "Getting text and picture for " + String.valueOf(eatery));
         new GetContentTask().execute(eatery.id);
         new GetImageTask().execute(eatery.id);
     }
