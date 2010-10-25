@@ -6,7 +6,6 @@ package de.friedenhagen.android.mittagstischka;
 
 /**
  * @author mirko
- * 
  */
 public final class Constants {
 
@@ -29,5 +28,16 @@ public final class Constants {
      * Do not instantiate.
      */
     private Constants() {
+    }
+
+    /**
+     * Returns a Tag including {@link Constants#LOG_PREFIX} and the simple name of klass.
+     * 
+     * @param klass
+     *            the class to return the tag for.
+     * @return tag
+     */
+    public static String getTag(Class<?> klass) {
+        return LOG_PREFIX + klass.getSimpleName();
     }
 }
