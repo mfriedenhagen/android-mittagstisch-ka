@@ -4,6 +4,7 @@
 
 package de.friedenhagen.android.mittagstischka;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -11,7 +12,7 @@ import roboguice.application.GuiceApplication;
 
 import com.google.inject.Module;
 
-import de.friedenhagen.android.mittagstischka.model.Eateries;
+import de.friedenhagen.android.mittagstischka.model.Eatery;
 
 /**
  * @author mirko
@@ -19,7 +20,7 @@ import de.friedenhagen.android.mittagstischka.model.Eateries;
  */
 public class MittagstischApplication extends GuiceApplication {
 
-    private Eateries eateries = new Eateries(Collections.EMPTY_LIST);
+    private List<Eatery> eateries = new ArrayList<Eatery>();
 
     /** {@inheritDoc} */
     @Override
@@ -32,15 +33,16 @@ public class MittagstischApplication extends GuiceApplication {
      * @param eateries
      *            the eateries to set
      */
-    public synchronized void setEateries(Eateries eateries) {
-        this.eateries = eateries;
+    public synchronized void setEateries(List<Eatery> eateries) {
+        eateries.clear();
+        Collections.copy(this.eateries, eateries);
     }
 
     /**
      * @return the eateries
      */
-    public synchronized Eateries getEateries() {
-        return eateries;
+    public synchronized List<Eatery> getEateries() {
+        return new ArrayList<Eatery>(this.eateries);
     }
 
     public boolean hasEateries() {

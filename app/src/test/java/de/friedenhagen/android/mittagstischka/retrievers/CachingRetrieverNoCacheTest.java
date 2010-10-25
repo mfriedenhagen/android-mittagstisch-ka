@@ -8,12 +8,13 @@ import static org.junit.Assert.assertEquals;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.util.List;
 
 import org.json.JSONException;
 import org.junit.Test;
 import org.mockito.Mockito;
 
-import de.friedenhagen.android.mittagstischka.model.Eateries;
+import de.friedenhagen.android.mittagstischka.model.Eatery;
 import de.friedenhagen.android.mittagstischka.model.TUtils;
 
 
@@ -33,10 +34,11 @@ public class CachingRetrieverNoCacheTest {
      * @throws ApiException 
      */
     @Test
-    public void testRetrieveEateries() throws JSONException, IOException, ApiException {        
-        final Eateries eateriesFromJson = TUtils.getEateriesFromJson();
-        Mockito.when(httpRetrieverMock.retrieveEateries()).thenReturn(eateriesFromJson);
-        final Eateries eateries = cachingRetriever.retrieveEateries();
+    public void testRetrieveEateries() throws JSONException, IOException, ApiException {
+        final String eateriesString = TUtils.getEateriesString();
+        final List<Eatery> eateriesFromJson = TUtils.getEateriesFromJson();
+        Mockito.when(httpRetrieverMock.retrieveEateriesJson()).thenReturn(eateriesString);
+        final List<Eatery> eateries = cachingRetriever.retrieveEateries();
         assertEquals(eateriesFromJson.size(), eateries.size());
     }
 
@@ -48,7 +50,7 @@ public class CachingRetrieverNoCacheTest {
      */
     @Test(expected=ApiException.class)
     public void testRetrieveEateriesApiException() throws JSONException, IOException, ApiException {
-        Mockito.when(httpRetrieverMock.retrieveEateries()).thenThrow(new ApiException("Jepp"));
+        Mockito.when(httpRetrieverMock.retrieveEateriesJson()).thenThrow(new ApiException("Jepp"));
         cachingRetriever.retrieveEateries();
     }
     

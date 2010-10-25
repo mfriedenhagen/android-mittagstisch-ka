@@ -8,13 +8,13 @@ import static org.junit.Assert.assertEquals;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 import org.json.JSONException;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import de.friedenhagen.android.mittagstischka.model.Eateries;
 import de.friedenhagen.android.mittagstischka.model.Eatery;
 import de.friedenhagen.android.mittagstischka.model.TUtils;
 import de.friedenhagen.android.mittagstischka.retrievers.CacheAccess.NoCacheAccess;
@@ -61,9 +61,10 @@ public class CacheAccessTest {
 
     @Test
     public void testCacheAccessSuccessful() throws ApiException, NoCacheEntry, JSONException, IOException {
-        final Eateries eateries = new Eateries(Eatery.fromJsonArray(TUtils.getEateries()));
-        access.writeCachedIndex(eateries);
-        final Eateries eateries2 = access.readCachedIndex();
+        final String jsonString = TUtils.getEateriesString();
+        final List<Eatery> eateries = Eatery.fromJsonString(jsonString);
+        access.writeCachedIndex(jsonString);
+        final List<Eatery> eateries2 = access.readCachedIndex();
         assertEquals(eateries.size(), eateries2.size());
         final String string = "Hallo";
         access.writeCachedText("foo", string);

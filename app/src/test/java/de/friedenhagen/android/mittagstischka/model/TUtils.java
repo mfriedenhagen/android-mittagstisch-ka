@@ -24,10 +24,9 @@ public class TUtils {
      * @throws JSONException
      * @throws IOException
      */
-    public static Eateries getEateriesFromJson() throws JSONException, IOException {
+    public static List<Eatery> getEateriesFromJson() throws JSONException, IOException {
         final List<Eatery> list = Eatery.fromJsonArray(getEateries());
-        final Eateries eateries = new Eateries(list);
-        return eateries;
+        return list;
     }
 
     public static JSONArray getEateries() throws JSONException, IOException {

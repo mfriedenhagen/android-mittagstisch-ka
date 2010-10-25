@@ -5,6 +5,7 @@
 package de.friedenhagen.android.mittagstischka.retrievers;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.apache.http.Header;
 import org.apache.http.HttpResponse;
@@ -18,7 +19,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 
 import de.friedenhagen.android.mittagstischka.Constants;
-import de.friedenhagen.android.mittagstischka.model.Eateries;
 import de.friedenhagen.android.mittagstischka.model.Eatery;
 
 /**
@@ -81,9 +81,18 @@ public class HttpRetriever implements Retriever {
      * {@inheritDoc}
      */
     @Override
-    public Eateries retrieveEateries() throws ApiException {
+    public List<Eatery> retrieveEateries() throws ApiException {
+        final String response = retrieveEateriesJson();
+        return Eatery.fromJsonArray(retrieveEateries(response));
+    }
+
+    /**
+     * @return
+     * @throws ApiException
+     */
+    String retrieveEateriesJson() throws ApiException {
         final String response = retrieveString(new HttpGet(apiLocation + "index"));
-        return new Eateries(Eatery.fromJsonArray(retrieveEateries(response)));
+        return response;
     }
 
     /** {@inheritDoc} */

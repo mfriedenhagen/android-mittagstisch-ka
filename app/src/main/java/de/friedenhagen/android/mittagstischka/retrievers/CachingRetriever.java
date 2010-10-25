@@ -5,11 +5,12 @@
 package de.friedenhagen.android.mittagstischka.retrievers;
 
 import java.io.File;
+import java.util.List;
 
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
 
-import de.friedenhagen.android.mittagstischka.model.Eateries;
+import de.friedenhagen.android.mittagstischka.model.Eatery;
 
 /**
  * Depending on the availability of a SD-card this decorator will write a cache to the SD-card.
@@ -45,13 +46,13 @@ public class CachingRetriever implements Retriever {
 
     /** {@inheritDoc} */
     @Override
-    public Eateries retrieveEateries() throws ApiException {
+    public List<Eatery> retrieveEateries() throws ApiException {
         try {
             return cacheAccess.readCachedIndex();
         } catch (NoCacheEntry ignored) {
-            final Eateries eateries = httpRetriever.retrieveEateries();
-            cacheAccess.writeCachedIndex(eateries);
-            return eateries;
+            final String eateriesJson = httpRetriever.retrieveEateriesJson();
+            cacheAccess.writeCachedIndex(eateriesJson);
+            return Eatery.fromJsonString(eateriesJson);
         }
     }
 

@@ -8,6 +8,7 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.apache.http.Header;
 import org.apache.http.HttpResponse;
@@ -23,7 +24,7 @@ import org.json.JSONException;
 import org.junit.Test;
 import org.mockito.Mockito;
 
-import de.friedenhagen.android.mittagstischka.model.Eateries;
+import de.friedenhagen.android.mittagstischka.model.Eatery;
 import de.friedenhagen.android.mittagstischka.model.TUtils;
 
 /**
@@ -78,7 +79,7 @@ public class HttpRetrieverTest {
     public void testRetrieveEateries() throws ClientProtocolException, IOException, ApiException, JSONException {
         final HttpResponse responseMock = createResponse(TUtils.getEateriesString());        
         Mockito.when(httpClient.execute(Mockito.any(HttpGet.class))).thenReturn(responseMock);
-        final Eateries eateries = retriever.retrieveEateries();
+        final List<Eatery> eateries = retriever.retrieveEateries();
         assertEquals(TUtils.getEateriesFromJson().size(), eateries.size());
     }
 

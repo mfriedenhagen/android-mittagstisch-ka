@@ -6,20 +6,18 @@ package de.friedenhagen.android.mittagstischka.retrievers;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
+import java.util.List;
 
-import org.simpleframework.xml.core.Persister;
+import org.json.JSONArray;
+import org.json.JSONException;
 
 import de.friedenhagen.android.mittagstischka.Constants;
-import de.friedenhagen.android.mittagstischka.model.Eateries;
+import de.friedenhagen.android.mittagstischka.model.Eatery;
 
 interface CacheAccess {
 
@@ -36,8 +34,6 @@ interface CacheAccess {
         /** where to store the cache files. */
         private final File storageDirectory;
 
-        private final Persister persister = new Persister();
-
         /**
          * @param storageDirectory
          *            where to store the cache files.
@@ -48,41 +44,17 @@ interface CacheAccess {
 
         /** {@inheritDoc} */
         @Override
-        public void writeCachedIndex(final Eateries o) throws ApiException {
-            try {
-                final File storageFile = new File(storageDirectory, "index");
-                final BufferedWriter writer = new BufferedWriter(new FileWriter(storageFile), BUFFER_SIZE);
-                try {
-                    persister.write(o, writer);
-                } catch (Exception e) {
-                    throw new ApiException(TAG, e);
-                } finally {
-                    writer.close();
-                }
-            } catch (FileNotFoundException e) {
-                throw new ApiException(TAG, e);
-            } catch (IOException e) {
-                throw new ApiException(TAG, e);
-            }
+        public void writeCachedIndex(final String json) throws ApiException {
+            writeCachedText("index", json);
         }
 
         /** {@inheritDoc} */
         @Override
-        public Eateries readCachedIndex() throws ApiException, NoCacheEntry {
+        public List<Eatery> readCachedIndex() throws ApiException, NoCacheEntry {
             try {
-                final File storageFile = getStorageFile("index");
-                final BufferedReader reader = new BufferedReader(new FileReader(storageFile), BUFFER_SIZE);
-                try {
-                    return persister.read(Eateries.class, reader);
-                } catch (Exception e) {
-                    throw new RuntimeException("Message:", e);
-                } finally {
-                    reader.close();
-                }
-            } catch (FileNotFoundException e) {
-                throw new NoCacheEntry();
-            } catch (IOException e) {
-                throw new NoCacheEntry();
+                return Eatery.fromJsonArray(new JSONArray(readCachedText("index")));
+            } catch (JSONException e) {
+                throw new ApiException("Message:", e);
             }
         }
 
@@ -150,7 +122,7 @@ interface CacheAccess {
 
         /** {@inheritDoc} */
         @Override
-        public Eateries readCachedIndex() throws ApiException, NoCacheEntry {
+        public List<Eatery> readCachedIndex() throws ApiException, NoCacheEntry {
             throw new NoCacheEntry();
         }
 
@@ -168,7 +140,7 @@ interface CacheAccess {
 
         /** {@inheritDoc} */
         @Override
-        public void writeCachedIndex(Eateries o) throws ApiException {
+        public void writeCachedIndex(final String json) throws ApiException {
             // Do nothing
         }
 
@@ -195,7 +167,7 @@ interface CacheAccess {
      * @throws NoCacheEntry
      *             when there is no cache entry.
      */
-    Eateries readCachedIndex() throws ApiException, NoCacheEntry;
+    List<Eatery> readCachedIndex() throws ApiException, NoCacheEntry;
 
     /**
      * Retrieves the text from the cache throwing {@link NoCacheEntry} when this is not possible.
@@ -231,7 +203,7 @@ interface CacheAccess {
      * @throws ApiException
      *             when other errors occur.
      */
-    void writeCachedIndex(final Eateries o) throws ApiException;
+    void writeCachedIndex(final String json) throws ApiException;
 
     /**
      * Writes the index to a cache file.

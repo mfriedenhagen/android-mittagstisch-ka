@@ -14,32 +14,23 @@ import java.util.List;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.simpleframework.xml.Attribute;
-import org.simpleframework.xml.Root;
 
 /**
  * @author mirko
  * 
  */
-@Root
 public class Eatery implements Serializable {
 
-    @Attribute(name = "title")
     public final String title;
 
-    @Attribute(name = "id")
     public final Integer id;
 
-    @Attribute(name = "latitude")
     public final Double latitude;
 
-    @Attribute(name = "longitude")
     public final Double longitude;
 
-    @Attribute(name = "homepage", required = false)
     public final String homepage;
 
-    @Attribute(name = "date")
     public final Date date;
 
     /**
@@ -50,30 +41,14 @@ public class Eatery implements Serializable {
      * @param homepage
      * @param date
      */
-    public Eatery(@Attribute(name = "title") String title, @Attribute(name = "id") Integer id,
-            @Attribute(name = "latitude") Double latitude, @Attribute(name = "longitude") Double longitude,
-            @Attribute(name = "homepage", required = false) String homepage, @Attribute(name = "date") Date date) {
+    Eatery(final String title, final Integer id,
+            Double latitude, Double longitude,
+            String homepage, Date date) {
         this.title = title;
         this.id = id;
         this.latitude = latitude;
         this.longitude = longitude;
         this.homepage = homepage;
-        this.date = date;
-    }
-
-    /**
-     * @param title
-     * @param id
-     * @param latitude
-     * @param longitude
-     * @param date
-     */
-    public Eatery(String title, Integer id, Double latitude, Double longitude, Date date) {
-        this.title = title;
-        this.id = id;
-        this.latitude = latitude;
-        this.longitude = longitude;
-        this.homepage = null;
         this.date = date;
     }
 
@@ -116,6 +91,14 @@ public class Eatery implements Serializable {
             }
         }
         return eateryList;
+    }
+    
+    public static List<Eatery> fromJsonString(final String jsonString) {
+        try {
+            return fromJsonArray(new JSONArray(jsonString));
+        } catch (JSONException e) {
+            throw new RuntimeException("Message:", e);
+        }
     }
 
 }

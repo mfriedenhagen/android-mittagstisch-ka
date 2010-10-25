@@ -7,7 +7,6 @@ package de.friedenhagen.android.mittagstischka.model;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
-import java.io.ByteArrayOutputStream;
 import java.text.ParseException;
 import java.util.Collections;
 import java.util.List;
@@ -18,7 +17,6 @@ import org.json.JSONObject;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
-import org.simpleframework.xml.core.Persister;
 
 
 /**
@@ -97,29 +95,6 @@ public class EateryTest {
         } catch (RuntimeException e) {
             assertEquals(JSONException.class, e.getCause().getClass());
         }
-    }
-
-    @Test
-    public void serializeToXml() throws Exception {
-        Persister persister = new Persister();
-        final Eateries eateriesOriginal = new Eateries(createEateryList());
-        final ByteArrayOutputStream out = new ByteArrayOutputStream(eateriesOriginal.size() * 20);
-        persister.write(eateriesOriginal, out, "utf-8");
-        final String string = out.toString("UTF-8");
-        // System.out.println(string);
-        final Eateries eateries = persister.read(Eateries.class, string);
-        assertEquals(eateriesOriginal.size(), eateries.size());
-    }
-
-    @Test
-    public void serializeToXmlSingle() throws Exception {
-        Persister persister = new Persister();
-        Eatery eatery = createEateryList().get(0);
-        final ByteArrayOutputStream out = new ByteArrayOutputStream(20);
-        persister.write(eatery, out, "utf-8");
-        final String string = out.toString("UTF-8");
-        System.out.println(string);
-        persister.read(Eatery.class, string);
     }
 
     /**

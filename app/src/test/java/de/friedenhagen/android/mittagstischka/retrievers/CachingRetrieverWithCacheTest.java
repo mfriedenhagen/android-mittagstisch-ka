@@ -56,7 +56,7 @@ public class CachingRetrieverWithCacheTest {
      */
     @Test
     public void testRetrieveEateries() throws JSONException, IOException, ApiException {
-        Mockito.when(httpRetrieverMock.retrieveEateries()).thenReturn(TUtils.getEateriesFromJson());
+        Mockito.when(httpRetrieverMock.retrieveEateriesJson()).thenReturn(TUtils.getEateriesString());
         cachingRetriever.retrieveEateries();
     }
 
@@ -69,7 +69,7 @@ public class CachingRetrieverWithCacheTest {
      */
     @Test(expected = ApiException.class)
     public void testRetrieveEateriesApiException() throws JSONException, IOException, ApiException {
-        Mockito.when(httpRetrieverMock.retrieveEateries()).thenThrow(new ApiException("Jepp"));
+        Mockito.when(httpRetrieverMock.retrieveEateriesJson()).thenThrow(new ApiException("Jepp"));
         cachingRetriever.retrieveEateries();
     }
 

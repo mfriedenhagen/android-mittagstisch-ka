@@ -72,22 +72,6 @@
                 <classifier>no_aop</classifier>
             </dependency>
             <dependency>
-                <groupId>org.simpleframework</groupId>
-                <artifactId>simple-xml</artifactId>
-                <version>2.3.6</version>
-                <!-- Attempt to include a core class (java.* or javax.*) in something other [INFO] than a core library. -->
-                <exclusions>
-                    <exclusion>
-                        <groupId>stax</groupId>
-                        <artifactId>stax-api</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>stax</groupId>
-                        <artifactId>stax</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>${appArtifactId}</artifactId>
                 <version>${project.version}</version>
@@ -303,6 +287,11 @@
                                     <artifactId>cobertura-maven-plugin</artifactId>
                                     <version>2.4</version>
                                     <configuration>
+                                        <instrumentation>
+                                            <excludes>
+                                                <exclude>de/friedenhagen/**/R.class</exclude>
+                                            </excludes>
+                                        </instrumentation>
                                         <formats>
                                             <format>xml</format>
                                             <format>html</format>
