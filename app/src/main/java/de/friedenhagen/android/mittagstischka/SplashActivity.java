@@ -4,13 +4,17 @@
 
 package de.friedenhagen.android.mittagstischka;
 
+import java.util.List;
+
 import roboguice.activity.GuiceActivity;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.widget.Toast;
 
 import com.google.inject.Inject;
 
+import de.friedenhagen.android.mittagstischka.model.Eatery;
 import de.friedenhagen.android.mittagstischka.retrievers.ApiException;
 import de.friedenhagen.android.mittagstischka.retrievers.Retriever;
 
@@ -31,25 +35,36 @@ public class SplashActivity extends GuiceActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash);
-        new Thread(new Runnable() {
-
-            private final Toast toast = Toast.makeText(application, R.string.progress_message, Toast.LENGTH_LONG);
-
+        final Toast toast = Toast.makeText(application, R.string.progress_message, Toast.LENGTH_LONG);
+        new AsyncTask<Void, Void, List<Eatery>>() {
+            /** {@inheritDoc} */
             @Override
-            public void run() {
+            protected void onPreExecute() {
+                toast.show();
+            }
+
+            /** {@inheritDoc} */
+            @Override
+            protected void onPostExecute(List<Eatery> eateries) {
+                toast.cancel();
+                // android.os.Debug.startMethodTracing("retrieve");
+                application.setEateries(eateries);
+                // android.os.Debug.stopMethodTracing();
+                startActivity(new Intent(SplashActivity.this, EateriesTabActivity.class));
+                SplashActivity.this.finish();
+            }
+
+            /** {@inheritDoc} */
+            @Override
+            protected List<Eatery> doInBackground(Void... params) {
                 try {
-                    toast.show();
-//                     android.os.Debug.startMethodTracing("retrieve");
-                    application.setEateries(retriever.retrieveEateries());
-//                     android.os.Debug.stopMethodTracing();
-                    toast.cancel();
-                    startActivity(new Intent(SplashActivity.this, EateriesTabActivity.class));
-                    SplashActivity.this.finish();
+                    return retriever.retrieveEateries();
                 } catch (ApiException e) {
                     throw new RuntimeException("Message:", e);
                 }
             }
-        }).start();
+
+        }.execute();
     }
 
 }
