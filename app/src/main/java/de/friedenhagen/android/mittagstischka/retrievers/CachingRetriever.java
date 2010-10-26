@@ -5,6 +5,7 @@
 package de.friedenhagen.android.mittagstischka.retrievers;
 
 import java.io.File;
+import java.net.URI;
 import java.util.List;
 
 import com.google.inject.Inject;
@@ -71,14 +72,14 @@ public class CachingRetriever implements Retriever {
 
     /** {@inheritDoc} */
     @Override
-    public byte[] retrieveEateryPicture(Integer id) throws ApiException {
+    public URI retrieveEateryPictureUri(Integer id) throws ApiException {
         final String filename = String.valueOf(id) + ".png";
         try {
-            return cacheAccess.readCachedBytes(filename);
+            return cacheAccess.getCacheFile(filename).toURI();
         } catch (NoCacheEntry ignored) {
             final byte[] buffer = httpRetriever.retrieveEateryPicture(id);
             cacheAccess.writeCachedBytes(filename, buffer);
-            return buffer;
+            return httpRetriever.retrieveEateryPictureUri(id);
         }
     }
 }

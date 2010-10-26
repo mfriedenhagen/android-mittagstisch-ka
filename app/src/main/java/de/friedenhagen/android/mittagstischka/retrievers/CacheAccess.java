@@ -11,6 +11,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream.GetField;
 import java.util.List;
 
 import org.json.JSONArray;
@@ -113,6 +114,17 @@ interface CacheAccess {
                 throw new ApiException(TAG, e);
             }
         }
+
+        /** {@inheritDoc} */
+        @Override
+        public File getCacheFile(String filename) throws NoCacheEntry, ApiException {
+            final File file = getStorageFile(filename);
+            if (file.exists()) {
+                return file;
+            } else {
+                throw new NoCacheEntry();
+            }
+        }
     }
 
     /**
@@ -154,6 +166,12 @@ interface CacheAccess {
         @Override
         public void writeCachedBytes(String filename, byte[] o) throws ApiException {
             // Do nothing
+        }
+
+        /** {@inheritDoc} */
+        @Override
+        public File getCacheFile(String filename) throws ApiException, NoCacheEntry {
+            throw new NoCacheEntry();
         }
 
     }
@@ -228,5 +246,18 @@ interface CacheAccess {
      *             when other errors occur.
      */
     void writeCachedBytes(final String filename, final byte[] o) throws ApiException;
+
+    /**
+     * Returns the cachefile only if it exists.
+     * 
+     * @param filename
+     *            of an existing cachefile
+     * @return file
+     * @throws NoCacheEntry
+     *             if the file does not exist already.
+     * @throws ApiException
+     *             when other errors occurr.
+     */
+    File getCacheFile(final String filename) throws NoCacheEntry, ApiException;
 
 }

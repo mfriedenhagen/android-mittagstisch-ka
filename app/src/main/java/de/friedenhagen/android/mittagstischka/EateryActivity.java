@@ -10,8 +10,6 @@ import roboguice.activity.GuiceActivity;
 import roboguice.inject.InjectExtra;
 import roboguice.inject.InjectView;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -87,20 +85,19 @@ public class EateryActivity extends GuiceActivity {
 
     }
 
-    private class GetImageTask extends AsyncTask<Integer, Void, Bitmap> {
+    private class GetImageTask extends AsyncTask<Integer, Void, Uri> {
 
         /** {@inheritDoc} */
         @Override
-        protected void onPostExecute(Bitmap result) {
-            imageView.setImageBitmap(result);
+        protected void onPostExecute(Uri result) {
+            imageView.setImageURI(result);
         }
 
         /** {@inheritDoc} */
         @Override
-        protected Bitmap doInBackground(Integer... params) {
+        protected Uri doInBackground(Integer... params) {
             try {
-                final byte[] pictureBytes = retriever.retrieveEateryPicture(params[0]);
-                return BitmapFactory.decodeByteArray(pictureBytes, 0, pictureBytes.length);
+                return Uri.parse(retriever.retrieveEateryPictureUri(params[0]).toASCIIString());
             } catch (ApiException e) {
                 throw new RuntimeException("Message:", e);
             }

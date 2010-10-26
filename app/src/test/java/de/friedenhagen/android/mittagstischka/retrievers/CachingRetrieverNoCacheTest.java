@@ -8,6 +8,7 @@ import static org.junit.Assert.assertEquals;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.net.URI;
 import java.util.List;
 
 import org.json.JSONException;
@@ -93,7 +94,11 @@ public class CachingRetrieverNoCacheTest {
     public void testRetrieveEateryPicture() throws ApiException, UnsupportedEncodingException {
         final byte[] content = "HullaHop".getBytes("utf-8");
         Mockito.when(httpRetrieverMock.retrieveEateryPicture(5)).thenReturn(content);
-        assertEquals(content, cachingRetriever.retrieveEateryPicture(5));
+        final URI remoteUri = URI.create("http://www.example.com/5.png");
+        Mockito.when(httpRetrieverMock.retrieveEateryPictureUri(5)).thenReturn(remoteUri);
+        assertEquals(remoteUri, cachingRetriever.retrieveEateryPictureUri(5));
+        // This returns the remoteUri on consecutive calls (cmp. to CachingRetriever)
+        assertEquals(remoteUri, cachingRetriever.retrieveEateryPictureUri(5));
     }
 
     /**
@@ -106,6 +111,6 @@ public class CachingRetrieverNoCacheTest {
     @Test(expected=ApiException.class)
     public void testRetrieveEateryPictureApiException() throws ApiException {
         Mockito.when(httpRetrieverMock.retrieveEateryPicture(5)).thenThrow(new ApiException("Jepp"));
-        cachingRetriever.retrieveEateryPicture(5);
+        cachingRetriever.retrieveEateryPictureUri(5);
     }
 }

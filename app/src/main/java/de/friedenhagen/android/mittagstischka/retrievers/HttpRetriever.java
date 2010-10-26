@@ -5,6 +5,7 @@
 package de.friedenhagen.android.mittagstischka.retrievers;
 
 import java.io.IOException;
+import java.net.URI;
 import java.util.List;
 
 import org.apache.http.Header;
@@ -57,16 +58,20 @@ public class HttpRetriever implements Retriever {
             response = httpClient.execute(whatToGet);
             final StatusLine statusLine = response.getStatusLine();
             final Header[] etags = response.getHeaders("ETag");
-            etag = etags[0].getValue();
-            if (statusLine.getStatusCode() != HttpStatus.SC_OK) {
-                throw new ApiException("Status-Line:" + statusLine);
+            etag = etags.length != 0 ? etags[0].getValue() : null;
+            switch (statusLine.getStatusCode()) {
+            case HttpStatus.SC_OK:
+                final byte[] byteArray = EntityUtils.toByteArray(response.getEntity());
+                return byteArray;
+            case HttpStatus.SC_NOT_FOUND:
+                return null;
+            default:
+                throw new ApiException(TAG + ":" + whatToGet.getURI() + ":Status-Line:" + statusLine);
             }
-            final byte[] byteArray = EntityUtils.toByteArray(response.getEntity());
-            return byteArray;
         } catch (ClientProtocolException e) {
-            throw new ApiException(TAG, e);
+            throw new ApiException(TAG + ": " + whatToGet.getURI(), e);
         } catch (IOException e) {
-            throw new ApiException(TAG, e);
+            throw new ApiException(TAG + ": " + whatToGet.getURI(), e);
         }
     }
 
@@ -113,12 +118,17 @@ public class HttpRetriever implements Retriever {
     }
 
     /**
-     * {@inheritDoc}
+     * Retrieve the bytes for a picture
      */
-    @Override
     public byte[] retrieveEateryPicture(Integer id) throws ApiException {
-        final HttpGet imageGet = new HttpGet(apiLocation + id + ".jpg");
+        final HttpGet imageGet = new HttpGet(retrieveEateryPictureUri(id));        
         return retrieveBytes(imageGet);
+    }
+
+    /** {@inheritDoc} */
+    @Override
+    public URI retrieveEateryPictureUri(Integer id) throws ApiException {
+        return URI.create(apiLocation + id + ".jpg");        
     }
 
 }

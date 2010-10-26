@@ -7,6 +7,7 @@
  */
 package de.friedenhagen.android.mittagstischka.retrievers;
 
+import java.net.URI;
 import java.util.List;
 
 import de.friedenhagen.android.mittagstischka.model.Eatery;
@@ -20,6 +21,6 @@ public interface Retriever {
     public abstract String retrieveEateryContent(Integer id) throws ApiException;
 
     /** {@inheritDoc} */
-    public abstract byte[] retrieveEateryPicture(Integer id) throws ApiException;
+    public abstract URI retrieveEateryPictureUri(Integer id) throws ApiException;
 
 }

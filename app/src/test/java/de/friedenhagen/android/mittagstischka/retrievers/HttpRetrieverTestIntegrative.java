@@ -5,6 +5,7 @@
 package de.friedenhagen.android.mittagstischka.retrievers;
 
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import java.util.List;
@@ -78,6 +79,13 @@ public class HttpRetrieverTestIntegrative {
         assertTrue("No picture at " + Constants.API_LOCATION + id + ".jpg", pictureBytes.length > 0);
     }
 
+    @Test
+    public void testRetrieveEateryPicture404() throws ApiException {
+        final Integer id = 412;
+        final byte[] pictureBytes = retriever.retrieveEateryPicture(id);
+        assertNull("Expected no image", pictureBytes);
+    }
+    
     /**
      * @return
      * @throws ApiException
