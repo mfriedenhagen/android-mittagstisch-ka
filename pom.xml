@@ -170,6 +170,9 @@
                         <device>${device}</device>
                         <deleteConflictingFiles>true</deleteConflictingFiles>
                         <undeployBeforeDeploy>true</undeployBeforeDeploy>
+                        <sign>
+                            <debug>both</debug>
+                        </sign>
                     </configuration>
                     <extensions>true</extensions>
                 </plugin>
