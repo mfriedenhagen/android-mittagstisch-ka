@@ -4,12 +4,18 @@
 
 package de.friedenhagen.android.mittagstischka;
 
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URI;
 import java.util.Locale;
 
 import roboguice.activity.GuiceActivity;
 import roboguice.inject.InjectExtra;
 import roboguice.inject.InjectView;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -85,19 +91,34 @@ public class EateryActivity extends GuiceActivity {
 
     }
 
-    private class GetImageTask extends AsyncTask<Integer, Void, Uri> {
+    private class GetImageTask extends AsyncTask<Integer, Void, URI> {
 
         /** {@inheritDoc} */
         @Override
-        protected void onPostExecute(Uri result) {
-            imageView.setImageURI(result);
+        protected void onPostExecute(URI result) {
+            Log.d(TAG, "GetImageTask.onPostExecute:" + result.toString());
+            final BufferedInputStream stream;
+            final Bitmap bitmap;
+            try {
+                stream = new BufferedInputStream(result.toURL().openStream());
+                try {
+                    bitmap = BitmapFactory.decodeStream(stream);
+                } finally {
+                    stream.close();
+                }
+            } catch (MalformedURLException e) {
+                throw new RuntimeException("Message:" + result, e);
+            } catch (IOException e) {
+                throw new RuntimeException("Message:" + result, e);
+            }
+            imageView.setImageBitmap(bitmap);
         }
 
         /** {@inheritDoc} */
         @Override
-        protected Uri doInBackground(Integer... params) {
+        protected URI doInBackground(Integer... params) {
             try {
-                return Uri.parse(retriever.retrieveEateryPictureUri(params[0]).toASCIIString());
+                return retriever.retrieveEateryPictureUri(params[0]);
             } catch (ApiException e) {
                 throw new RuntimeException("Message:", e);
             }
