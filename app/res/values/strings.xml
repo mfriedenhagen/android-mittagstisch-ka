@@ -29,7 +29,7 @@
     <string
         name="info_title">Mittagstisch Karlsruhe - Info</string>
     <string
-        name="info_message">
+        name="info_message" formatted="false">
         &lt;p&gt;
         &lt;a href=&quot;http://wiki.github.com/mfriedenhagen/android-mittagstisch-ka/&quot;&gt;Homepage&lt;/a&gt;
         &lt;br/&gt;&lt;br/&gt;
